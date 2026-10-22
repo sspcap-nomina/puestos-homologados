@@ -1,0 +1,4474 @@
+{
+  "puestos": [
+    {
+      "orden": 1,
+      "encargado": "COO",
+      "departamento": "Gerencia General",
+      "departamento_orden": 2,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Gerente General",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 2,
+      "encargado": "COO",
+      "departamento": "Gerencia General",
+      "departamento_orden": 2,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Gerente General",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 3,
+      "encargado": "COO",
+      "departamento": "Gerencia General",
+      "departamento_orden": 2,
+      "pais": "Nicaragua",
+      "empresa": "CDF",
+      "puesto_vigente": "Gerencia General",
+      "puesto_propuesto": "Gerente General"
+    },
+    {
+      "orden": 4,
+      "encargado": "COO",
+      "departamento": "Gerencia General",
+      "departamento_orden": 2,
+      "pais": "Guatemala",
+      "empresa": "AFG",
+      "puesto_vigente": "Gerente General",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 5,
+      "encargado": "COO",
+      "departamento": "Gerencia General",
+      "departamento_orden": 2,
+      "pais": "Honduras",
+      "empresa": "AFH",
+      "puesto_vigente": "Gerente General",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 6,
+      "encargado": "COO",
+      "departamento": "Gerencia General",
+      "departamento_orden": 2,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Gerente General",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 7,
+      "encargado": "COO",
+      "departamento": "Gerencia General",
+      "departamento_orden": 2,
+      "pais": "Perú",
+      "empresa": "PCT",
+      "puesto_vigente": "Gerente General",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 8,
+      "encargado": "COO",
+      "departamento": "Gerencia General",
+      "departamento_orden": 2,
+      "pais": "Guatemala",
+      "empresa": "MPG",
+      "puesto_vigente": "Gerencia General",
+      "puesto_propuesto": "Gerente General"
+    },
+    {
+      "orden": 9,
+      "encargado": "COO",
+      "departamento": "Gerencia General",
+      "departamento_orden": 2,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Gerencia General",
+      "puesto_propuesto": "Gerente General"
+    },
+    {
+      "orden": 10,
+      "encargado": "COO",
+      "departamento": "Gerencia General",
+      "departamento_orden": 2,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Gerente General",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 11,
+      "encargado": "COO",
+      "departamento": "Gerencia General",
+      "departamento_orden": 2,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Gerencia General",
+      "puesto_propuesto": "Gerente General"
+    },
+    {
+      "orden": 12,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Analista Contable",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 13,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Analista De Impuestos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 14,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "Nicaragua",
+      "empresa": "CDF",
+      "puesto_vigente": "Analista De Impuestos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 15,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "Guatemala",
+      "empresa": "AFG",
+      "puesto_vigente": "Analista De Impuestos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 16,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "Honduras",
+      "empresa": "AFH",
+      "puesto_vigente": "Analista Contable Semi Senior",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 17,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Analista De Impuestos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 18,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Especialista Tributario",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 19,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Analista De Operaciones Contables",
+      "puesto_propuesto": "Analista Contable Semi Senior"
+    },
+    {
+      "orden": 20,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "Nicaragua",
+      "empresa": "CDF",
+      "puesto_vigente": "Analista De Operaciones Contables",
+      "puesto_propuesto": "Analista Contable Semi Senior"
+    },
+    {
+      "orden": 21,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "Guatemala",
+      "empresa": "AFG",
+      "puesto_vigente": "Analista De Operaciones Contables",
+      "puesto_propuesto": "Analista Contable Semi Senior"
+    },
+    {
+      "orden": 22,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "Honduras",
+      "empresa": "AFH",
+      "puesto_vigente": "Gerente De Contabilidad",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 23,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Analista De Operaciones Contables",
+      "puesto_propuesto": "Analista Contable Semi Senior"
+    },
+    {
+      "orden": 24,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Asistente De Contabilidad",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 25,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Coordinador De Operaciones Contabilidad",
+      "puesto_propuesto": "Analista Contable Senior"
+    },
+    {
+      "orden": 26,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "Nicaragua",
+      "empresa": "CDF",
+      "puesto_vigente": "Jefe de Contabilidad",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 27,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "Guatemala",
+      "empresa": "AFG",
+      "puesto_vigente": "Jefe de Contabilidad",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 28,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "Honduras",
+      "empresa": "AFH",
+      "puesto_vigente": "Jefe De Contabilidad",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 29,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Contador Administrativo",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 30,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Especialista Contable",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 31,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Gerente de Contabilidad",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 32,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "Guatemala",
+      "empresa": "MPG",
+      "puesto_vigente": "Analista De Operaciones Contables",
+      "puesto_propuesto": "Analista Contable Semi Senior"
+    },
+    {
+      "orden": 33,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "Honduras",
+      "empresa": "ECH",
+      "puesto_vigente": "Analista Contable Semi Senior",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 34,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Especialista De Software Financiero",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 35,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Gestor De Plataformas Erp Y Datos Maestros",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 36,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "Honduras",
+      "empresa": "ECH",
+      "puesto_vigente": "Jefe de Contabilidad",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 37,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Jefe de Contabilidad",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 38,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Jefe De Contabilidad",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 39,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Analista Contable Semi Senior",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 40,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Jefe de Contabilidad",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 41,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "Honduras",
+      "empresa": "AFH",
+      "puesto_vigente": "Coordinador De Cuentas Por Pagar",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 42,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Analista De Impuestos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 43,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Analista De Operaciones Contables",
+      "puesto_propuesto": "Analista Contable Semi Senior"
+    },
+    {
+      "orden": 44,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Jefe de Contabilidad",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 45,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Analista Contable Senior",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 46,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Analista De Interfaz Contable",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 47,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Jefe De Integraciones Contables",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 48,
+      "encargado": "CFO",
+      "departamento": "Nominas",
+      "departamento_orden": 4,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Analista De Nominas Senior",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 49,
+      "encargado": "CFO",
+      "departamento": "Nominas",
+      "departamento_orden": 4,
+      "pais": "Guatemala",
+      "empresa": "AFG",
+      "puesto_vigente": "Analista De Nominas",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 50,
+      "encargado": "CFO",
+      "departamento": "Nominas",
+      "departamento_orden": 4,
+      "pais": "Honduras",
+      "empresa": "AFH",
+      "puesto_vigente": "Analista De Nominas",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 51,
+      "encargado": "CFO",
+      "departamento": "Nominas",
+      "departamento_orden": 4,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Analista De Nominas",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 52,
+      "encargado": "CFO",
+      "departamento": "Nominas",
+      "departamento_orden": 4,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Jefe De Gestión De Nóminas",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 53,
+      "encargado": "CFO",
+      "departamento": "Inteligencia Financiera",
+      "departamento_orden": 5,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Analista De Inteligencia Financiera",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 54,
+      "encargado": "CFO",
+      "departamento": "Inteligencia Financiera",
+      "departamento_orden": 5,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Supervisor Gestión Inteligente De La Información",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 55,
+      "encargado": "CFO",
+      "departamento": "Planificación Financiera",
+      "departamento_orden": 6,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Especialista de Planificación Financiera",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 56,
+      "encargado": "CFO",
+      "departamento": "Planificación Financiera",
+      "departamento_orden": 6,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Jefe De Planificacion Financiera",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 57,
+      "encargado": "CFO",
+      "departamento": "Planificación Financiera",
+      "departamento_orden": 6,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Gerente De Planificación Financiera",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 58,
+      "encargado": "CFO",
+      "departamento": "Planificación Financiera",
+      "departamento_orden": 6,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Jefe de Planificacion Financiera",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 59,
+      "encargado": "CFO",
+      "departamento": "Tesoreria",
+      "departamento_orden": 7,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Analista De Tesoreria",
+      "puesto_propuesto": "Analista de Tesoreria Senior"
+    },
+    {
+      "orden": 60,
+      "encargado": "CFO",
+      "departamento": "Tesoreria",
+      "departamento_orden": 7,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Analista de Tesoreria Senior",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 61,
+      "encargado": "CFO",
+      "departamento": "Tesoreria",
+      "departamento_orden": 7,
+      "pais": "Nicaragua",
+      "empresa": "CDF",
+      "puesto_vigente": "Analista De Tesoreria",
+      "puesto_propuesto": "Analista de Tesoreria Senior"
+    },
+    {
+      "orden": 62,
+      "encargado": "CFO",
+      "departamento": "Tesoreria",
+      "departamento_orden": 7,
+      "pais": "Guatemala",
+      "empresa": "AFG",
+      "puesto_vigente": "Analista De Tesoreria",
+      "puesto_propuesto": "Analista de Tesoreria Senior"
+    },
+    {
+      "orden": 63,
+      "encargado": "CFO",
+      "departamento": "Tesoreria",
+      "departamento_orden": 7,
+      "pais": "Honduras",
+      "empresa": "AFH",
+      "puesto_vigente": "Analista De Tesoreria",
+      "puesto_propuesto": "Analista de Tesoreria Senior"
+    },
+    {
+      "orden": 64,
+      "encargado": "CFO",
+      "departamento": "Tesoreria",
+      "departamento_orden": 7,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Coordinador De Tesoreria",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 65,
+      "encargado": "CFO",
+      "departamento": "Tesoreria",
+      "departamento_orden": 7,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Coordinador De Tesoreria",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 66,
+      "encargado": "CFO",
+      "departamento": "Tesoreria",
+      "departamento_orden": 7,
+      "pais": "Guatemala",
+      "empresa": "MPG",
+      "puesto_vigente": "Analista De Tesoreria",
+      "puesto_propuesto": "Analista de Tesoreria Senior"
+    },
+    {
+      "orden": 67,
+      "encargado": "CFO",
+      "departamento": "Tesoreria",
+      "departamento_orden": 7,
+      "pais": "Honduras",
+      "empresa": "ECH",
+      "puesto_vigente": "Analista De Tesoreria",
+      "puesto_propuesto": "Analista de Tesoreria Senior"
+    },
+    {
+      "orden": 68,
+      "encargado": "CFO",
+      "departamento": "Tesoreria",
+      "departamento_orden": 7,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Analista De Tesoreria",
+      "puesto_propuesto": "Analista de Tesoreria Senior"
+    },
+    {
+      "orden": 69,
+      "encargado": "CFO",
+      "departamento": "Tesoreria",
+      "departamento_orden": 7,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Analista De Tesoreria Junior",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 70,
+      "encargado": "CFO",
+      "departamento": "Tesoreria",
+      "departamento_orden": 7,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Analista De Tesoreria",
+      "puesto_propuesto": "Analista de Tesoreria Senior"
+    },
+    {
+      "orden": 71,
+      "encargado": "CFO",
+      "departamento": "Tesoreria",
+      "departamento_orden": 7,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Coordinador De Tesoreria",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 72,
+      "encargado": "CFO",
+      "departamento": "Tesoreria",
+      "departamento_orden": 7,
+      "pais": "Honduras",
+      "empresa": "AFH",
+      "puesto_vigente": "Coordinadora De Tesoreria",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 73,
+      "encargado": "CFO",
+      "departamento": "Tesoreria",
+      "departamento_orden": 7,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Coordinador De Tesoreria",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 74,
+      "encargado": "CFO",
+      "departamento": "Tesoreria",
+      "departamento_orden": 7,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Jefe de Tesoreria",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 75,
+      "encargado": "CFO",
+      "departamento": "Tesoreria",
+      "departamento_orden": 7,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Jefe de Tesoreria Senior",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 76,
+      "encargado": "COO",
+      "departamento": "Control Interno",
+      "departamento_orden": 8,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Jefe De Control Interno",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 77,
+      "encargado": "COO",
+      "departamento": "Control Interno",
+      "departamento_orden": 8,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Analista De Control Interno",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 78,
+      "encargado": "COO",
+      "departamento": "Control Interno",
+      "departamento_orden": 8,
+      "pais": "Nicaragua",
+      "empresa": "CDF",
+      "puesto_vigente": "Analista De Control Interno",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 79,
+      "encargado": "COO",
+      "departamento": "Control Interno",
+      "departamento_orden": 8,
+      "pais": "Guatemala",
+      "empresa": "AFG",
+      "puesto_vigente": "Analista De Control Interno",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 80,
+      "encargado": "COO",
+      "departamento": "Control Interno",
+      "departamento_orden": 8,
+      "pais": "Honduras",
+      "empresa": "AFH",
+      "puesto_vigente": "Analista De Control Interno",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 81,
+      "encargado": "COO",
+      "departamento": "Control Interno",
+      "departamento_orden": 8,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Analista De Control Interno",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 82,
+      "encargado": "COO",
+      "departamento": "Control Interno",
+      "departamento_orden": 8,
+      "pais": "Perú",
+      "empresa": "PCT",
+      "puesto_vigente": "Analista De Control Interno",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 83,
+      "encargado": "COO",
+      "departamento": "Control Interno",
+      "departamento_orden": 8,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Jefe De Control Interno",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 84,
+      "encargado": "COO",
+      "departamento": "Control Interno",
+      "departamento_orden": 8,
+      "pais": "Nicaragua",
+      "empresa": "CDF",
+      "puesto_vigente": "Control Documentario",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 85,
+      "encargado": "COO",
+      "departamento": "Control Interno",
+      "departamento_orden": 8,
+      "pais": "Guatemala",
+      "empresa": "MPG",
+      "puesto_vigente": "Analista De Control Interno",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 86,
+      "encargado": "COO",
+      "departamento": "Control Interno",
+      "departamento_orden": 8,
+      "pais": "Honduras",
+      "empresa": "AFH",
+      "puesto_vigente": "Jefe De Control Interno",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 87,
+      "encargado": "COO",
+      "departamento": "Control Interno",
+      "departamento_orden": 8,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Analista De Monitoreo Y Centro De Control",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 88,
+      "encargado": "COO",
+      "departamento": "Control Interno",
+      "departamento_orden": 8,
+      "pais": "Perú",
+      "empresa": "PCT",
+      "puesto_vigente": "Analista De Monitoreo Y Centro De Control",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 89,
+      "encargado": "COO",
+      "departamento": "Control Interno",
+      "departamento_orden": 8,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Operador de Monitoreo",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 90,
+      "encargado": "COO",
+      "departamento": "Control Interno",
+      "departamento_orden": 8,
+      "pais": "Nicaragua",
+      "empresa": "CDF",
+      "puesto_vigente": "Jefe De Control Interno",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 91,
+      "encargado": "COO",
+      "departamento": "Control Interno",
+      "departamento_orden": 8,
+      "pais": "Guatemala",
+      "empresa": "MPG",
+      "puesto_vigente": "Monitoreo",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 92,
+      "encargado": "COO",
+      "departamento": "Control Interno",
+      "departamento_orden": 8,
+      "pais": "Honduras",
+      "empresa": "ECH",
+      "puesto_vigente": "Analista De Control Interno",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 93,
+      "encargado": "COO",
+      "departamento": "Control Interno",
+      "departamento_orden": 8,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Gerente De Control Interno Corporativo",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 94,
+      "encargado": "COO",
+      "departamento": "Control Interno",
+      "departamento_orden": 8,
+      "pais": "Perú",
+      "empresa": "PCT",
+      "puesto_vigente": "Auxiliar De Control Documentario",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 95,
+      "encargado": "COO",
+      "departamento": "Control Interno",
+      "departamento_orden": 8,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Valuador de Control Interno",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 96,
+      "encargado": "COO",
+      "departamento": "Control Interno",
+      "departamento_orden": 8,
+      "pais": "Nicaragua",
+      "empresa": "CDF",
+      "puesto_vigente": "Monitoreo",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 97,
+      "encargado": "COO",
+      "departamento": "Control Interno",
+      "departamento_orden": 8,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Analista De Control Interno",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 98,
+      "encargado": "COO",
+      "departamento": "Control Interno",
+      "departamento_orden": 8,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Analista De Control Interno",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 99,
+      "encargado": "COO",
+      "departamento": "Control Interno",
+      "departamento_orden": 8,
+      "pais": "Perú",
+      "empresa": "PCT",
+      "puesto_vigente": "Coordinador Monitoreo",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 100,
+      "encargado": "COO",
+      "departamento": "Control Interno",
+      "departamento_orden": 8,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Control Documentario",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 101,
+      "encargado": "COO",
+      "departamento": "Control Interno",
+      "departamento_orden": 8,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Analista De Control Interno",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 102,
+      "encargado": "COO",
+      "departamento": "Control Interno",
+      "departamento_orden": 8,
+      "pais": "Perú",
+      "empresa": "PCT",
+      "puesto_vigente": "Valuador de Control Interno",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 103,
+      "encargado": "COO",
+      "departamento": "Control Interno",
+      "departamento_orden": 8,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Monitoreo",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 104,
+      "encargado": "COO",
+      "departamento": "Control Interno",
+      "departamento_orden": 8,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Control Documentario",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 105,
+      "encargado": "COO",
+      "departamento": "Control Interno",
+      "departamento_orden": 8,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Valuador de Control Interno",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 106,
+      "encargado": "COO",
+      "departamento": "Control Interno",
+      "departamento_orden": 8,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Jefe De Control Interno",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 107,
+      "encargado": "COO",
+      "departamento": "Control Interno",
+      "departamento_orden": 8,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Valuador de Control Interno",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 108,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Administrador De Agencia",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 109,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Administrador (A) De Agencia",
+      "puesto_propuesto": "Administrador de Agencia"
+    },
+    {
+      "orden": 110,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "Nicaragua",
+      "empresa": "CDF",
+      "puesto_vigente": "Administrador (A) De Agencia",
+      "puesto_propuesto": "Administrador de Agencia"
+    },
+    {
+      "orden": 111,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "Guatemala",
+      "empresa": "AFG",
+      "puesto_vigente": "Asesor de Creditos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 112,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "Honduras",
+      "empresa": "AFH",
+      "puesto_vigente": "Asesor de Creditos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 113,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Asesor de Creditos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 114,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Ejecutivo de Agencia",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 115,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Ejecutivo (A) De Agencia",
+      "puesto_propuesto": "Ejecutivo de Agencia"
+    },
+    {
+      "orden": 116,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "Nicaragua",
+      "empresa": "CDF",
+      "puesto_vigente": "Ejecutivo (A) De Agencia",
+      "puesto_propuesto": "Ejecutivo de Agencia"
+    },
+    {
+      "orden": 117,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "Guatemala",
+      "empresa": "AFG",
+      "puesto_vigente": "Auxiliar De Cartera",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 118,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "Honduras",
+      "empresa": "AFH",
+      "puesto_vigente": "Auxiliar De Cartera",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 119,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Auxiliar De Cartera",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 120,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "Perú",
+      "empresa": "PCT",
+      "puesto_vigente": "Asesor Comercial",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 121,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "Guatemala",
+      "empresa": "AFG",
+      "puesto_vigente": "Jefe De Agencia",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 122,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "Honduras",
+      "empresa": "AFH",
+      "puesto_vigente": "Jefe De Agencia",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 123,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Jefe De Agencia",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 124,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "Guatemala",
+      "empresa": "AFG",
+      "puesto_vigente": "Promotor de Microcreditos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 125,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "Honduras",
+      "empresa": "AFH",
+      "puesto_vigente": "Oficial De Desembolso",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 126,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Promotor de Microcreditos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 127,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "Guatemala",
+      "empresa": "MPG",
+      "puesto_vigente": "Administrador (A) De Agencia",
+      "puesto_propuesto": "Administrador de Agencia"
+    },
+    {
+      "orden": 128,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "Honduras",
+      "empresa": "AFH",
+      "puesto_vigente": "Promotor de Microcreditos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 129,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Supervisor de Recuperaciones",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 130,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "Guatemala",
+      "empresa": "MPG",
+      "puesto_vigente": "Ejecutivo (A) De Agencia",
+      "puesto_propuesto": "Ejecutivo de Agencia"
+    },
+    {
+      "orden": 131,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "Honduras",
+      "empresa": "AFH",
+      "puesto_vigente": "Supervisor de Recuperaciones",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 132,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Administrador (A) De Agencia",
+      "puesto_propuesto": "Administrador de Agencia"
+    },
+    {
+      "orden": 133,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "Guatemala",
+      "empresa": "AFG",
+      "puesto_vigente": "Verificador de Microcreditos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 134,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "Honduras",
+      "empresa": "ECH",
+      "puesto_vigente": "Administrador (A) De Agencia",
+      "puesto_propuesto": "Administrador de Agencia"
+    },
+    {
+      "orden": 135,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Asesor de Negocios",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 136,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "Honduras",
+      "empresa": "ECH",
+      "puesto_vigente": "Asesor de Negocios",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 137,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Ejecutivo de Agencia",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 138,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Administrador (A) De Agencia",
+      "puesto_propuesto": "Administrador de Agencia"
+    },
+    {
+      "orden": 139,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Administrador (A) De Agencia",
+      "puesto_propuesto": "Administrador de Agencia"
+    },
+    {
+      "orden": 140,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Ejecutivo (A) De Agencia",
+      "puesto_propuesto": "Ejecutivo de Agencia"
+    },
+    {
+      "orden": 141,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Ejecutivo (A) De Agencia",
+      "puesto_propuesto": "Ejecutivo de Agencia"
+    },
+    {
+      "orden": 142,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Verificador",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 143,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Ejecutivo de Ventas",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 144,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "Honduras",
+      "empresa": "AFH",
+      "puesto_vigente": "Verificador de Microcreditos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 145,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 9,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Verificador de Microcreditos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 146,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Jefe De Negocios",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 147,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Supervisor (A) De Negocios",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 148,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Nicaragua",
+      "empresa": "CDF",
+      "puesto_vigente": "Supervisor (A) De Negocios",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 149,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Guatemala",
+      "empresa": "AFG",
+      "puesto_vigente": "Coordinador Juridico",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 150,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Supervisor de Negocios",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 151,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Ejecutivo de Operaciones On Line",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 152,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Guatemala",
+      "empresa": "AFG",
+      "puesto_vigente": "Gerente De Negocios",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 153,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Honduras",
+      "empresa": "AFH",
+      "puesto_vigente": "Supervisor de Agencia",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 154,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Perú",
+      "empresa": "PCT",
+      "puesto_vigente": "Gestor De Cobranzas",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 155,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Guatemala",
+      "empresa": "AFG",
+      "puesto_vigente": "Gestor Juridico",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 156,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Honduras",
+      "empresa": "AFH",
+      "puesto_vigente": "Jefe Comercial",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 157,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Jefe Comercial",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 158,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Perú",
+      "empresa": "PCT",
+      "puesto_vigente": "Supervisor de Cobranzas y Atencion al Cliente",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 159,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Guatemala",
+      "empresa": "AFG",
+      "puesto_vigente": "Jefe Comercial",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 160,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Honduras",
+      "empresa": "AFH",
+      "puesto_vigente": "Jefe De Zona",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 161,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Jefe De Operaciones",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 162,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Perú",
+      "empresa": "PCT",
+      "puesto_vigente": "Supervisor de Negocios",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 163,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Guatemala",
+      "empresa": "AFG",
+      "puesto_vigente": "Jefe De Operaciones",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 164,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Honduras",
+      "empresa": "AFH",
+      "puesto_vigente": "Supervisor de Operaciones",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 165,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Jefe De Zona",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 166,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Ejecutivo de Operaciones On Line",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 167,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Guatemala",
+      "empresa": "AFG",
+      "puesto_vigente": "Jefe De Zona",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 168,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Honduras",
+      "empresa": "ECH",
+      "puesto_vigente": "Auxiliar de Tramites y Archivo",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 169,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Coordinador de Cobros",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 170,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Especialista En Capacitación De Servicio Al Cliente",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 171,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Guatemala",
+      "empresa": "AFG",
+      "puesto_vigente": "Jefe Juridico",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 172,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Honduras",
+      "empresa": "ECH",
+      "puesto_vigente": "Coordinador De Operaciones",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 173,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Auxiliar Operativo",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 174,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Especialista De Calidad Y Servicios",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 175,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Guatemala",
+      "empresa": "MPG",
+      "puesto_vigente": "Supervisor (A) De Negocios",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 176,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Coordinador (A) De Cobros",
+      "puesto_propuesto": "Coordinador de Cobranzas"
+    },
+    {
+      "orden": 177,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Coordinador De Operaciones",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 178,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Gestor De Cobros",
+      "puesto_propuesto": "Gestor de Cobranzas"
+    },
+    {
+      "orden": 179,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Honduras",
+      "empresa": "ECH",
+      "puesto_vigente": "Ejecutivo de Agencia",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 180,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Mecanico Automotriz",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 181,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Honduras",
+      "empresa": "ECH",
+      "puesto_vigente": "Gestor de Cobranzas",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 182,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Gestor (A) De Cobro",
+      "puesto_propuesto": "Gestor de Cobranzas"
+    },
+    {
+      "orden": 183,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Honduras",
+      "empresa": "ECH",
+      "puesto_vigente": "Jefe Juridico",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 184,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Modulador de Compras",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 185,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Honduras",
+      "empresa": "ECH",
+      "puesto_vigente": "Mecanico Automotriz",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 186,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Modulador Administrativo",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 187,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Honduras",
+      "empresa": "ECH",
+      "puesto_vigente": "Modulador De Garantías Y Gps",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 188,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Supervisor (A) De Negocios",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 189,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Honduras",
+      "empresa": "ECH",
+      "puesto_vigente": "Modulador De Operaciones",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 190,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Ejecutivo de Caja",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 191,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Honduras",
+      "empresa": "ECH",
+      "puesto_vigente": "Oficial De Confirmaciones Y Gestiones Administrativas",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 192,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Supervisor de Negocios",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 193,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Honduras",
+      "empresa": "ECH",
+      "puesto_vigente": "Vendedor de Repuestos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 194,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Oficial De Confirmacion De Depositos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 195,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Honduras",
+      "empresa": "ECH",
+      "puesto_vigente": "Ejecutivo de Ventas",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 196,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Asistente De Producto Vehicular",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 197,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Gestor (A) De Cobro",
+      "puesto_propuesto": "Gestor de Cobranzas"
+    },
+    {
+      "orden": 198,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Supervisor (A) De Negocios",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 199,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Coordinador Legal",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 200,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Auxiliar de Tramites y Archivo",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 201,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Asistente Legal",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 202,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Vendedor-Mecanico",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 203,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Gestor (A) De Cobranza",
+      "puesto_propuesto": "Gestor de Cobranzas"
+    },
+    {
+      "orden": 204,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Gestor Juridico",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 205,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Jefe de Producto Vehicular",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 206,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 10,
+      "pais": "Honduras",
+      "empresa": "ECH",
+      "puesto_vigente": "Gestor de Cobranzas Senior",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 207,
+      "encargado": "CFO",
+      "departamento": "Auditoria Interna",
+      "departamento_orden": 11,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Auditor Interno",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 208,
+      "encargado": "CFO",
+      "departamento": "Auditoria Interna",
+      "departamento_orden": 11,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Auditor Interno",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 209,
+      "encargado": "CFO",
+      "departamento": "Auditoria Interna",
+      "departamento_orden": 11,
+      "pais": "Nicaragua",
+      "empresa": "CDF",
+      "puesto_vigente": "Auditor Interno",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 210,
+      "encargado": "CFO",
+      "departamento": "Auditoria Interna",
+      "departamento_orden": 11,
+      "pais": "Guatemala",
+      "empresa": "AFG",
+      "puesto_vigente": "Auditor Interno",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 211,
+      "encargado": "CFO",
+      "departamento": "Auditoria Interna",
+      "departamento_orden": 11,
+      "pais": "Honduras",
+      "empresa": "AFH",
+      "puesto_vigente": "Auditor Financiero",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 212,
+      "encargado": "CFO",
+      "departamento": "Auditoria Interna",
+      "departamento_orden": 11,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Auditor Interno",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 213,
+      "encargado": "CFO",
+      "departamento": "Auditoria Interna",
+      "departamento_orden": 11,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Auditor Senior",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 214,
+      "encargado": "CFO",
+      "departamento": "Auditoria Interna",
+      "departamento_orden": 11,
+      "pais": "Honduras",
+      "empresa": "AFH",
+      "puesto_vigente": "Auditor Interno",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 215,
+      "encargado": "CFO",
+      "departamento": "Auditoria Interna",
+      "departamento_orden": 11,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Auditor Interno",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 216,
+      "encargado": "CFO",
+      "departamento": "Auditoria Interna",
+      "departamento_orden": 11,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Gerente de Auditoria Interna",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 217,
+      "encargado": "CFO",
+      "departamento": "Auditoria Interna",
+      "departamento_orden": 11,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Auditor Interno",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 218,
+      "encargado": "CFO",
+      "departamento": "Auditoria Interna",
+      "departamento_orden": 11,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Auditor Interno",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 219,
+      "encargado": "COO",
+      "departamento": "Desarrollo Humano",
+      "departamento_orden": 12,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Diseñador Creativo Integral",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 220,
+      "encargado": "COO",
+      "departamento": "Desarrollo Humano",
+      "departamento_orden": 12,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Analista De Desarrollo Humano",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 221,
+      "encargado": "COO",
+      "departamento": "Desarrollo Humano",
+      "departamento_orden": 12,
+      "pais": "Nicaragua",
+      "empresa": "CDF",
+      "puesto_vigente": "Especialista de Desarrollo Humano",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 222,
+      "encargado": "COO",
+      "departamento": "Desarrollo Humano",
+      "departamento_orden": 12,
+      "pais": "Guatemala",
+      "empresa": "AFG",
+      "puesto_vigente": "Especialista De Procesos Administrativos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 223,
+      "encargado": "COO",
+      "departamento": "Desarrollo Humano",
+      "departamento_orden": 12,
+      "pais": "Honduras",
+      "empresa": "AFH",
+      "puesto_vigente": "Especialista De Capacitacion Y Desarrollo Regional",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 224,
+      "encargado": "COO",
+      "departamento": "Desarrollo Humano",
+      "departamento_orden": 12,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Especialista De Capacitacion Y Desarrollo",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 225,
+      "encargado": "COO",
+      "departamento": "Desarrollo Humano",
+      "departamento_orden": 12,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Especialista de Formación y Desarrollo",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 226,
+      "encargado": "COO",
+      "departamento": "Desarrollo Humano",
+      "departamento_orden": 12,
+      "pais": "Nicaragua",
+      "empresa": "CDF",
+      "puesto_vigente": "Coordinador de Desarrollo Humano",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 227,
+      "encargado": "COO",
+      "departamento": "Desarrollo Humano",
+      "departamento_orden": 12,
+      "pais": "Guatemala",
+      "empresa": "AFG",
+      "puesto_vigente": "Especialista De Seleccion Y Contratacion",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 228,
+      "encargado": "COO",
+      "departamento": "Desarrollo Humano",
+      "departamento_orden": 12,
+      "pais": "Honduras",
+      "empresa": "AFH",
+      "puesto_vigente": "Especialista De Procesos Administrativos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 229,
+      "encargado": "COO",
+      "departamento": "Desarrollo Humano",
+      "departamento_orden": 12,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Especialista De Procesos Administrativos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 230,
+      "encargado": "COO",
+      "departamento": "Desarrollo Humano",
+      "departamento_orden": 12,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Especialista De Seleccion Y Contratacion",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 231,
+      "encargado": "COO",
+      "departamento": "Desarrollo Humano",
+      "departamento_orden": 12,
+      "pais": "Nicaragua",
+      "empresa": "CDF",
+      "puesto_vigente": "Especialista de Formación y Desarrollo",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 232,
+      "encargado": "COO",
+      "departamento": "Desarrollo Humano",
+      "departamento_orden": 12,
+      "pais": "Guatemala",
+      "empresa": "MPG",
+      "puesto_vigente": "Especialista De Procesos Administrativos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 233,
+      "encargado": "COO",
+      "departamento": "Desarrollo Humano",
+      "departamento_orden": 12,
+      "pais": "Honduras",
+      "empresa": "AFH",
+      "puesto_vigente": "Especialista De Seleccion Y Contratacion",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 234,
+      "encargado": "COO",
+      "departamento": "Desarrollo Humano",
+      "departamento_orden": 12,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Especialista De Seleccion Y Contratacion",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 235,
+      "encargado": "COO",
+      "departamento": "Desarrollo Humano",
+      "departamento_orden": 12,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Jefe De Desarrollo Humano",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 236,
+      "encargado": "COO",
+      "departamento": "Desarrollo Humano",
+      "departamento_orden": 12,
+      "pais": "Guatemala",
+      "empresa": "MPG",
+      "puesto_vigente": "Especialista De Seleccion Y Contratacion",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 237,
+      "encargado": "COO",
+      "departamento": "Desarrollo Humano",
+      "departamento_orden": 12,
+      "pais": "Honduras",
+      "empresa": "AFH",
+      "puesto_vigente": "Jefe De Desarrollo Humano Regional",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 238,
+      "encargado": "COO",
+      "departamento": "Desarrollo Humano",
+      "departamento_orden": 12,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Especialista De Seleccion Y Contratacion",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 239,
+      "encargado": "COO",
+      "departamento": "Desarrollo Humano",
+      "departamento_orden": 12,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Jefe De Desarrollo Humano Regional",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 240,
+      "encargado": "COO",
+      "departamento": "Desarrollo Humano",
+      "departamento_orden": 12,
+      "pais": "Guatemala",
+      "empresa": "AFG",
+      "puesto_vigente": "Coordinador de Desarrollo Humano",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 241,
+      "encargado": "COO",
+      "departamento": "Desarrollo Humano",
+      "departamento_orden": 12,
+      "pais": "Honduras",
+      "empresa": "ECH",
+      "puesto_vigente": "Jefe De Desarrollo Humano Regional",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 242,
+      "encargado": "COO",
+      "departamento": "Desarrollo Humano",
+      "departamento_orden": 12,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Especialista De Procesos Administrativos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 243,
+      "encargado": "COO",
+      "departamento": "Desarrollo Humano",
+      "departamento_orden": 12,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Gerente de Desarrollo Humano",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 244,
+      "encargado": "COO",
+      "departamento": "Desarrollo Humano",
+      "departamento_orden": 12,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Especialista De Procesos Administrativos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 245,
+      "encargado": "COO",
+      "departamento": "Desarrollo Humano",
+      "departamento_orden": 12,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Especialista De Seleccion Y Contratacion",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 246,
+      "encargado": "COO",
+      "departamento": "Desarrollo Humano",
+      "departamento_orden": 12,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Asistente de Procesos Administrativos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 247,
+      "encargado": "COO",
+      "departamento": "Desarrollo Humano",
+      "departamento_orden": 12,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Especialista De Seleccion Y Contratacion",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 248,
+      "encargado": "COO",
+      "departamento": "Desarrollo Humano",
+      "departamento_orden": 12,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Coordinador de Formación Y Desarrollo",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 249,
+      "encargado": "CIO",
+      "departamento": "Tecnologia de la Informacion",
+      "departamento_orden": 13,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Administrador De Base De Datos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 250,
+      "encargado": "CIO",
+      "departamento": "Tecnologia de la Informacion",
+      "departamento_orden": 13,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Analista De Redes Y Seguridad",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 251,
+      "encargado": "CIO",
+      "departamento": "Tecnologia de la Informacion",
+      "departamento_orden": 13,
+      "pais": "Nicaragua",
+      "empresa": "CDF",
+      "puesto_vigente": "Analista De Soporte Tecnico",
+      "puesto_propuesto": "Operador de Soporte Tecnico"
+    },
+    {
+      "orden": 252,
+      "encargado": "CIO",
+      "departamento": "Tecnologia de la Informacion",
+      "departamento_orden": 13,
+      "pais": "Guatemala",
+      "empresa": "AFG",
+      "puesto_vigente": "Operador de Soporte Tecnico",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 253,
+      "encargado": "CIO",
+      "departamento": "Tecnologia de la Informacion",
+      "departamento_orden": 13,
+      "pais": "Honduras",
+      "empresa": "AFH",
+      "puesto_vigente": "Analista De Soporte Tecnico",
+      "puesto_propuesto": "Operador de Soporte Tecnico"
+    },
+    {
+      "orden": 254,
+      "encargado": "CIO",
+      "departamento": "Tecnologia de la Informacion",
+      "departamento_orden": 13,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Administrador De Redes",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 255,
+      "encargado": "CIO",
+      "departamento": "Tecnologia de la Informacion",
+      "departamento_orden": 13,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Analista De Sistemas",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 256,
+      "encargado": "CIO",
+      "departamento": "Tecnologia de la Informacion",
+      "departamento_orden": 13,
+      "pais": "Nicaragua",
+      "empresa": "CDF",
+      "puesto_vigente": "Jefe De Redes Y Cloud",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 257,
+      "encargado": "CIO",
+      "departamento": "Tecnologia de la Informacion",
+      "departamento_orden": 13,
+      "pais": "Honduras",
+      "empresa": "AFH",
+      "puesto_vigente": "Coordinador de T.I.",
+      "puesto_propuesto": "Analista de Soporte Aplicativo"
+    },
+    {
+      "orden": 258,
+      "encargado": "CIO",
+      "departamento": "Tecnologia de la Informacion",
+      "departamento_orden": 13,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Analista De Soporte Tecnico",
+      "puesto_propuesto": "Operador de Soporte Tecnico"
+    },
+    {
+      "orden": 259,
+      "encargado": "CIO",
+      "departamento": "Tecnologia de la Informacion",
+      "departamento_orden": 13,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Coordinador de Servicios de Tecnología de la Información",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 260,
+      "encargado": "CIO",
+      "departamento": "Tecnologia de la Informacion",
+      "departamento_orden": 13,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Operador de Soporte Tecnico",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 261,
+      "encargado": "CIO",
+      "departamento": "Tecnologia de la Informacion",
+      "departamento_orden": 13,
+      "pais": "Honduras",
+      "empresa": "ECH",
+      "puesto_vigente": "Analista De Soporte Tecnico",
+      "puesto_propuesto": "Operador de Soporte Tecnico"
+    },
+    {
+      "orden": 262,
+      "encargado": "CIO",
+      "departamento": "Tecnologia de la Informacion",
+      "departamento_orden": 13,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Coordinador (A) De T.I.",
+      "puesto_propuesto": "Analista de Soporte Aplicativo"
+    },
+    {
+      "orden": 263,
+      "encargado": "CIO",
+      "departamento": "Tecnologia de la Informacion",
+      "departamento_orden": 13,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Analista Programador",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 264,
+      "encargado": "CIO",
+      "departamento": "Tecnologia de la Informacion",
+      "departamento_orden": 13,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Analista de Soporte Aplicativo",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 265,
+      "encargado": "CIO",
+      "departamento": "Tecnologia de la Informacion",
+      "departamento_orden": 13,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Analista De Soporte Tecnico",
+      "puesto_propuesto": "Operador de Soporte Tecnico"
+    },
+    {
+      "orden": 266,
+      "encargado": "CIO",
+      "departamento": "Tecnologia de la Informacion",
+      "departamento_orden": 13,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Analista Programador Senior",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 267,
+      "encargado": "CIO",
+      "departamento": "Tecnologia de la Informacion",
+      "departamento_orden": 13,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Jefe De T.I.",
+      "puesto_propuesto": "Analista de Soporte Aplicativo"
+    },
+    {
+      "orden": 268,
+      "encargado": "CIO",
+      "departamento": "Tecnologia de la Informacion",
+      "departamento_orden": 13,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Analista Programador",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 269,
+      "encargado": "CIO",
+      "departamento": "Tecnologia de la Informacion",
+      "departamento_orden": 13,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Analista De Control De Calidad",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 270,
+      "encargado": "CIO",
+      "departamento": "Tecnologia de la Informacion",
+      "departamento_orden": 13,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Gerente De Tecnología De La Información",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 271,
+      "encargado": "CIO",
+      "departamento": "Tecnologia de la Informacion",
+      "departamento_orden": 13,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Analista De Soporte Tecnico",
+      "puesto_propuesto": "Operador de Soporte Tecnico"
+    },
+    {
+      "orden": 272,
+      "encargado": "CIO",
+      "departamento": "Tecnologia de la Informacion",
+      "departamento_orden": 13,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Jefe De Gestión De Servicios De Ti",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 273,
+      "encargado": "CIO",
+      "departamento": "Tecnologia de la Informacion",
+      "departamento_orden": 13,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Jefe De Soluciones De Software",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 274,
+      "encargado": "CIO",
+      "departamento": "Tecnologia de la Informacion",
+      "departamento_orden": 13,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Operador De Soporte Aplicativo",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 275,
+      "encargado": "CIO",
+      "departamento": "Tecnologia de la Informacion",
+      "departamento_orden": 13,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Analista De Soporte Tecnico",
+      "puesto_propuesto": "Operador de Soporte Tecnico"
+    },
+    {
+      "orden": 276,
+      "encargado": "CIO",
+      "departamento": "Tecnologia de la Informacion",
+      "departamento_orden": 13,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Operador De Soporte Tecnico",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 277,
+      "encargado": "CIO",
+      "departamento": "Tecnologia de la Informacion",
+      "departamento_orden": 13,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Analista Programador",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 278,
+      "encargado": "CIO",
+      "departamento": "Tecnologia de la Informacion",
+      "departamento_orden": 13,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Líder Técnico",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 279,
+      "encargado": "CIO",
+      "departamento": "Data Analytics",
+      "departamento_orden": 15,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Data Engineer",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 280,
+      "encargado": "CIO",
+      "departamento": "Data Analytics",
+      "departamento_orden": 15,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Analista De Bi Regional",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 281,
+      "encargado": "CIO",
+      "departamento": "Data Quality",
+      "departamento_orden": 16,
+      "pais": "Perú",
+      "empresa": "PCT",
+      "puesto_vigente": "Analista De Inteligencia De Negocios",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 282,
+      "encargado": "CIO",
+      "departamento": "Data Quality",
+      "departamento_orden": 16,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Coordinador (A) De Bi",
+      "puesto_propuesto": "Coordinador de Inteligencia de Negocios"
+    },
+    {
+      "orden": 283,
+      "encargado": "CIO",
+      "departamento": "Data Quality",
+      "departamento_orden": 16,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Coordinador de Inteligencia de Negocios",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 284,
+      "encargado": "CIO",
+      "departamento": "Data Quality",
+      "departamento_orden": 16,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Analista De Inteligencia De Negocios",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 285,
+      "encargado": "CIO",
+      "departamento": "Data Quality",
+      "departamento_orden": 16,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Ingeniero De Datos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 286,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Analista De Marketing",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 287,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Analista De Mercadeo",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 288,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "Nicaragua",
+      "empresa": "CDF",
+      "puesto_vigente": "Ejecutivo (A) De Nps",
+      "puesto_propuesto": "Ejecutivo de NPS"
+    },
+    {
+      "orden": 289,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "Guatemala",
+      "empresa": "AFG",
+      "puesto_vigente": "Ejecutivo (A) De Nps",
+      "puesto_propuesto": "Ejecutivo de NPS"
+    },
+    {
+      "orden": 290,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "Honduras",
+      "empresa": "AFH",
+      "puesto_vigente": "Ejecutivo Sac",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 291,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Ejecutivo (A) De Nps",
+      "puesto_propuesto": "Ejecutivo de NPS"
+    },
+    {
+      "orden": 292,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Asistente De Marketing",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 293,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Diseñador Grafico",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 294,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "Nicaragua",
+      "empresa": "CDF",
+      "puesto_vigente": "Perifonista",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 295,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "Guatemala",
+      "empresa": "MPG",
+      "puesto_vigente": "Coordinador (A) De Mercadeo",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 296,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Analista De Mercadeo",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 297,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Community Manager",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 298,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Coordinador Crm Loyalty Corporativo",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 299,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Ejecutivo de Nps",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 300,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "Nicaragua",
+      "empresa": "CDF",
+      "puesto_vigente": "Promotor (A)  De Marca",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 301,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Diseñador Grafico",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 302,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Trade Marketing",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 303,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Coordinador Diseñador Creativo Publicitario Audiovisual Corporativo",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 304,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Jefe De Mercadeo",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 305,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Ejecutivo de Atencion Online",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 306,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Ejecutivo (A) De Nps",
+      "puesto_propuesto": "Ejecutivo de NPS"
+    },
+    {
+      "orden": 307,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Diseñador Grafico",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 308,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Ejecutivo de Quejas y Reclamos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 309,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Ejecutivo (A) De Nps",
+      "puesto_propuesto": "Ejecutivo de NPS"
+    },
+    {
+      "orden": 310,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Analista De Mercadeo",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 311,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Diseñador Publicitario Audiovisual",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 312,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Perifonista",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 313,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Coordinador De Mercadeo",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 314,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Gerente De Marketing Regional",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 315,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Trade Marketing",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 316,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Diseñador Grafico",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 317,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "Perú",
+      "empresa": "PCT",
+      "puesto_vigente": "Content Creator Digital",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 318,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Ejecutivo (A) De Atencion Online",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 319,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Coordinador Web & Ai",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 320,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Ejecutivo (A) De Nps",
+      "puesto_propuesto": "Ejecutivo de NPS"
+    },
+    {
+      "orden": 321,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Diseñador Audiovisual",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 322,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Coordinador De Paid Media",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 323,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Diseñador Grafico Audiovisual",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 324,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 17,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Coordinador de Marketing",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 325,
+      "encargado": "COO",
+      "departamento": "Garantias y Valores",
+      "departamento_orden": 18,
+      "pais": "Perú",
+      "empresa": "PCT",
+      "puesto_vigente": "Asistente de Garantias y Valores",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 326,
+      "encargado": "COO",
+      "departamento": "Garantias y Valores",
+      "departamento_orden": 18,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Auxiliar De Garantias Y Valores",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 327,
+      "encargado": "COO",
+      "departamento": "Garantias y Valores",
+      "departamento_orden": 18,
+      "pais": "Nicaragua",
+      "empresa": "CDF",
+      "puesto_vigente": "Asistente De Motorista",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 328,
+      "encargado": "COO",
+      "departamento": "Garantias y Valores",
+      "departamento_orden": 18,
+      "pais": "Guatemala",
+      "empresa": "MPG",
+      "puesto_vigente": "Contact Center",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 329,
+      "encargado": "COO",
+      "departamento": "Garantias y Valores",
+      "departamento_orden": 18,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Auxiliar De Garantias Y Valores",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 330,
+      "encargado": "COO",
+      "departamento": "Garantias y Valores",
+      "departamento_orden": 18,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Asistente De Motorista",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 331,
+      "encargado": "COO",
+      "departamento": "Garantias y Valores",
+      "departamento_orden": 18,
+      "pais": "Perú",
+      "empresa": "PCT",
+      "puesto_vigente": "Auxiliar De Valores",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 332,
+      "encargado": "COO",
+      "departamento": "Garantias y Valores",
+      "departamento_orden": 18,
+      "pais": "Nicaragua",
+      "empresa": "CDF",
+      "puesto_vigente": "Auxiliar De Garantias Y Valores",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 333,
+      "encargado": "COO",
+      "departamento": "Garantias y Valores",
+      "departamento_orden": 18,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Coordinador (A) De Garantias Y Valores",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 334,
+      "encargado": "COO",
+      "departamento": "Garantias y Valores",
+      "departamento_orden": 18,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Auxiliar De Garantias Y Valores",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 335,
+      "encargado": "COO",
+      "departamento": "Garantias y Valores",
+      "departamento_orden": 18,
+      "pais": "Perú",
+      "empresa": "PCT",
+      "puesto_vigente": "Coordinador de Garantias y Valores",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 336,
+      "encargado": "COO",
+      "departamento": "Garantias y Valores",
+      "departamento_orden": 18,
+      "pais": "Nicaragua",
+      "empresa": "CDF",
+      "puesto_vigente": "Contact Center",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 337,
+      "encargado": "COO",
+      "departamento": "Garantias y Valores",
+      "departamento_orden": 18,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Joyero",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 338,
+      "encargado": "COO",
+      "departamento": "Garantias y Valores",
+      "departamento_orden": 18,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Contact Center",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 339,
+      "encargado": "COO",
+      "departamento": "Garantias y Valores",
+      "departamento_orden": 18,
+      "pais": "Perú",
+      "empresa": "PCT",
+      "puesto_vigente": "Supervisor de Garantias y Valores",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 340,
+      "encargado": "COO",
+      "departamento": "Garantias y Valores",
+      "departamento_orden": 18,
+      "pais": "Nicaragua",
+      "empresa": "CDF",
+      "puesto_vigente": "Joyero",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 341,
+      "encargado": "COO",
+      "departamento": "Garantias y Valores",
+      "departamento_orden": 18,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Coordinador (A) De Garantias Y Valores",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 342,
+      "encargado": "COO",
+      "departamento": "Garantias y Valores",
+      "departamento_orden": 18,
+      "pais": "Nicaragua",
+      "empresa": "CDF",
+      "puesto_vigente": "Tecnico De Electro",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 343,
+      "encargado": "COO",
+      "departamento": "Garantias y Valores",
+      "departamento_orden": 18,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Motorista",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 344,
+      "encargado": "COO",
+      "departamento": "Garantias y Valores",
+      "departamento_orden": 18,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Asistente de Joyeria",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 345,
+      "encargado": "CFO",
+      "departamento": "Legal",
+      "departamento_orden": 19,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Analista Legal y de Cumplimiento",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 346,
+      "encargado": "CFO",
+      "departamento": "Legal",
+      "departamento_orden": 19,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Asistente JurÍdico",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 347,
+      "encargado": "CFO",
+      "departamento": "Legal",
+      "departamento_orden": 19,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Analista Legal Y De Cumplimiento",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 348,
+      "encargado": "CFO",
+      "departamento": "Legal",
+      "departamento_orden": 19,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Jefe de Asesoria Legal y Cumplimiento",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 349,
+      "encargado": "CFO",
+      "departamento": "Legal",
+      "departamento_orden": 19,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Analista Legal Y De Cumplimiento",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 350,
+      "encargado": "CFO",
+      "departamento": "Legal",
+      "departamento_orden": 19,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Gerente De Legal Y Cumplimiento",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 351,
+      "encargado": "CFO",
+      "departamento": "Legal",
+      "departamento_orden": 19,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Analista De Legal Y Cumplimiento",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 352,
+      "encargado": "CFO",
+      "departamento": "Cumplimiento",
+      "departamento_orden": 20,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Oficial De Cumplimiento",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 353,
+      "encargado": "CFO",
+      "departamento": "Cumplimiento",
+      "departamento_orden": 20,
+      "pais": "Nicaragua",
+      "empresa": "CDF",
+      "puesto_vigente": "Oficial De Cumplimiento",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 354,
+      "encargado": "CFO",
+      "departamento": "Cumplimiento",
+      "departamento_orden": 20,
+      "pais": "Guatemala",
+      "empresa": "AFG",
+      "puesto_vigente": "Oficial De Cumplimiento",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 355,
+      "encargado": "CFO",
+      "departamento": "Cumplimiento",
+      "departamento_orden": 20,
+      "pais": "Honduras",
+      "empresa": "AFH",
+      "puesto_vigente": "Oficial De Cumplimiento",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 356,
+      "encargado": "CFO",
+      "departamento": "Cumplimiento",
+      "departamento_orden": 20,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Jefe de Cumplimiento",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 357,
+      "encargado": "CFO",
+      "departamento": "Cumplimiento",
+      "departamento_orden": 20,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Oficial De Cumplimiento",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 358,
+      "encargado": "CFO",
+      "departamento": "Cumplimiento",
+      "departamento_orden": 20,
+      "pais": "Honduras",
+      "empresa": "ECH",
+      "puesto_vigente": "Oficial De Cumplimiento",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 359,
+      "encargado": "CFO",
+      "departamento": "Cumplimiento",
+      "departamento_orden": 20,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Oficial De Cumplimiento",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 360,
+      "encargado": "CFO",
+      "departamento": "Cumplimiento",
+      "departamento_orden": 20,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Oficial De Cumplimiento",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 361,
+      "encargado": "CFO",
+      "departamento": "Cumplimiento",
+      "departamento_orden": 20,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Oficial De Cumplimiento",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 362,
+      "encargado": "CFO",
+      "departamento": "Cumplimiento",
+      "departamento_orden": 20,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Oficial De Cumplimiento",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 363,
+      "encargado": "COO",
+      "departamento": "Creditos",
+      "departamento_orden": 26,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Gerente De Creditos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 364,
+      "encargado": "COO",
+      "departamento": "Creditos",
+      "departamento_orden": 26,
+      "pais": "Guatemala",
+      "empresa": "AFG",
+      "puesto_vigente": "Analista De Creditos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 365,
+      "encargado": "COO",
+      "departamento": "Creditos",
+      "departamento_orden": 26,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Jefe De La Unidad De Inteligencia De Portafolio",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 366,
+      "encargado": "COO",
+      "departamento": "Creditos",
+      "departamento_orden": 26,
+      "pais": "Guatemala",
+      "empresa": "AFG",
+      "puesto_vigente": "Jefe De Creditos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 367,
+      "encargado": "COO",
+      "departamento": "Creditos",
+      "departamento_orden": 26,
+      "pais": "Honduras",
+      "empresa": "AFH",
+      "puesto_vigente": "Analista De Creditos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 368,
+      "encargado": "COO",
+      "departamento": "Creditos",
+      "departamento_orden": 26,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Analista De Creditos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 369,
+      "encargado": "COO",
+      "departamento": "Creditos",
+      "departamento_orden": 26,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Jefe De Metodologias De Credito",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 370,
+      "encargado": "COO",
+      "departamento": "Creditos",
+      "departamento_orden": 26,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Analista De Creditos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 371,
+      "encargado": "COO",
+      "departamento": "Creditos",
+      "departamento_orden": 26,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Analista De Creditos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 372,
+      "encargado": "COO",
+      "departamento": "Creditos",
+      "departamento_orden": 26,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Jefe De Calidad De Procesos Crediticios",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 373,
+      "encargado": "COO",
+      "departamento": "Creditos",
+      "departamento_orden": 26,
+      "pais": "Honduras",
+      "empresa": "AFH",
+      "puesto_vigente": "Jefe De Creditos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 374,
+      "encargado": "COO",
+      "departamento": "Creditos",
+      "departamento_orden": 26,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Jefe De Creditos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 375,
+      "encargado": "COO",
+      "departamento": "Creditos",
+      "departamento_orden": 26,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Senior Analyst De Modelos Y Forecast",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 376,
+      "encargado": "COO",
+      "departamento": "Creditos",
+      "departamento_orden": 26,
+      "pais": "Honduras",
+      "empresa": "ECH",
+      "puesto_vigente": "Coordinador de Creditos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 377,
+      "encargado": "COO",
+      "departamento": "Creditos",
+      "departamento_orden": 26,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Analista de CPC",
+      "puesto_propuesto": "Analista De Creditos"
+    },
+    {
+      "orden": 378,
+      "encargado": "COO",
+      "departamento": "Creditos",
+      "departamento_orden": 26,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Gerente De Modelos Y Pricing",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 379,
+      "encargado": "COO",
+      "departamento": "Creditos",
+      "departamento_orden": 26,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Analista Senior Unidad De Inteligencia Portafolio",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 380,
+      "encargado": "COO",
+      "departamento": "Creditos",
+      "departamento_orden": 26,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Especialista De Unidad De Inteligencia De Portafolio",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 381,
+      "encargado": "COO",
+      "departamento": "Creditos",
+      "departamento_orden": 26,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Especialista Senior de Planificación Comercial",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 382,
+      "encargado": "COO",
+      "departamento": "Creditos",
+      "departamento_orden": 26,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Especialista Senior De Forecast",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 383,
+      "encargado": "COO",
+      "departamento": "Creditos",
+      "departamento_orden": 26,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Especialista Senior De Unidad De Inteligencia De Portafolio",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 384,
+      "encargado": "COO",
+      "departamento": "Servicio y Atencion al Cliente",
+      "departamento_orden": 21,
+      "pais": "Perú",
+      "empresa": "PCT",
+      "puesto_vigente": "Gestor De Atención Al Cliente",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 385,
+      "encargado": "COO",
+      "departamento": "Servicio y Atencion al Cliente",
+      "departamento_orden": 21,
+      "pais": "Nicaragua",
+      "empresa": "CDF",
+      "puesto_vigente": "Oficial De Atencion Al Usuario",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 386,
+      "encargado": "COO",
+      "departamento": "Servicio y Atencion al Cliente",
+      "departamento_orden": 21,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Recuperador De Clientes Inactivos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 387,
+      "encargado": "COO",
+      "departamento": "Servicio y Atencion al Cliente",
+      "departamento_orden": 21,
+      "pais": "Perú",
+      "empresa": "PCT",
+      "puesto_vigente": "Gestor De Clientes",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 388,
+      "encargado": "COO",
+      "departamento": "Servicio y Atencion al Cliente",
+      "departamento_orden": 21,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Ejecutivo De Atencion Al Cliente",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 389,
+      "encargado": "CIO",
+      "departamento": "Riesgos",
+      "departamento_orden": 22,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Especialista de Modelo Crediticio",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 390,
+      "encargado": "CIO",
+      "departamento": "Riesgos",
+      "departamento_orden": 22,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Especialista de Seguimiento de Riesgo",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 391,
+      "encargado": "CIO",
+      "departamento": "Riesgos",
+      "departamento_orden": 22,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Jefe de Riesgos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 392,
+      "encargado": "CIO",
+      "departamento": "Riesgos",
+      "departamento_orden": 22,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Jefe de Riesgos Operativos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 393,
+      "encargado": "CIO",
+      "departamento": "Riesgos",
+      "departamento_orden": 22,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Especialista de Riesgo de Crédito",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 394,
+      "encargado": "CFO",
+      "departamento": "Procesos",
+      "departamento_orden": 23,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Analista De Procesos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 395,
+      "encargado": "CFO",
+      "departamento": "Procesos",
+      "departamento_orden": 23,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Analista de Procesos Junior",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 396,
+      "encargado": "CFO",
+      "departamento": "Procesos",
+      "departamento_orden": 23,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Analista De Procesos Senior",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 397,
+      "encargado": "CFO",
+      "departamento": "Procesos",
+      "departamento_orden": 23,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Analista de Procesos Junior",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 398,
+      "encargado": "CFO",
+      "departamento": "Procesos",
+      "departamento_orden": 23,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Jefe De Procesos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 399,
+      "encargado": "CFO",
+      "departamento": "Proyectos y Sostenibilidad",
+      "departamento_orden": 24,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Analista de Proyectos, Planificación y sostenibilidad",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 400,
+      "encargado": "CFO",
+      "departamento": "Proyectos y Sostenibilidad",
+      "departamento_orden": 24,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Coordinador de Procesos",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 401,
+      "encargado": "CFO",
+      "departamento": "Proyectos y Sostenibilidad",
+      "departamento_orden": 24,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Gerente De Proyectos, Planificación Y Sostenibilidad",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 402,
+      "encargado": "CFO",
+      "departamento": "Mercado de Capitales",
+      "departamento_orden": 25,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Director of Capital Markets and Structure Finance",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 403,
+      "encargado": "COO",
+      "departamento": "Gestión de Incidencias y Requerimientos",
+      "departamento_orden": 26,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Especialista De Qa",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 404,
+      "encargado": "COO",
+      "departamento": "Gestión de Incidencias y Requerimientos",
+      "departamento_orden": 26,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Product Owner",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 405,
+      "encargado": "COO",
+      "departamento": "Gestión de Incidencias y Requerimientos",
+      "departamento_orden": 26,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Analista de Requerimiento y Cambios",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 406,
+      "encargado": "COO",
+      "departamento": "Gestión de Incidencias y Requerimientos",
+      "departamento_orden": 26,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Analista de Requerimiento y Cambios",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 407,
+      "encargado": "COO",
+      "departamento": "Gestión de Incidencias y Requerimientos",
+      "departamento_orden": 26,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Analista Qa",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 408,
+      "encargado": "COO",
+      "departamento": "Gestión de Incidencias y Requerimientos",
+      "departamento_orden": 26,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Especialista Qa",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 409,
+      "encargado": "CFO",
+      "departamento": "Tesoreria Central",
+      "departamento_orden": 27,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Gerente De Tesoreria",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 410,
+      "encargado": "CFO",
+      "departamento": "Tesoreria Central",
+      "departamento_orden": 27,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Asistente De Tesoreria",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 411,
+      "encargado": "CFO",
+      "departamento": "Tesoreria Central",
+      "departamento_orden": 27,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Analista De Contabilidad",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 412,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Arquitecta Corporativa",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 413,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Analista de Compras y Logistica",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 414,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "Nicaragua",
+      "empresa": "CDF",
+      "puesto_vigente": "Analista De Compras Y Logistica",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 415,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "Guatemala",
+      "empresa": "AFG",
+      "puesto_vigente": "Analista De Compras Y Logistica",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 416,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "Honduras",
+      "empresa": "AFH",
+      "puesto_vigente": "Analista De Logistica",
+      "puesto_propuesto": "Analista de Compras y Logistica"
+    },
+    {
+      "orden": 417,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Analista de Compras y Logistica",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 418,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Auxiliar De Servicios Generales",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 419,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Auxiliar de Mantenimiento",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 420,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "Nicaragua",
+      "empresa": "CDF",
+      "puesto_vigente": "Coordinador De Logistica Y Compras",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 421,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "Guatemala",
+      "empresa": "AFG",
+      "puesto_vigente": "Analista De Logistica",
+      "puesto_propuesto": "Analista de Compras y Logistica"
+    },
+    {
+      "orden": 422,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "Honduras",
+      "empresa": "AFH",
+      "puesto_vigente": "Servicios Generales",
+      "puesto_propuesto": "Auxiliar de Servicios Generales"
+    },
+    {
+      "orden": 423,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Gerente de Logistica",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 424,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Chofer Administrativo",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 425,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "Bolivia",
+      "empresa": "PDM",
+      "puesto_vigente": "Coordinador de Compras y Logistica",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 426,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "Nicaragua",
+      "empresa": "CDF",
+      "puesto_vigente": "Mensajero",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 427,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "Guatemala",
+      "empresa": "AFG",
+      "puesto_vigente": "Coordinador De Logistica",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 428,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Analista De Logistica",
+      "puesto_propuesto": "Analista de Compras y Logistica"
+    },
+    {
+      "orden": 429,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "El Salvador",
+      "empresa": "AFS",
+      "puesto_vigente": "Servicios Generales",
+      "puesto_propuesto": "Auxiliar de Servicios Generales"
+    },
+    {
+      "orden": 430,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "Perú",
+      "empresa": "PCT",
+      "puesto_vigente": "Analista De Control Patrimonial Y Abastecimiento",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 431,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "Nicaragua",
+      "empresa": "CDF",
+      "puesto_vigente": "Servicios Generales",
+      "puesto_propuesto": "Auxiliar de Servicios Generales"
+    },
+    {
+      "orden": 432,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "Guatemala",
+      "empresa": "AFG",
+      "puesto_vigente": "Servicios Generales",
+      "puesto_propuesto": "Auxiliar de Servicios Generales"
+    },
+    {
+      "orden": 433,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Coordinador de Logistica y Compras",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 434,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "El Salvador",
+      "empresa": "ECS",
+      "puesto_vigente": "Analista De Logistica",
+      "puesto_propuesto": "Analista de Compras y Logistica"
+    },
+    {
+      "orden": 435,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "Perú",
+      "empresa": "PCT",
+      "puesto_vigente": "Analista De Servicios Generales Y Abastecimiento",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 436,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "Guatemala",
+      "empresa": "MPG",
+      "puesto_vigente": "Analista De Logistica",
+      "puesto_propuesto": "Analista de Compras y Logistica"
+    },
+    {
+      "orden": 437,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "Honduras",
+      "empresa": "MPH",
+      "puesto_vigente": "Mantenimiento",
+      "puesto_propuesto": "Auxiliar de Mantenimiento"
+    },
+    {
+      "orden": 438,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Auxiliar De Servicios Generales",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 439,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "Perú",
+      "empresa": "PCT",
+      "puesto_vigente": "Analista de Compras y Logistica",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 440,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "Honduras",
+      "empresa": "ECS",
+      "puesto_vigente": "Asistente Administrativo",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 441,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "El Salvador",
+      "empresa": "PST",
+      "puesto_vigente": "Mantenimiento",
+      "puesto_propuesto": "Auxiliar de Mantenimiento"
+    },
+    {
+      "orden": 442,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "Perú",
+      "empresa": "PCT",
+      "puesto_vigente": "Asistente De Abastecimiento Y Distribución",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 443,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "Perú",
+      "empresa": "PCT",
+      "puesto_vigente": "Asistente De Abastecimiento Y Mantenimiento",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 444,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "Perú",
+      "empresa": "PCT",
+      "puesto_vigente": "Chofer De Distribución",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 445,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "Perú",
+      "empresa": "PCT",
+      "puesto_vigente": "Jefe de Logística y Compras",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 446,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "Perú",
+      "empresa": "PCT",
+      "puesto_vigente": "Asistente de Logistica",
+      "puesto_propuesto": ""
+    },
+    {
+      "orden": 447,
+      "encargado": "COO",
+      "departamento": "Logistica",
+      "departamento_orden": 28,
+      "pais": "Perú",
+      "empresa": "EILC",
+      "puesto_vigente": "Asistente De Control De Activos Fijos",
+      "puesto_propuesto": ""
+    }
+  ]
+}
