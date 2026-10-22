@@ -18,9 +18,6 @@
     --texto-terciario: #8694A3;
     --borde: #E2E8F0;
     --blanco: #FFFFFF;
-    --ambar: #96640A;
-    --fondo-ambar: #FDF1D6;
-    --borde-ambar: #F0DBA3;
     --alto-header: 76px;
   }
 
@@ -142,8 +139,6 @@
     margin-top: 1px;
   }
 
-  .stat-tile--ambar .stat-valor{ color: var(--ambar); }
-
   /* ---------- Panel de filtros ---------- */
   .panel-filtros{
     background: var(--blanco);
@@ -209,7 +204,7 @@
     border: 1px solid var(--borde);
     border-radius: 10px;
     box-shadow: 0 10px 24px rgba(15,35,55,0.12);
-    max-height: 260px;
+    max-height: 280px;
     overflow-y: auto;
     z-index: 40;
     display: none;
@@ -222,6 +217,15 @@
     font-size: 14px;
     cursor: pointer;
     color: var(--texto-principal);
+  }
+
+  .sugerencias div .sugerencia-tipo{
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--texto-terciario);
+    margin-right: 6px;
   }
 
   .sugerencias div:hover,
@@ -390,48 +394,30 @@
     margin-top: 2px;
   }
 
-  td.col-pais{ white-space: nowrap; }
+  td.col-funcion{ color: var(--texto-secundario); font-size: 13px; }
+
+  td.col-vigente{ color: var(--texto-principal); font-weight: 500; }
+
+  td.col-presencia{ }
+  .lista-paises{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
   .badge-pais{
     display: inline-block;
     background: var(--fondo-platino);
     border: 1px solid var(--borde);
     color: var(--texto-principal);
-    font-size: 12.5px;
+    font-size: 12px;
     font-weight: 600;
-    padding: 3px 10px;
+    padding: 3px 9px;
     border-radius: 7px;
+    cursor: default;
   }
-
-  td.col-empresa{
-    font-family: "SFMono-Regular", Consolas, monospace;
-    font-size: 12.5px;
-    color: var(--texto-secundario);
-    letter-spacing: 0.02em;
-  }
-
-  td.col-vigente{ color: var(--texto-principal); }
-
-  td.col-propuesto{ color: var(--texto-secundario); }
-  td.col-propuesto .valor-propuesto{
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    background: var(--fondo-ambar);
-    color: var(--ambar);
-    border: 1px solid var(--borde-ambar);
-    font-weight: 700;
-    padding: 3px 10px;
-    border-radius: 7px;
-    font-size: 13px;
-  }
-  td.col-propuesto .sin-cambio{
-    display: inline-block;
-    background: var(--fondo-platino);
-    border: 1px solid var(--borde);
+  .sin-presencia{
     color: var(--texto-terciario);
     font-size: 12.5px;
-    padding: 3px 10px;
-    border-radius: 7px;
   }
 
   .sin-datos{
@@ -474,15 +460,15 @@
       padding: 4px 0;
     }
     td.col-departamento::before{ content: ""; }
-    td.col-pais, td.col-empresa, td.col-vigente, td.col-propuesto{
+    td.col-funcion, td.col-presencia{
       display: flex;
       justify-content: space-between;
+      align-items: flex-start;
       gap: 10px;
     }
-    td.col-pais::before{ content: "País"; font-size: 11px; color: var(--texto-secundario); font-weight: 700; text-transform: uppercase; }
-    td.col-empresa::before{ content: "Empresa"; font-size: 11px; color: var(--texto-secundario); font-weight: 700; text-transform: uppercase; }
-    td.col-vigente::before{ content: "Puesto vigente"; font-size: 11px; color: var(--texto-secundario); font-weight: 700; text-transform: uppercase; }
-    td.col-propuesto::before{ content: "Puesto propuesto"; font-size: 11px; color: var(--texto-secundario); font-weight: 700; text-transform: uppercase; }
+    td.col-funcion::before{ content: "Función"; font-size: 11px; color: var(--texto-secundario); font-weight: 700; text-transform: uppercase; flex-shrink: 0; }
+    td.col-presencia::before{ content: "Presencia"; font-size: 11px; color: var(--texto-secundario); font-weight: 700; text-transform: uppercase; flex-shrink: 0; }
+    td.col-presencia .lista-paises{ justify-content: flex-end; }
   }
 </style>
 </head>
@@ -505,7 +491,7 @@
   <section class="resumen-ejecutivo" aria-label="Resumen ejecutivo">
     <div class="stat-tile">
       <span class="stat-valor" id="stat-total">0</span>
-      <span class="stat-etiqueta">Puestos totales</span>
+      <span class="stat-etiqueta">Puestos con personal</span>
     </div>
     <div class="stat-tile">
       <span class="stat-valor" id="stat-direcciones">0</span>
@@ -517,19 +503,20 @@
       <span class="stat-etiqueta">Países</span>
       <span class="stat-detalle">Perú · Bolivia · Nicaragua · Guatemala · Honduras · El Salvador</span>
     </div>
-    <div class="stat-tile stat-tile--ambar">
-      <span class="stat-valor" id="stat-cambios">0</span>
-      <span class="stat-etiqueta">Cambios propuestos</span>
+    <div class="stat-tile">
+      <span class="stat-valor" id="stat-funciones">0</span>
+      <span class="stat-etiqueta">Funciones</span>
+      <span class="stat-detalle">Back · Middle · Front Office</span>
     </div>
   </section>
 
   <section class="panel-filtros">
 
     <div class="fila-filtros">
-      <label class="etiqueta-filtro" for="buscador-departamento">Buscar por departamento</label>
+      <label class="etiqueta-filtro" for="buscador-general">Buscar por puesto, departamento o dirección</label>
       <div class="buscador">
-        <input type="text" id="buscador-departamento" autocomplete="off"
-               placeholder="Escribe un departamento, ej. Nóminas, Contabilidad, Tesorería..." />
+        <input type="text" id="buscador-general" autocomplete="off"
+               placeholder="Ej. Analista Contable, Nóminas, CFO..." />
         <div class="sugerencias" id="caja-sugerencias"></div>
       </div>
 
@@ -571,10 +558,9 @@
       <thead>
         <tr>
           <th style="width:26%">Departamento</th>
-          <th style="width:12%">País</th>
-          <th style="width:10%">Empresa</th>
-          <th style="width:26%">Puesto vigente</th>
-          <th style="width:26%">Puesto propuesto</th>
+          <th style="width:14%">Función</th>
+          <th style="width:30%">Puesto vigente</th>
+          <th style="width:30%">Presencia por país</th>
         </tr>
       </thead>
       <tbody id="cuerpo-tabla"></tbody>
@@ -597,17 +583,17 @@
 
   var estado = {
     puestos: [],
-    departamentos: [],
+    opcionesBusqueda: [],
     encargado: "TODOS",
     pais: "TODOS",
-    textoDepartamento: ""
+    textoBusqueda: ""
   };
 
   var elCuerpoTabla = document.getElementById("cuerpo-tabla");
   var elSinDatos = document.getElementById("sin-datos");
   var elNumResultados = document.getElementById("num-resultados");
   var elChipsActivos = document.getElementById("chips-activos");
-  var elInputBuscador = document.getElementById("buscador-departamento");
+  var elInputBuscador = document.getElementById("buscador-general");
   var elCajaSugerencias = document.getElementById("caja-sugerencias");
 
   function normalizar(texto){
@@ -644,6 +630,38 @@
     window.requestAnimationFrame(paso);
   }
 
+  // Mapa empresa -> país. Se usa para derivar, a partir de las cifras crudas
+  // de "empresas" en puestos.json, en qué países hay personal activo. Mantenerlo
+  // aquí (no en el JSON) evita que quede desactualizado si el admin solo edita
+  // los números de personal.
+  var EMPRESA_PAIS = {
+    EILC: "Perú", PCT: "Perú",
+    PDM: "Bolivia",
+    CDF: "Nicaragua",
+    AFG: "Guatemala", MPG: "Guatemala",
+    AFH: "Honduras", MPH: "Honduras", ECH: "Honduras",
+    AFS: "El Salvador", PST: "El Salvador", ECS: "El Salvador"
+  };
+  var ORDEN_PAISES = ["Perú", "Bolivia", "Nicaragua", "Guatemala", "Honduras", "El Salvador"];
+
+  function derivarPresencia(p){
+    var empresas = p.empresas || {};
+    var activosTotal = 0;
+    var paisesSet = {};
+
+    Object.keys(empresas).forEach(function(codigo){
+      var cantidad = Number(empresas[codigo]) || 0;
+      activosTotal += cantidad;
+      if(cantidad > 0 && EMPRESA_PAIS[codigo]){
+        paisesSet[EMPRESA_PAIS[codigo]] = true;
+      }
+    });
+
+    p.activos_total = activosTotal;
+    p.paises_activos = ORDEN_PAISES.filter(function(pais){ return paisesSet[pais]; });
+    return p;
+  }
+
   /* ---------------- Carga de datos ---------------- */
   fetch("puestos.json", { cache: "no-store" })
     .then(function(resp){
@@ -651,9 +669,13 @@
       return resp.json();
     })
     .then(function(data){
-      estado.puestos = (data && data.puestos) ? data.puestos : [];
-      construirListaDepartamentos();
-      construirResumenEjecutivo();
+      var todos = ((data && data.puestos) ? data.puestos : []).map(derivarPresencia);
+      // Solo se muestran puestos con al menos una persona activa en alguna empresa.
+      // Los puestos "en catálogo" con 0 activos quedan en la base de datos para
+      // cuando se contrate a alguien, pero no aparecen en la búsqueda pública.
+      estado.puestos = todos.filter(function(p){ return p.activos_total > 0; });
+      construirOpcionesBusqueda();
+      construirResumenEjecutivo(todos);
       aplicarFiltros();
     })
     .catch(function(err){
@@ -664,43 +686,47 @@
       console.error(err);
     });
 
-  function construirListaDepartamentos(){
+  function construirOpcionesBusqueda(){
     var vistos = {};
     var lista = [];
+
     estado.puestos.forEach(function(p){
-      var clave = p.departamento;
-      if(clave && !vistos[clave]){
-        vistos[clave] = true;
-        lista.push({
-          nombre: p.departamento,
-          orden: p.departamento_orden != null ? p.departamento_orden : 999
-        });
+      var clavePuesto = "puesto|" + p.puesto_vigente;
+      if(p.puesto_vigente && !vistos[clavePuesto]){
+        vistos[clavePuesto] = true;
+        lista.push({ tipo: "Puesto", valor: p.puesto_vigente });
+      }
+      var claveDepto = "depto|" + p.departamento;
+      if(p.departamento && !vistos[claveDepto]){
+        vistos[claveDepto] = true;
+        lista.push({ tipo: "Departamento", valor: p.departamento });
       }
     });
-    lista.sort(function(a, b){ return a.orden - b.orden; });
-    estado.departamentos = lista;
+
+    lista.sort(function(a, b){ return a.valor.localeCompare(b.valor, "es"); });
+    estado.opcionesBusqueda = lista;
   }
 
-  function construirResumenEjecutivo(){
+  function construirResumenEjecutivo(todos){
     var direcciones = {};
     var paises = {};
-    var cambios = 0;
+    var funciones = {};
 
     estado.puestos.forEach(function(p){
       if(p.encargado){ direcciones[p.encargado] = true; }
-      if(p.pais){ paises[p.pais] = true; }
-      if(p.puesto_propuesto){ cambios++; }
+      if(p.funcion){ funciones[p.funcion] = true; }
+      (p.paises_activos || []).forEach(function(pais){ paises[pais] = true; });
     });
 
     animarNumero(document.getElementById("stat-total"), estado.puestos.length, 500);
     animarNumero(document.getElementById("stat-direcciones"), Object.keys(direcciones).length, 500);
     animarNumero(document.getElementById("stat-paises"), Object.keys(paises).length, 500);
-    animarNumero(document.getElementById("stat-cambios"), cambios, 500);
+    animarNumero(document.getElementById("stat-funciones"), Object.keys(funciones).length, 500);
   }
 
   /* ---------------- Buscador predictivo ---------------- */
   elInputBuscador.addEventListener("input", function(){
-    estado.textoDepartamento = elInputBuscador.value;
+    estado.textoBusqueda = elInputBuscador.value;
     mostrarSugerencias(elInputBuscador.value);
     aplicarFiltros();
   });
@@ -717,9 +743,6 @@
 
   function mostrarSugerencias(texto){
     var consulta = normalizar(texto);
-    var coincidencias = estado.departamentos.filter(function(d){
-      return normalizar(d.nombre).indexOf(consulta) !== -1;
-    });
 
     if(consulta === ""){
       elCajaSugerencias.classList.remove("visible");
@@ -727,24 +750,28 @@
       return;
     }
 
+    var coincidencias = estado.opcionesBusqueda.filter(function(op){
+      return normalizar(op.valor).indexOf(consulta) !== -1;
+    });
+
     if(coincidencias.length === 0){
       elCajaSugerencias.innerHTML = '<div class="sin-resultados">Sin coincidencias</div>';
       elCajaSugerencias.classList.add("visible");
       return;
     }
 
-    elCajaSugerencias.innerHTML = coincidencias.slice(0, 12).map(function(d){
-      var total = estado.puestos.filter(function(p){ return p.departamento === d.nombre; }).length;
-      return '<div data-valor="' + escaparHtml(d.nombre) + '">' +
-             escaparHtml(d.nombre) +
-             '<span class="conteo">' + total + '</span></div>';
+    elCajaSugerencias.innerHTML = coincidencias.slice(0, 12).map(function(op){
+      return '<div data-valor="' + escaparHtml(op.valor) + '">' +
+             '<span class="sugerencia-tipo">' + escaparHtml(op.tipo) + '</span>' +
+             escaparHtml(op.valor) +
+             '</div>';
     }).join("");
     elCajaSugerencias.classList.add("visible");
 
     Array.prototype.forEach.call(elCajaSugerencias.querySelectorAll("div[data-valor]"), function(item){
       item.addEventListener("click", function(){
         elInputBuscador.value = item.getAttribute("data-valor");
-        estado.textoDepartamento = elInputBuscador.value;
+        estado.textoBusqueda = elInputBuscador.value;
         elCajaSugerencias.classList.remove("visible");
         aplicarFiltros();
       });
@@ -777,7 +804,7 @@
   document.getElementById("btn-limpiar").addEventListener("click", function(){
     estado.encargado = "TODOS";
     estado.pais = "TODOS";
-    estado.textoDepartamento = "";
+    estado.textoBusqueda = "";
     elInputBuscador.value = "";
     elCajaSugerencias.classList.remove("visible");
 
@@ -793,12 +820,18 @@
 
   /* ---------------- Render ---------------- */
   function aplicarFiltros(){
-    var consultaDepto = normalizar(estado.textoDepartamento);
+    var consulta = normalizar(estado.textoBusqueda);
 
     var resultado = estado.puestos.filter(function(p){
       if(estado.encargado !== "TODOS" && p.encargado !== estado.encargado){ return false; }
-      if(estado.pais !== "TODOS" && p.pais !== estado.pais){ return false; }
-      if(consultaDepto !== "" && normalizar(p.departamento).indexOf(consultaDepto) === -1){ return false; }
+      if(estado.pais !== "TODOS" && (p.paises_activos || []).indexOf(estado.pais) === -1){ return false; }
+      if(consulta !== ""){
+        var coincide =
+          normalizar(p.puesto_vigente).indexOf(consulta) !== -1 ||
+          normalizar(p.departamento).indexOf(consulta) !== -1 ||
+          normalizar(p.encargado).indexOf(consulta) !== -1;
+        if(!coincide){ return false; }
+      }
       return true;
     });
 
@@ -826,19 +859,21 @@
       elSinDatos.style.display = "none";
 
       elCuerpoTabla.innerHTML = lista.map(function(p){
-        var propuestoHtml = p.puesto_propuesto
-          ? '<span class="valor-propuesto">↗ ' + escaparHtml(p.puesto_propuesto) + '</span>'
-          : '<span class="sin-cambio">Sin cambio</span>';
+        var paises = p.paises_activos || [];
+        var presenciaHtml = paises.length
+          ? '<div class="lista-paises">' + paises.map(function(pais){
+              return '<span class="badge-pais">' + escaparHtml(pais) + '</span>';
+            }).join("") + '</div>'
+          : '<span class="sin-presencia">—</span>';
 
         return (
           '<tr>' +
             '<td class="col-departamento">' + escaparHtml(p.departamento) +
               '<span class="encargado-tag">' + escaparHtml(p.encargado) + '</span>' +
             '</td>' +
-            '<td class="col-pais"><span class="badge-pais">' + escaparHtml(p.pais) + '</span></td>' +
-            '<td class="col-empresa">' + escaparHtml(p.empresa) + '</td>' +
+            '<td class="col-funcion">' + escaparHtml(p.funcion || "—") + '</td>' +
             '<td class="col-vigente">' + escaparHtml(p.puesto_vigente || "—") + '</td>' +
-            '<td class="col-propuesto">' + propuestoHtml + '</td>' +
+            '<td class="col-presencia">' + presenciaHtml + '</td>' +
           '</tr>'
         );
       }).join("");
@@ -853,7 +888,7 @@
     var chips = [];
     if(estado.encargado !== "TODOS"){ chips.push(estado.encargado); }
     if(estado.pais !== "TODOS"){ chips.push(estado.pais); }
-    if(estado.textoDepartamento){ chips.push('"' + estado.textoDepartamento + '"'); }
+    if(estado.textoBusqueda){ chips.push('"' + estado.textoBusqueda + '"'); }
 
     elChipsActivos.innerHTML = chips.map(function(c){
       return '<span class="chip-filtro-activo">' + escaparHtml(c) + '</span>';

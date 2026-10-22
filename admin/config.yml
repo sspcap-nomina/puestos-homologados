@@ -14,19 +14,19 @@ collections:
   - name: "puestos"
     label: "Puestos Homologados"
     label_singular: "Puesto"
-    description: "Listado maestro de puestos por país, usado por el directorio en index.html"
+    description: "Catálogo maestro de puestos, con el personal activo por empresa. Los puestos con 0 personas en todas las empresas quedan guardados aquí pero no se muestran en el sitio público hasta que se contrate a alguien."
     files:
       - name: "puestos"
         label: "Listado de Puestos"
-        description: "Cada fila representa un puesto homologado para un país y departamento específicos"
+        description: "Un registro por puesto único (dirección + departamento + función + puesto vigente). Las cifras de cada empresa son la cantidad de personas activas en ese puesto."
         file: "puestos.json"
         fields:
           - label: "Puestos"
             name: "puestos"
             widget: "list"
-            summary: "{{departamento}} · {{pais}} ({{encargado}}) — {{puesto_vigente}}"
+            summary: "{{departamento}} — {{puesto_vigente}} ({{encargado}} · {{funcion}})"
             fields:
-              - label: "Encargado (Dirección corporativa)"
+              - label: "Dirección corporativa"
                 name: "encargado"
                 widget: "select"
                 options:
@@ -37,32 +37,37 @@ collections:
               - label: "Departamento"
                 name: "departamento"
                 widget: "string"
+                hint: "Si cambias el departamento de un puesto existente, se reagrupa solo en el sitio público."
 
-              - label: "País"
-                name: "pais"
+              - label: "Función"
+                name: "funcion"
                 widget: "select"
                 options:
-                  - { label: "Perú", value: "Perú" }
-                  - { label: "Bolivia", value: "Bolivia" }
-                  - { label: "Nicaragua", value: "Nicaragua" }
-                  - { label: "Guatemala", value: "Guatemala" }
-                  - { label: "Honduras", value: "Honduras" }
-                  - { label: "El Salvador", value: "El Salvador" }
-
-              - label: "Empresa"
-                name: "empresa"
-                widget: "string"
-                hint: "Código de la empresa, por ejemplo EILC, PDM, CDF, AFG, AFH, AFS"
+                  - { label: "Back Office", value: "Back Office" }
+                  - { label: "Middle Office", value: "Middle Office" }
+                  - { label: "Front Office", value: "Front Office" }
 
               - label: "Puesto Vigente"
                 name: "puesto_vigente"
                 widget: "string"
 
-              - label: "Puesto Propuesto"
-                name: "puesto_propuesto"
-                widget: "string"
-                required: false
-                hint: "Déjalo vacío si no hay un cambio de puesto propuesto"
+              - label: "Personal activo por empresa"
+                name: "empresas"
+                widget: "object"
+                hint: "Cantidad de personas activas en este puesto, por empresa. Un puesto con 0 en todas las empresas no aparece en la búsqueda pública, pero queda guardado aquí."
+                fields:
+                  - { label: "Perú · EILC", name: "EILC", widget: "number", valueType: "int", default: 0 }
+                  - { label: "Perú · PCT", name: "PCT", widget: "number", valueType: "int", default: 0 }
+                  - { label: "Bolivia · PDM", name: "PDM", widget: "number", valueType: "int", default: 0 }
+                  - { label: "Nicaragua · CDF", name: "CDF", widget: "number", valueType: "int", default: 0 }
+                  - { label: "Guatemala · AFG", name: "AFG", widget: "number", valueType: "int", default: 0 }
+                  - { label: "Guatemala · MPG", name: "MPG", widget: "number", valueType: "int", default: 0 }
+                  - { label: "Honduras · AFH", name: "AFH", widget: "number", valueType: "int", default: 0 }
+                  - { label: "Honduras · MPH", name: "MPH", widget: "number", valueType: "int", default: 0 }
+                  - { label: "Honduras · ECH", name: "ECH", widget: "number", valueType: "int", default: 0 }
+                  - { label: "El Salvador · AFS", name: "AFS", widget: "number", valueType: "int", default: 0 }
+                  - { label: "El Salvador · PST", name: "PST", widget: "number", valueType: "int", default: 0 }
+                  - { label: "El Salvador · ECS", name: "ECS", widget: "number", valueType: "int", default: 0 }
 
               - label: "Orden general"
                 name: "orden"
