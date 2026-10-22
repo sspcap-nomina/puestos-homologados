@@ -1,0 +1,79 @@
+locale: "es"
+
+backend:
+  name: github
+  repo: sspcap-nomina/puestos-homologados
+  branch: main
+
+publish_mode: editorial_workflow
+
+media_folder: "admin/uploads"
+public_folder: "/admin/uploads"
+
+collections:
+  - name: "puestos"
+    label: "Puestos Homologados"
+    label_singular: "Puesto"
+    description: "Listado maestro de puestos por país, usado por el directorio en index.html"
+    files:
+      - name: "puestos"
+        label: "Listado de Puestos"
+        description: "Cada fila representa un puesto homologado para un país y departamento específicos"
+        file: "puestos.json"
+        fields:
+          - label: "Puestos"
+            name: "puestos"
+            widget: "list"
+            summary: "{{departamento}} · {{pais}} ({{encargado}}) — {{puesto_vigente}}"
+            fields:
+              - label: "Encargado (Dirección corporativa)"
+                name: "encargado"
+                widget: "select"
+                options:
+                  - { label: "CIO", value: "CIO" }
+                  - { label: "COO", value: "COO" }
+                  - { label: "CFO", value: "CFO" }
+
+              - label: "Departamento"
+                name: "departamento"
+                widget: "string"
+
+              - label: "País"
+                name: "pais"
+                widget: "select"
+                options:
+                  - { label: "Perú", value: "Perú" }
+                  - { label: "Bolivia", value: "Bolivia" }
+                  - { label: "Nicaragua", value: "Nicaragua" }
+                  - { label: "Guatemala", value: "Guatemala" }
+                  - { label: "Honduras", value: "Honduras" }
+                  - { label: "El Salvador", value: "El Salvador" }
+
+              - label: "Empresa"
+                name: "empresa"
+                widget: "string"
+                hint: "Código de la empresa, por ejemplo EILC, PDM, CDF, AFG, AFH, AFS"
+
+              - label: "Puesto Vigente"
+                name: "puesto_vigente"
+                widget: "string"
+
+              - label: "Puesto Propuesto"
+                name: "puesto_propuesto"
+                widget: "string"
+                required: false
+                hint: "Déjalo vacío si no hay un cambio de puesto propuesto"
+
+              - label: "Orden general"
+                name: "orden"
+                widget: "number"
+                required: false
+                default: 0
+                hint: "Controla el orden de aparición en el listado. No es necesario modificarlo manualmente."
+
+              - label: "Orden del departamento"
+                name: "departamento_orden"
+                widget: "number"
+                required: false
+                default: 999
+                hint: "Controla el orden en que se agrupan los departamentos en la tabla."
