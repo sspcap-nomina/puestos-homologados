@@ -1,7 +1,7 @@
 locale: "es"
 
 backend:
-  name: git-gateway # 👈 CORREGIDO: Cambiado de "github" a "git-gateway"
+  name: github
   repo: sspcap-nomina/puestos-homologados
   branch: main
 
