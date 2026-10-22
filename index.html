@@ -304,26 +304,48 @@
     box-shadow: 0 2px 8px rgba(9,59,28,0.25);
   }
 
-  .acciones-filtro{
-    margin-left: auto;
+  /* Fila label + acción a la misma altura: la etiqueta "Buscar por puesto"
+     queda a la izquierda y "Limpiar filtros" a la derecha, como un botón
+     más (igual estilo que los pills de Dirección/País), para que el campo
+     de abajo quede tan simétrico como el de "Buscar por departamento". */
+  .encabezado-filtro{
+    width: 100%;
     display: flex;
-    gap: 10px;
     align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 4px;
+  }
+
+  .encabezado-filtro .etiqueta-filtro{
+    width: auto;
+    margin-bottom: 0;
   }
 
   .boton-limpiar{
-    background: none;
-    border: none;
+    background: var(--blanco);
+    border: 1.5px solid var(--borde);
     color: var(--texto-secundario);
+    padding: 7px 16px;
+    border-radius: 999px;
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
-    text-decoration: underline;
-    padding: 6px 4px;
-    transition: color .15s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    transition: transform .15s ease, box-shadow .15s ease, color .15s ease, border-color .15s ease;
   }
 
-  .boton-limpiar:hover{ color: var(--verde-sspcap); }
+  .boton-limpiar:hover{
+    border-color: var(--verde-sspcap);
+    color: var(--verde-sspcap);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(17,107,50,0.14);
+  }
+
+  .boton-limpiar:active{ transform: scale(0.96); }
 
   .boton-exportar{
     background: var(--verde-sspcap);
@@ -550,15 +572,14 @@
   <section class="panel-filtros">
 
     <div class="fila-filtros">
-      <label class="etiqueta-filtro" for="buscador-general">Buscar por puesto</label>
+      <div class="encabezado-filtro">
+        <label class="etiqueta-filtro" for="buscador-general">Buscar por puesto</label>
+        <button class="boton-limpiar" id="btn-limpiar">✕ Limpiar filtros</button>
+      </div>
       <div class="buscador">
         <input type="text" id="buscador-general" autocomplete="off"
                placeholder="Ej. Analista Contable, Gerente de Nóminas..." />
         <div class="sugerencias" id="caja-sugerencias"></div>
-      </div>
-
-      <div class="acciones-filtro">
-        <button class="boton-limpiar" id="btn-limpiar">Limpiar filtros</button>
       </div>
     </div>
 
