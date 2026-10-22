@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Puestos Homologados · SSP Capital</title>
+<style>
+  :root{
+    --azul-oscuro: #002B49;
+    --azul-electrico: #0084C5;
+    --fondo-platino: #F8FAFC;
+    --texto-principal: #152233;
+    --texto-secundario: #5B6B7D;
+    --borde: #E2E8F0;
+    --blanco: #FFFFFF;
+    --verde-cambio: #0E9F6E;
+    --fondo-cambio: #E7F8F1;
+  }
+
+  *{ box-sizing: border-box; }
+
+  body{
+    margin: 0;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--fondo-platino);
+    color: var(--texto-principal);
+  }
+
+  /* ---------- Encabezado ---------- */
+  header{
+    background: var(--azul-oscuro);
+    color: var(--blanco);
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.18);
+  }
+
+  .marca{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+  }
+
+  .marca img{
+    height: 36px;
+    width: auto;
+    display: block;
+  }
+
+  .marca .logo-texto{
+    display: none;
+    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: 0.3px;
+    color: var(--blanco);
+  }
+
+  .marca img.logo-oculto{ display: none; }
+  .marca img.logo-oculto + .logo-texto{ display: inline-block; }
+
+  .titulo-app{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #C9DDEA;
+    border-left: 1px solid rgba(255,255,255,0.25);
+    padding-left: 16px;
+    line-height: 1.3;
+  }
+
+  .titulo-app strong{
+    display:block;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--blanco);
+  }
+
+  /* ---------- Contenedor general ---------- */
+  main{
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 24px 20px 60px;
+  }
+
+  .panel-filtros{
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 22px;
+    box-shadow: 0 1px 3px rgba(15,35,55,0.04);
+  }
+
+  .fila-filtros{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .fila-filtros + .fila-filtros{
+    margin-top: 16px;
+  }
+
+  label.etiqueta-filtro{
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--texto-secundario);
+    width: 100%;
+    margin-bottom: 4px;
+  }
+
+  /* ---------- Buscador predictivo ---------- */
+  .buscador{
+    position: relative;
+    flex: 1 1 320px;
+    min-width: 240px;
+  }
+
+  .buscador input[type="text"]{
+    width: 100%;
+    padding: 11px 14px 11px 40px;
+    border: 1.5px solid var(--borde);
+    border-radius: 10px;
+    font-size: 14.5px;
+    color: var(--texto-principal);
+    background: var(--fondo-platino) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="%235B6B7D" stroke-width="2"><circle cx="7.5" cy="7.5" r="6"/><line x1="12" y1="12" x2="16.5" y2="16.5"/></svg>') no-repeat 12px center;
+    outline: none;
+    transition: border-color .15s, box-shadow .15s;
+  }
+
+  .buscador input[type="text"]:focus{
+    border-color: var(--azul-electrico);
+    box-shadow: 0 0 0 3px rgba(0,132,197,0.15);
+    background-color: var(--blanco);
+  }
+
+  .sugerencias{
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    box-shadow: 0 10px 24px rgba(15,35,55,0.12);
+    max-height: 260px;
+    overflow-y: auto;
+    z-index: 40;
+    display: none;
+  }
+
+  .sugerencias.visible{ display: block; }
+
+  .sugerencias div{
+    padding: 10px 14px;
+    font-size: 14px;
+    cursor: pointer;
+    color: var(--texto-principal);
+  }
+
+  .sugerencias div:hover,
+  .sugerencias div.activa{
+    background: var(--fondo-platino);
+    color: var(--azul-electrico);
+  }
+
+  .sugerencias .sin-resultados{
+    color: var(--texto-secundario);
+    cursor: default;
+  }
+
+  .sugerencias .conteo{
+    float: right;
+    color: var(--texto-secundario);
+    font-size: 12.5px;
+  }
+
+  /* ---------- Botones de filtro (pills) ---------- */
+  .pill{
+    border: 1.5px solid var(--borde);
+    background: var(--blanco);
+    color: var(--texto-principal);
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 13.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .15s ease;
+    white-space: nowrap;
+  }
+
+  .pill:hover{
+    border-color: var(--azul-electrico);
+    color: var(--azul-electrico);
+  }
+
+  .pill.activa{
+    background: var(--azul-electrico);
+    border-color: var(--azul-electrico);
+    color: var(--blanco);
+  }
+
+  .pill.direccion.activa{
+    background: var(--azul-oscuro);
+    border-color: var(--azul-oscuro);
+  }
+
+  .acciones-filtro{
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .boton-limpiar{
+    background: none;
+    border: none;
+    color: var(--texto-secundario);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 6px 4px;
+  }
+
+  .boton-limpiar:hover{ color: var(--azul-electrico); }
+
+  /* ---------- Resumen de resultados ---------- */
+  .resumen{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .resumen .contador{
+    font-size: 14px;
+    color: var(--texto-secundario);
+  }
+
+  .resumen .contador strong{
+    color: var(--azul-oscuro);
+    font-size: 16px;
+  }
+
+  .chip-filtro-activo{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #E8F4FB;
+    color: var(--azul-oscuro);
+    border: 1px solid #BFE1F2;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12.5px;
+    font-weight: 600;
+    margin-left: 8px;
+  }
+
+  /* ---------- Tabla de resultados ---------- */
+  .contenedor-tabla{
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(15,35,55,0.04);
+  }
+
+  table{
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  thead th{
+    background: var(--azul-oscuro);
+    color: var(--blanco);
+    text-align: left;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 13px 16px;
+    position: sticky;
+    top: 68px;
+  }
+
+  tbody td{
+    padding: 13px 16px;
+    font-size: 14px;
+    border-bottom: 1px solid var(--borde);
+    vertical-align: top;
+  }
+
+  tbody tr:last-child td{ border-bottom: none; }
+  tbody tr:hover{ background: #FAFCFE; }
+
+  td.col-departamento{ font-weight: 600; color: var(--texto-principal); }
+  td.col-departamento span.encargado-tag{
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--azul-electrico);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-top: 2px;
+  }
+
+  td.col-pais{ white-space: nowrap; }
+  .badge-pais{
+    display: inline-block;
+    background: var(--fondo-platino);
+    border: 1px solid var(--borde);
+    color: var(--texto-principal);
+    font-size: 12.5px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 7px;
+  }
+
+  td.col-empresa{
+    font-family: "SFMono-Regular", Consolas, monospace;
+    font-size: 12.5px;
+    color: var(--texto-secundario);
+    letter-spacing: 0.02em;
+  }
+
+  td.col-vigente{ color: var(--texto-principal); }
+
+  td.col-propuesto{ color: var(--texto-secundario); }
+  td.col-propuesto .valor-propuesto{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--fondo-cambio);
+    color: var(--verde-cambio);
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 7px;
+    font-size: 13px;
+  }
+  td.col-propuesto .guion{ color: #B9C4CF; }
+
+  .sin-datos{
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--texto-secundario);
+  }
+
+  .sin-datos strong{
+    display: block;
+    font-size: 16px;
+    color: var(--texto-principal);
+    margin-bottom: 6px;
+  }
+
+  footer{
+    text-align: center;
+    color: var(--texto-secundario);
+    font-size: 12.5px;
+    padding: 30px 20px 10px;
+  }
+
+  @media (max-width: 760px){
+    header{ padding: 12px 16px; flex-wrap: wrap; }
+    .titulo-app{ border-left: none; padding-left: 0; font-size: 13px; }
+    thead{ display: none; }
+    table, tbody, tr, td{ display: block; width: 100%; }
+    tbody tr{
+      border-bottom: 1px solid var(--borde);
+      padding: 14px 16px;
+    }
+    tbody td{
+      border: none;
+      padding: 4px 0;
+    }
+    td.col-departamento::before{ content: ""; }
+    td.col-pais, td.col-empresa, td.col-vigente, td.col-propuesto{
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    td.col-pais::before{ content: "País"; font-size: 11px; color: var(--texto-secundario); font-weight: 700; text-transform: uppercase; }
+    td.col-empresa::before{ content: "Empresa"; font-size: 11px; color: var(--texto-secundario); font-weight: 700; text-transform: uppercase; }
+    td.col-vigente::before{ content: "Puesto vigente"; font-size: 11px; color: var(--texto-secundario); font-weight: 700; text-transform: uppercase; }
+    td.col-propuesto::before{ content: "Puesto propuesto"; font-size: 11px; color: var(--texto-secundario); font-weight: 700; text-transform: uppercase; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="marca">
+    <img id="logo-ssp" src="https://sspcap.com" alt="SSP Capital"
+         onerror="this.classList.add('logo-oculto'); this.alt='';" />
+    <span class="logo-texto">SSP Capital</span>
+  </div>
+  <p class="titulo-app">
+    <strong>Puestos Homologados</strong>
+    Recursos Humanos LATAM
+  </p>
+</header>
+
+<main>
+
+  <section class="panel-filtros">
+
+    <div class="fila-filtros">
+      <label class="etiqueta-filtro" for="buscador-departamento">Buscar por departamento</label>
+      <div class="buscador">
+        <input type="text" id="buscador-departamento" autocomplete="off"
+               placeholder="Escribe un departamento, ej. Nóminas, Contabilidad, Tesorería..." />
+        <div class="sugerencias" id="caja-sugerencias"></div>
+      </div>
+
+      <div class="acciones-filtro">
+        <button class="boton-limpiar" id="btn-limpiar">Limpiar filtros</button>
+      </div>
+    </div>
+
+    <div class="fila-filtros">
+      <label class="etiqueta-filtro">Dirección corporativa</label>
+      <button class="pill direccion activa" data-encargado="TODOS">Todas</button>
+      <button class="pill direccion" data-encargado="CIO">CIO</button>
+      <button class="pill direccion" data-encargado="COO">COO</button>
+      <button class="pill direccion" data-encargado="CFO">CFO</button>
+    </div>
+
+    <div class="fila-filtros">
+      <label class="etiqueta-filtro">País</label>
+      <button class="pill activa" data-pais="TODOS">Todos</button>
+      <button class="pill" data-pais="Perú">Perú</button>
+      <button class="pill" data-pais="Bolivia">Bolivia</button>
+      <button class="pill" data-pais="Nicaragua">Nicaragua</button>
+      <button class="pill" data-pais="Guatemala">Guatemala</button>
+      <button class="pill" data-pais="Honduras">Honduras</button>
+      <button class="pill" data-pais="El Salvador">El Salvador</button>
+    </div>
+
+  </section>
+
+  <div class="resumen">
+    <div class="contador">
+      <strong id="num-resultados">0</strong> puestos encontrados
+      <span id="chips-activos"></span>
+    </div>
+  </div>
+
+  <div class="contenedor-tabla">
+    <table>
+      <thead>
+        <tr>
+          <th style="width:26%">Departamento</th>
+          <th style="width:12%">País</th>
+          <th style="width:10%">Empresa</th>
+          <th style="width:26%">Puesto vigente</th>
+          <th style="width:26%">Puesto propuesto</th>
+        </tr>
+      </thead>
+      <tbody id="cuerpo-tabla"></tbody>
+    </table>
+    <div class="sin-datos" id="sin-datos" style="display:none;">
+      <strong>No se encontraron puestos</strong>
+      Ajusta los filtros o el término de búsqueda para ver resultados.
+    </div>
+  </div>
+
+  <footer>
+    SSP Capital · Directorio interno de puestos homologados · Datos gestionados vía Decap CMS
+  </footer>
+
+</main>
+
+<script>
+(function(){
+  "use strict";
+
+  var TODOS_PAISES = [
+    "Perú", "Bolivia", "Nicaragua", "Guatemala", "Honduras", "El Salvador"
+  ];
+
+  var estado = {
+    puestos: [],
+    departamentos: [],
+    encargado: "TODOS",
+    pais: "TODOS",
+    textoDepartamento: ""
+  };
+
+  var elCuerpoTabla = document.getElementById("cuerpo-tabla");
+  var elSinDatos = document.getElementById("sin-datos");
+  var elNumResultados = document.getElementById("num-resultados");
+  var elChipsActivos = document.getElementById("chips-activos");
+  var elInputBuscador = document.getElementById("buscador-departamento");
+  var elCajaSugerencias = document.getElementById("caja-sugerencias");
+
+  function normalizar(texto){
+    return (texto || "")
+      .toString()
+      .normalize("NFD")
+      .replace(/[̀-ͯ]/g, "")
+      .toLowerCase()
+      .trim();
+  }
+
+  function escaparHtml(texto){
+    var div = document.createElement("div");
+    div.textContent = texto == null ? "" : texto;
+    return div.innerHTML;
+  }
+
+  /* ---------------- Carga de datos ---------------- */
+  fetch("puestos.json", { cache: "no-store" })
+    .then(function(resp){
+      if(!resp.ok){ throw new Error("No se pudo cargar puestos.json (" + resp.status + ")"); }
+      return resp.json();
+    })
+    .then(function(data){
+      estado.puestos = (data && data.puestos) ? data.puestos : [];
+      construirListaDepartamentos();
+      aplicarFiltros();
+    })
+    .catch(function(err){
+      elCuerpoTabla.innerHTML = "";
+      elSinDatos.style.display = "block";
+      elSinDatos.querySelector("strong").textContent = "No se pudo cargar la información";
+      elSinDatos.lastChild.textContent = "Verifica que el archivo puestos.json esté disponible junto a esta página.";
+      console.error(err);
+    });
+
+  function construirListaDepartamentos(){
+    var vistos = {};
+    var lista = [];
+    estado.puestos.forEach(function(p){
+      var clave = p.departamento;
+      if(clave && !vistos[clave]){
+        vistos[clave] = true;
+        lista.push({
+          nombre: p.departamento,
+          orden: p.departamento_orden != null ? p.departamento_orden : 999
+        });
+      }
+    });
+    lista.sort(function(a, b){ return a.orden - b.orden; });
+    estado.departamentos = lista;
+  }
+
+  /* ---------------- Buscador predictivo ---------------- */
+  elInputBuscador.addEventListener("input", function(){
+    estado.textoDepartamento = elInputBuscador.value;
+    mostrarSugerencias(elInputBuscador.value);
+    aplicarFiltros();
+  });
+
+  elInputBuscador.addEventListener("focus", function(){
+    mostrarSugerencias(elInputBuscador.value);
+  });
+
+  document.addEventListener("click", function(e){
+    if(!elCajaSugerencias.contains(e.target) && e.target !== elInputBuscador){
+      elCajaSugerencias.classList.remove("visible");
+    }
+  });
+
+  function mostrarSugerencias(texto){
+    var consulta = normalizar(texto);
+    var coincidencias = estado.departamentos.filter(function(d){
+      return normalizar(d.nombre).indexOf(consulta) !== -1;
+    });
+
+    if(consulta === ""){
+      elCajaSugerencias.classList.remove("visible");
+      elCajaSugerencias.innerHTML = "";
+      return;
+    }
+
+    if(coincidencias.length === 0){
+      elCajaSugerencias.innerHTML = '<div class="sin-resultados">Sin coincidencias</div>';
+      elCajaSugerencias.classList.add("visible");
+      return;
+    }
+
+    elCajaSugerencias.innerHTML = coincidencias.slice(0, 12).map(function(d){
+      var total = estado.puestos.filter(function(p){ return p.departamento === d.nombre; }).length;
+      return '<div data-valor="' + escaparHtml(d.nombre) + '">' +
+             escaparHtml(d.nombre) +
+             '<span class="conteo">' + total + '</span></div>';
+    }).join("");
+    elCajaSugerencias.classList.add("visible");
+
+    Array.prototype.forEach.call(elCajaSugerencias.querySelectorAll("div[data-valor]"), function(item){
+      item.addEventListener("click", function(){
+        elInputBuscador.value = item.getAttribute("data-valor");
+        estado.textoDepartamento = elInputBuscador.value;
+        elCajaSugerencias.classList.remove("visible");
+        aplicarFiltros();
+      });
+    });
+  }
+
+  /* ---------------- Filtros rápidos ---------------- */
+  Array.prototype.forEach.call(document.querySelectorAll(".pill[data-encargado]"), function(btn){
+    btn.addEventListener("click", function(){
+      Array.prototype.forEach.call(document.querySelectorAll(".pill[data-encargado]"), function(b){
+        b.classList.remove("activa");
+      });
+      btn.classList.add("activa");
+      estado.encargado = btn.getAttribute("data-encargado");
+      aplicarFiltros();
+    });
+  });
+
+  Array.prototype.forEach.call(document.querySelectorAll(".pill[data-pais]"), function(btn){
+    btn.addEventListener("click", function(){
+      Array.prototype.forEach.call(document.querySelectorAll(".pill[data-pais]"), function(b){
+        b.classList.remove("activa");
+      });
+      btn.classList.add("activa");
+      estado.pais = btn.getAttribute("data-pais");
+      aplicarFiltros();
+    });
+  });
+
+  document.getElementById("btn-limpiar").addEventListener("click", function(){
+    estado.encargado = "TODOS";
+    estado.pais = "TODOS";
+    estado.textoDepartamento = "";
+    elInputBuscador.value = "";
+    elCajaSugerencias.classList.remove("visible");
+
+    Array.prototype.forEach.call(document.querySelectorAll(".pill[data-encargado]"), function(b){
+      b.classList.toggle("activa", b.getAttribute("data-encargado") === "TODOS");
+    });
+    Array.prototype.forEach.call(document.querySelectorAll(".pill[data-pais]"), function(b){
+      b.classList.toggle("activa", b.getAttribute("data-pais") === "TODOS");
+    });
+
+    aplicarFiltros();
+  });
+
+  /* ---------------- Render ---------------- */
+  function aplicarFiltros(){
+    var consultaDepto = normalizar(estado.textoDepartamento);
+
+    var resultado = estado.puestos.filter(function(p){
+      if(estado.encargado !== "TODOS" && p.encargado !== estado.encargado){ return false; }
+      if(estado.pais !== "TODOS" && p.pais !== estado.pais){ return false; }
+      if(consultaDepto !== "" && normalizar(p.departamento).indexOf(consultaDepto) === -1){ return false; }
+      return true;
+    });
+
+    resultado.sort(function(a, b){
+      var da = a.departamento_orden != null ? a.departamento_orden : 999;
+      var db = b.departamento_orden != null ? b.departamento_orden : 999;
+      if(da !== db){ return da - db; }
+      return (a.orden || 0) - (b.orden || 0);
+    });
+
+    renderTabla(resultado);
+    renderResumen(resultado.length);
+  }
+
+  function renderTabla(lista){
+    if(lista.length === 0){
+      elCuerpoTabla.innerHTML = "";
+      elSinDatos.style.display = "block";
+      return;
+    }
+    elSinDatos.style.display = "none";
+
+    elCuerpoTabla.innerHTML = lista.map(function(p){
+      var propuestoHtml = p.puesto_propuesto
+        ? '<span class="valor-propuesto">' + escaparHtml(p.puesto_propuesto) + '</span>'
+        : '<span class="guion">—</span>';
+
+      return (
+        '<tr>' +
+          '<td class="col-departamento">' + escaparHtml(p.departamento) +
+            '<span class="encargado-tag">' + escaparHtml(p.encargado) + '</span>' +
+          '</td>' +
+          '<td class="col-pais"><span class="badge-pais">' + escaparHtml(p.pais) + '</span></td>' +
+          '<td class="col-empresa">' + escaparHtml(p.empresa) + '</td>' +
+          '<td class="col-vigente">' + escaparHtml(p.puesto_vigente || "—") + '</td>' +
+          '<td class="col-propuesto">' + propuestoHtml + '</td>' +
+        '</tr>'
+      );
+    }).join("");
+  }
+
+  function renderResumen(total){
+    elNumResultados.textContent = total;
+
+    var chips = [];
+    if(estado.encargado !== "TODOS"){ chips.push(estado.encargado); }
+    if(estado.pais !== "TODOS"){ chips.push(estado.pais); }
+    if(estado.textoDepartamento){ chips.push('"' + estado.textoDepartamento + '"'); }
+
+    elChipsActivos.innerHTML = chips.map(function(c){
+      return '<span class="chip-filtro-activo">' + escaparHtml(c) + '</span>';
+    }).join("");
+  }
+
+})();
+</script>
+
+</body>
+</html>
