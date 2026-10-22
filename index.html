@@ -1538,8 +1538,11 @@
   function validarNombrePuesto(texto){
     var valor = (texto || "").trim();
     if(!valor){ return "Escribe el nombre del puesto."; }
-    if(!/^[0-9A-Za-zÀ-ÖØ-öø-ÿñÑ\s]+$/.test(valor)){
-      return "Usa solo letras y espacios, sin símbolos (#, /, -, *, @...).";
+    // Los chequeos de palabra/patrón van antes que el de símbolos en general,
+    // para que el mensaje sea el más específico posible (p. ej. que
+    // "Encargado(a)" avise sobre género y no solo "sin símbolos").
+    if(/\(\s*a\s*\)|\/\s*a\b/i.test(valor)){
+      return 'No diferencies el género con "(a)" o "/a" (ej. "Encargado(a)"). Usa un nombre neutro.';
     }
     if(/corporativ/i.test(valor)){
       return 'No incluyas la palabra "Corporativo".';
@@ -1547,8 +1550,8 @@
     if(/regional/i.test(valor)){
       return 'No incluyas la palabra "Regional".';
     }
-    if(/\(\s*a\s*\)|\/\s*a\b/i.test(valor)){
-      return 'No diferencies el género con "(a)" o "/a" (ej. "Encargado(a)"). Usa un nombre neutro.';
+    if(!/^[0-9A-Za-zÀ-ÖØ-öø-ÿñÑ\s]+$/.test(valor)){
+      return "Usa solo letras y espacios, sin símbolos (#, /, -, *, @...).";
     }
     return null;
   }
@@ -1565,6 +1568,7 @@
     } else {
       elPpPuesto.classList.remove("campo-invalido");
       elPpPuestoError.classList.remove("visible");
+      elPpPuestoError.textContent = "";
     }
     return !error;
   }
