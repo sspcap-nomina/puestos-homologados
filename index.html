@@ -569,8 +569,8 @@
       <strong id="num-resultados">0</strong> puestos encontrados
       <span id="chips-activos"></span>
     </div>
-    <button class="boton-exportar" id="btn-exportar" title="Descarga el catálogo completo (incluye puestos sin personal activo), con el mismo formato del Excel original">
-      ⬇ Exportar base de datos (Excel)
+    <button class="boton-exportar" id="btn-exportar" title="Descarga los puestos que ves en pantalla (según tu búsqueda y filtros actuales), con presencia por país — sin cantidades de personal">
+      ⬇ Exportar resultados (Excel)
     </button>
   </div>
 
@@ -605,7 +605,7 @@
 
   var estado = {
     puestos: [],
-    todos: [],
+    resultadoActual: [],
     opcionesBusqueda: [],
     encargado: "TODOS",
     pais: "TODOS",
@@ -693,9 +693,6 @@
     })
     .then(function(data){
       var todos = ((data && data.puestos) ? data.puestos : []).map(derivarPresencia);
-      // Se guarda el catálogo completo (incluye los puestos con 0 activos) para
-      // poder exportarlo íntegro a Excel, igual que la base de datos original.
-      estado.todos = todos;
       // Solo se muestran puestos con al menos una persona activa en alguna empresa.
       // Los puestos "en catálogo" con 0 activos quedan en la base de datos para
       // cuando se contrate a alguien, pero no aparecen en la búsqueda pública.
@@ -868,6 +865,10 @@
       return (a.orden || 0) - (b.orden || 0);
     });
 
+    // Se guarda para que "Exportar a Excel" descargue exactamente lo que
+    // se ve en pantalla (mismo filtro/búsqueda), no el catálogo completo.
+    estado.resultadoActual = resultado;
+
     renderTabla(resultado);
     renderResumen(resultado.length);
   }
@@ -906,79 +907,36 @@
   }
 
   /* ---------------- Exportar a Excel ---------------- */
-  // Exporta el catálogo COMPLETO (incluye puestos con 0 activos), con el mismo
-  // agrupamiento por país/empresa del Excel original que se usó para crear
-  // puestos.json. No depende de los filtros aplicados en pantalla.
-  var EMPRESA_COLS = ["EILC","PCT","PDM","CDF","AFG","MPG","AFH","MPH","ECH","AFS","PST","ECS"];
-  var BLOQUES_PAIS = [
-    { pais: "Perú", cols: ["EILC","PCT"] },
-    { pais: "Bolivia", cols: ["PDM"] },
-    { pais: "Nicaragua", cols: ["CDF"] },
-    { pais: "Guatemala", cols: ["AFG","MPG"] },
-    { pais: "Honduras", cols: ["AFH","MPH","ECH"] },
-    { pais: "El Salvador", cols: ["AFS","PST","ECS"] }
-  ];
-
+  // Exporta exactamente lo que se ve en pantalla (mismo filtro/búsqueda) y,
+  // igual que la tabla pública, solo presencia por país (Sí/—), nunca
+  // cantidades de personal.
   function exportarExcel(){
     if(typeof XLSX === "undefined"){
       alert("No se pudo cargar la librería de Excel. Verifica tu conexión a internet e inténtalo de nuevo.");
       return;
     }
-    if(!estado.todos || !estado.todos.length){
-      alert("Los datos aún no han terminado de cargar. Espera un momento e inténtalo de nuevo.");
+    var lista = estado.resultadoActual || [];
+    if(!lista.length){
+      alert("No hay puestos para exportar con el filtro o la búsqueda actual.");
       return;
     }
 
-    var filaHeader1 = ["", "", "", ""];
-    var filaHeader2 = ["Dirección", "Departamento", "Función", "Puesto Vigente"];
+    var encabezado = ["Dirección", "Departamento", "Función", "Puesto Vigente"].concat(ORDEN_PAISES);
 
-    BLOQUES_PAIS.forEach(function(bloque){
-      filaHeader1.push(bloque.pais);
-      for(var i = 1; i < bloque.cols.length; i++){ filaHeader1.push(""); }
-      bloque.cols.forEach(function(codigo){ filaHeader2.push(codigo); });
-    });
-    filaHeader1.push("");
-    filaHeader2.push("Total activos");
-
-    var ordenados = estado.todos.slice().sort(function(a, b){
-      var da = a.departamento_orden != null ? a.departamento_orden : 999;
-      var db = b.departamento_orden != null ? b.departamento_orden : 999;
-      if(da !== db){ return da - db; }
-      return (a.orden || 0) - (b.orden || 0);
-    });
-
-    var filas = ordenados.map(function(p){
-      var empresas = p.empresas || {};
+    var filas = lista.map(function(p){
+      var paisesActivos = p.paises_activos || [];
       var fila = [p.encargado || "", p.departamento || "", p.funcion || "", p.puesto_vigente || ""];
-      var total = 0;
-      EMPRESA_COLS.forEach(function(codigo){
-        var cantidad = Number(empresas[codigo]) || 0;
-        total += cantidad;
-        fila.push(cantidad);
+      ORDEN_PAISES.forEach(function(pais){
+        fila.push(paisesActivos.indexOf(pais) !== -1 ? "Sí" : "");
       });
-      fila.push(total);
       return fila;
     });
 
-    var datos = [filaHeader1, filaHeader2].concat(filas);
+    var datos = [encabezado].concat(filas);
     var hoja = XLSX.utils.aoa_to_sheet(datos);
 
-    var merges = [];
-    var colIndice = 4;
-    BLOQUES_PAIS.forEach(function(bloque){
-      if(bloque.cols.length > 1){
-        merges.push({ s: { r: 0, c: colIndice }, e: { r: 0, c: colIndice + bloque.cols.length - 1 } });
-      }
-      colIndice += bloque.cols.length;
-    });
-    [0, 1, 2, 3, colIndice].forEach(function(c){
-      merges.push({ s: { r: 0, c: c }, e: { r: 1, c: c } });
-    });
-    hoja["!merges"] = merges;
-
     hoja["!cols"] = [{ wch: 10 }, { wch: 28 }, { wch: 14 }, { wch: 32 }]
-      .concat(EMPRESA_COLS.map(function(){ return { wch: 8 }; }))
-      .concat([{ wch: 13 }]);
+      .concat(ORDEN_PAISES.map(function(){ return { wch: 12 }; }));
 
     var libro = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(libro, hoja, "Puestos Homologados");
