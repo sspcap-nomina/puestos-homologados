@@ -531,10 +531,10 @@
   <section class="panel-filtros">
 
     <div class="fila-filtros">
-      <label class="etiqueta-filtro" for="buscador-general">Buscar por puesto, departamento o dirección</label>
+      <label class="etiqueta-filtro" for="buscador-general">Buscar por puesto</label>
       <div class="buscador">
         <input type="text" id="buscador-general" autocomplete="off"
-               placeholder="Ej. Analista Contable, Nóminas, CFO..." />
+               placeholder="Ej. Analista Contable, Gerente de Nóminas..." />
         <div class="sugerencias" id="caja-sugerencias"></div>
       </div>
 
@@ -720,11 +720,6 @@
         vistos[clavePuesto] = true;
         lista.push({ tipo: "Puesto", valor: p.puesto_vigente });
       }
-      var claveDepto = "depto|" + p.departamento;
-      if(p.departamento && !vistos[claveDepto]){
-        vistos[claveDepto] = true;
-        lista.push({ tipo: "Departamento", valor: p.departamento });
-      }
     });
 
     lista.sort(function(a, b){ return a.valor.localeCompare(b.valor, "es"); });
@@ -849,12 +844,8 @@
     var resultado = estado.puestos.filter(function(p){
       if(estado.encargado !== "TODOS" && p.encargado !== estado.encargado){ return false; }
       if(estado.pais !== "TODOS" && (p.paises_activos || []).indexOf(estado.pais) === -1){ return false; }
-      if(consulta !== ""){
-        var coincide =
-          normalizar(p.puesto_vigente).indexOf(consulta) !== -1 ||
-          normalizar(p.departamento).indexOf(consulta) !== -1 ||
-          normalizar(p.encargado).indexOf(consulta) !== -1;
-        if(!coincide){ return false; }
+      if(consulta !== "" && normalizar(p.puesto_vigente).indexOf(consulta) === -1){
+        return false;
       }
       return true;
     });
