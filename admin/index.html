@@ -9,8 +9,11 @@
   <!-- Incluye el script que construye la página y activa Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 
+  <!-- Para generar el Excel completo con el formato original de la base de datos -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
   <!--
-    Buscador dentro del listado "Puestos Homologados".
+    Buscador y exportación a Excel dentro del listado "Puestos Homologados".
     Decap CMS no trae un buscador nativo para una lista dentro de una
     colección de un solo archivo (tipo "files"), así que este script lo
     agrega por encima, filtrando las 272 tarjetas por su título visible
@@ -52,6 +55,111 @@
       });
     }
 
+    /* ---------------- Exportar Excel completo (formato original) ---------------- */
+    // A diferencia de la descarga del sitio público (que respeta filtros y nunca
+    // muestra cifras), este botón vive solo dentro del panel admin -con acceso
+    // restringido por GitHub- y exporta el catálogo COMPLETO (los 272 puestos,
+    // incluidos los de 0 activos) con el mismo formato por país/empresa del
+    // Excel original que se usó para crear puestos.json.
+    var EMPRESA_COLS = ["EILC","PCT","PDM","CDF","AFG","MPG","AFH","MPH","ECH","AFS","PST","ECS"];
+    var BLOQUES_PAIS = [
+      { pais: "Perú", cols: ["EILC","PCT"] },
+      { pais: "Bolivia", cols: ["PDM"] },
+      { pais: "Nicaragua", cols: ["CDF"] },
+      { pais: "Guatemala", cols: ["AFG","MPG"] },
+      { pais: "Honduras", cols: ["AFH","MPH","ECH"] },
+      { pais: "El Salvador", cols: ["AFS","PST","ECS"] }
+    ];
+
+    function construirYDescargarExcelCompleto(todos){
+      var filaHeader1 = ["", "", "", ""];
+      var filaHeader2 = ["Dirección", "Departamento", "Función", "Puesto Vigente"];
+
+      BLOQUES_PAIS.forEach(function(bloque){
+        filaHeader1.push(bloque.pais);
+        for(var i = 1; i < bloque.cols.length; i++){ filaHeader1.push(""); }
+        bloque.cols.forEach(function(codigo){ filaHeader2.push(codigo); });
+      });
+      filaHeader1.push("");
+      filaHeader2.push("Total activos");
+
+      var ordenados = todos.slice().sort(function(a, b){
+        var da = a.departamento_orden != null ? a.departamento_orden : 999;
+        var db = b.departamento_orden != null ? b.departamento_orden : 999;
+        if(da !== db){ return da - db; }
+        return (a.orden || 0) - (b.orden || 0);
+      });
+
+      var filas = ordenados.map(function(p){
+        var empresas = p.empresas || {};
+        var fila = [p.encargado || "", p.departamento || "", p.funcion || "", p.puesto_vigente || ""];
+        var total = 0;
+        EMPRESA_COLS.forEach(function(codigo){
+          var cantidad = Number(empresas[codigo]) || 0;
+          total += cantidad;
+          fila.push(cantidad);
+        });
+        fila.push(total);
+        return fila;
+      });
+
+      var datos = [filaHeader1, filaHeader2].concat(filas);
+      var hoja = XLSX.utils.aoa_to_sheet(datos);
+
+      var merges = [];
+      var colIndice = 4;
+      BLOQUES_PAIS.forEach(function(bloque){
+        if(bloque.cols.length > 1){
+          merges.push({ s: { r: 0, c: colIndice }, e: { r: 0, c: colIndice + bloque.cols.length - 1 } });
+        }
+        colIndice += bloque.cols.length;
+      });
+      [0, 1, 2, 3, colIndice].forEach(function(c){
+        merges.push({ s: { r: 0, c: c }, e: { r: 1, c: c } });
+      });
+      hoja["!merges"] = merges;
+
+      hoja["!cols"] = [{ wch: 10 }, { wch: 28 }, { wch: 14 }, { wch: 32 }]
+        .concat(EMPRESA_COLS.map(function(){ return { wch: 8 }; }))
+        .concat([{ wch: 13 }]);
+
+      var libro = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(libro, hoja, "Puestos Homologados");
+
+      var fecha = new Date().toISOString().slice(0, 10);
+      XLSX.writeFile(libro, "puestos_homologados_base_de_datos_" + fecha + ".xlsx");
+    }
+
+    function exportarExcelCompleto(boton){
+      if(typeof XLSX === "undefined"){
+        alert("No se pudo cargar la librería de Excel. Verifica tu conexión a internet e inténtalo de nuevo.");
+        return;
+      }
+      var textoOriginal = boton.textContent;
+      boton.disabled = true;
+      boton.textContent = "Generando...";
+
+      // Se lee puestos.json publicado (la misma fuente que usa el sitio público),
+      // no el estado sin guardar del editor, para no exportar cambios a medio hacer.
+      fetch("../puestos.json", { cache: "no-store" })
+        .then(function(resp){
+          if(!resp.ok){ throw new Error("No se pudo leer puestos.json (" + resp.status + ")"); }
+          return resp.json();
+        })
+        .then(function(data){
+          var todos = (data && data.puestos) ? data.puestos : [];
+          if(!todos.length){ throw new Error("puestos.json no tiene datos."); }
+          construirYDescargarExcelCompleto(todos);
+        })
+        .catch(function(err){
+          alert("No se pudo generar el Excel: " + err.message);
+        })
+        .then(function(){
+          boton.disabled = false;
+          boton.textContent = textoOriginal;
+        });
+    }
+
     function intentarInyectar(){
       var contenedor = document.querySelector('[id^="puestos-field-"]');
       if(!contenedor){ return; }
@@ -63,20 +171,34 @@
 
       var caja = document.createElement("div");
       caja.id = "buscador-admin-puestos";
-      caja.style.cssText = "position:sticky;top:0;z-index:50;background:#fff;padding:8px 0;";
+      caja.style.cssText =
+        "position:sticky;top:0;z-index:50;background:#fff;padding:8px 0;" +
+        "display:flex;gap:8px;align-items:center;flex-wrap:wrap;";
 
       var input = document.createElement("input");
       input.type = "text";
       input.placeholder = "Buscar puesto, departamento o dirección...";
       input.autocomplete = "off";
       input.style.cssText =
-        "width:100%;box-sizing:border-box;padding:10px 12px;" +
+        "flex:1 1 240px;box-sizing:border-box;padding:10px 12px;" +
         "border:1.5px solid #CBD5E1;border-radius:8px;font-size:14px;outline:none;";
       input.addEventListener("focus", function(){ input.style.borderColor = "#116B32"; });
       input.addEventListener("blur", function(){ input.style.borderColor = "#CBD5E1"; });
       input.addEventListener("input", function(){ filtrar(contenedor, input.value); });
 
+      var botonExportar = document.createElement("button");
+      botonExportar.type = "button";
+      botonExportar.textContent = "⬇ Excel completo (272)";
+      botonExportar.title = "Descarga los 272 puestos (incluye los de 0 activos) con el formato original: cifras reales por empresa y país";
+      botonExportar.style.cssText =
+        "flex:0 0 auto;background:#116B32;color:#fff;border:none;padding:10px 14px;" +
+        "border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;";
+      botonExportar.addEventListener("mouseenter", function(){ botonExportar.style.background = "#15863F"; });
+      botonExportar.addEventListener("mouseleave", function(){ botonExportar.style.background = "#116B32"; });
+      botonExportar.addEventListener("click", function(){ exportarExcelCompleto(botonExportar); });
+
       caja.appendChild(input);
+      caja.appendChild(botonExportar);
       contenedor.insertBefore(caja, itemsWrapper);
     }
 
