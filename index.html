@@ -4,17 +4,24 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Puestos Homologados · SSP Capital</title>
+<link rel="icon" href="assets/logo-sspcap.png" />
 <style>
   :root{
-    --azul-oscuro: #002B49;
-    --azul-electrico: #0084C5;
+    --verde-oscuro: #093B1C;
+    --verde-sspcap: #116B32;
+    --verde-hover: #15863F;
+    --verde-tint: #EEF7F1;
+    --verde-borde-tint: #CFE9D7;
     --fondo-platino: #F8FAFC;
     --texto-principal: #152233;
     --texto-secundario: #5B6B7D;
+    --texto-terciario: #8694A3;
     --borde: #E2E8F0;
     --blanco: #FFFFFF;
-    --verde-cambio: #0E9F6E;
-    --fondo-cambio: #E7F8F1;
+    --ambar: #96640A;
+    --fondo-ambar: #FDF1D6;
+    --borde-ambar: #F0DBA3;
+    --alto-header: 76px;
   }
 
   *{ box-sizing: border-box; }
@@ -28,9 +35,10 @@
 
   /* ---------- Encabezado ---------- */
   header{
-    background: var(--azul-oscuro);
+    background: linear-gradient(135deg, var(--verde-oscuro) 0%, #0C4C25 100%);
     color: var(--blanco);
-    padding: 14px 24px;
+    padding: 15px 24px;
+    min-height: var(--alto-header);
     display: flex;
     align-items: center;
     gap: 16px;
@@ -47,28 +55,27 @@
     min-width: 0;
   }
 
-  .marca img{
-    height: 36px;
+  .marca-chip{
+    background: var(--blanco);
+    border-radius: 12px;
+    padding: 6px 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    flex-shrink: 0;
+  }
+
+  .marca-chip img{
+    height: 34px;
     width: auto;
     display: block;
   }
-
-  .marca .logo-texto{
-    display: none;
-    font-weight: 700;
-    font-size: 19px;
-    letter-spacing: 0.3px;
-    color: var(--blanco);
-  }
-
-  .marca img.logo-oculto{ display: none; }
-  .marca img.logo-oculto + .logo-texto{ display: inline-block; }
 
   .titulo-app{
     margin: 0;
     font-size: 16px;
     font-weight: 500;
-    color: #C9DDEA;
+    color: #BFE3CC;
     border-left: 1px solid rgba(255,255,255,0.25);
     padding-left: 16px;
     line-height: 1.3;
@@ -88,6 +95,56 @@
     padding: 24px 20px 60px;
   }
 
+  /* ---------- Resumen ejecutivo ---------- */
+  .resumen-ejecutivo{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 22px;
+  }
+
+  .stat-tile{
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+    padding: 16px 18px;
+    box-shadow: 0 1px 3px rgba(15,35,55,0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    transition: box-shadow .15s ease, transform .15s ease;
+  }
+
+  .stat-tile:hover{
+    box-shadow: 0 4px 14px rgba(9,59,28,0.09);
+    transform: translateY(-1px);
+  }
+
+  .stat-valor{
+    font-size: 27px;
+    font-weight: 800;
+    color: var(--verde-oscuro);
+    line-height: 1.1;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .stat-etiqueta{
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--texto-secundario);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .stat-detalle{
+    font-size: 11.5px;
+    color: var(--texto-terciario);
+    margin-top: 1px;
+  }
+
+  .stat-tile--ambar .stat-valor{ color: var(--ambar); }
+
+  /* ---------- Panel de filtros ---------- */
   .panel-filtros{
     background: var(--blanco);
     border: 1px solid var(--borde);
@@ -138,8 +195,8 @@
   }
 
   .buscador input[type="text"]:focus{
-    border-color: var(--azul-electrico);
-    box-shadow: 0 0 0 3px rgba(0,132,197,0.15);
+    border-color: var(--verde-sspcap);
+    box-shadow: 0 0 0 3px rgba(17,107,50,0.14);
     background-color: var(--blanco);
   }
 
@@ -169,8 +226,8 @@
 
   .sugerencias div:hover,
   .sugerencias div.activa{
-    background: var(--fondo-platino);
-    color: var(--azul-electrico);
+    background: var(--verde-tint);
+    color: var(--verde-sspcap);
   }
 
   .sugerencias .sin-resultados{
@@ -194,24 +251,36 @@
     font-size: 13.5px;
     font-weight: 600;
     cursor: pointer;
-    transition: all .15s ease;
+    transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease, color .15s ease, border-color .15s ease;
     white-space: nowrap;
   }
 
   .pill:hover{
-    border-color: var(--azul-electrico);
-    color: var(--azul-electrico);
+    border-color: var(--verde-sspcap);
+    color: var(--verde-sspcap);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(17,107,50,0.14);
+  }
+
+  .pill:active{
+    transform: scale(0.96);
   }
 
   .pill.activa{
-    background: var(--azul-electrico);
-    border-color: var(--azul-electrico);
+    background: var(--verde-sspcap);
+    border-color: var(--verde-sspcap);
+    color: var(--blanco);
+    box-shadow: 0 2px 8px rgba(17,107,50,0.22);
+  }
+
+  .pill.activa:hover{
     color: var(--blanco);
   }
 
   .pill.direccion.activa{
-    background: var(--azul-oscuro);
-    border-color: var(--azul-oscuro);
+    background: var(--verde-oscuro);
+    border-color: var(--verde-oscuro);
+    box-shadow: 0 2px 8px rgba(9,59,28,0.25);
   }
 
   .acciones-filtro{
@@ -230,11 +299,12 @@
     cursor: pointer;
     text-decoration: underline;
     padding: 6px 4px;
+    transition: color .15s ease;
   }
 
-  .boton-limpiar:hover{ color: var(--azul-electrico); }
+  .boton-limpiar:hover{ color: var(--verde-sspcap); }
 
-  /* ---------- Resumen de resultados ---------- */
+  /* ---------- Resumen de resultados filtrados ---------- */
   .resumen{
     display: flex;
     justify-content: space-between;
@@ -250,17 +320,18 @@
   }
 
   .resumen .contador strong{
-    color: var(--azul-oscuro);
+    color: var(--verde-oscuro);
     font-size: 16px;
+    font-variant-numeric: tabular-nums;
   }
 
   .chip-filtro-activo{
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    background: #E8F4FB;
-    color: var(--azul-oscuro);
-    border: 1px solid #BFE1F2;
+    background: var(--verde-tint);
+    color: var(--verde-oscuro);
+    border: 1px solid var(--verde-borde-tint);
     padding: 4px 10px;
     border-radius: 999px;
     font-size: 12.5px;
@@ -283,7 +354,7 @@
   }
 
   thead th{
-    background: var(--azul-oscuro);
+    background: var(--verde-oscuro);
     color: var(--blanco);
     text-align: left;
     font-size: 12px;
@@ -291,7 +362,11 @@
     letter-spacing: 0.05em;
     padding: 13px 16px;
     position: sticky;
-    top: 68px;
+    top: var(--alto-header);
+  }
+
+  tbody{
+    transition: opacity .16s ease;
   }
 
   tbody td{
@@ -302,14 +377,14 @@
   }
 
   tbody tr:last-child td{ border-bottom: none; }
-  tbody tr:hover{ background: #FAFCFE; }
+  tbody tr:hover{ background: var(--verde-tint); }
 
   td.col-departamento{ font-weight: 600; color: var(--texto-principal); }
   td.col-departamento span.encargado-tag{
     display: block;
     font-size: 11px;
     font-weight: 700;
-    color: var(--azul-electrico);
+    color: var(--verde-sspcap);
     text-transform: uppercase;
     letter-spacing: 0.04em;
     margin-top: 2px;
@@ -340,15 +415,24 @@
   td.col-propuesto .valor-propuesto{
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    background: var(--fondo-cambio);
-    color: var(--verde-cambio);
-    font-weight: 600;
+    gap: 5px;
+    background: var(--fondo-ambar);
+    color: var(--ambar);
+    border: 1px solid var(--borde-ambar);
+    font-weight: 700;
     padding: 3px 10px;
     border-radius: 7px;
     font-size: 13px;
   }
-  td.col-propuesto .guion{ color: #B9C4CF; }
+  td.col-propuesto .sin-cambio{
+    display: inline-block;
+    background: var(--fondo-platino);
+    border: 1px solid var(--borde);
+    color: var(--texto-terciario);
+    font-size: 12.5px;
+    padding: 3px 10px;
+    border-radius: 7px;
+  }
 
   .sin-datos{
     text-align: center;
@@ -373,6 +457,12 @@
   @media (max-width: 760px){
     header{ padding: 12px 16px; flex-wrap: wrap; }
     .titulo-app{ border-left: none; padding-left: 0; font-size: 13px; }
+
+    .resumen-ejecutivo{ grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .stat-tile{ padding: 13px 14px; }
+    .stat-valor{ font-size: 22px; }
+    .stat-detalle{ display: none; }
+
     thead{ display: none; }
     table, tbody, tr, td{ display: block; width: 100%; }
     tbody tr{
@@ -400,9 +490,9 @@
 
 <header>
   <div class="marca">
-    <img id="logo-ssp" src="https://sspcap.com" alt="SSP Capital"
-         onerror="this.classList.add('logo-oculto'); this.alt='';" />
-    <span class="logo-texto">SSP Capital</span>
+    <span class="marca-chip">
+      <img src="assets/logo-sspcap.png" alt="SSP Capital" />
+    </span>
   </div>
   <p class="titulo-app">
     <strong>Puestos Homologados</strong>
@@ -411,6 +501,27 @@
 </header>
 
 <main>
+
+  <section class="resumen-ejecutivo" aria-label="Resumen ejecutivo">
+    <div class="stat-tile">
+      <span class="stat-valor" id="stat-total">0</span>
+      <span class="stat-etiqueta">Puestos totales</span>
+    </div>
+    <div class="stat-tile">
+      <span class="stat-valor" id="stat-direcciones">0</span>
+      <span class="stat-etiqueta">Direcciones corporativas</span>
+      <span class="stat-detalle">CIO · COO · CFO</span>
+    </div>
+    <div class="stat-tile">
+      <span class="stat-valor" id="stat-paises">0</span>
+      <span class="stat-etiqueta">Países</span>
+      <span class="stat-detalle">Perú · Bolivia · Nicaragua · Guatemala · Honduras · El Salvador</span>
+    </div>
+    <div class="stat-tile stat-tile--ambar">
+      <span class="stat-valor" id="stat-cambios">0</span>
+      <span class="stat-etiqueta">Cambios propuestos</span>
+    </div>
+  </section>
 
   <section class="panel-filtros">
 
@@ -484,10 +595,6 @@
 (function(){
   "use strict";
 
-  var TODOS_PAISES = [
-    "Perú", "Bolivia", "Nicaragua", "Guatemala", "Honduras", "El Salvador"
-  ];
-
   var estado = {
     puestos: [],
     departamentos: [],
@@ -518,6 +625,25 @@
     return div.innerHTML;
   }
 
+  /* ---------------- Animación de números ---------------- */
+  function animarNumero(el, hasta, duracion){
+    if(!el){ return; }
+    var inicio = parseInt(el.textContent, 10) || 0;
+    var tiempoInicio = null;
+    function paso(marca){
+      if(!tiempoInicio){ tiempoInicio = marca; }
+      var progreso = Math.min((marca - tiempoInicio) / duracion, 1);
+      var suavizado = 1 - Math.pow(1 - progreso, 3);
+      el.textContent = Math.round(inicio + (hasta - inicio) * suavizado);
+      if(progreso < 1){
+        window.requestAnimationFrame(paso);
+      } else {
+        el.textContent = hasta;
+      }
+    }
+    window.requestAnimationFrame(paso);
+  }
+
   /* ---------------- Carga de datos ---------------- */
   fetch("puestos.json", { cache: "no-store" })
     .then(function(resp){
@@ -527,6 +653,7 @@
     .then(function(data){
       estado.puestos = (data && data.puestos) ? data.puestos : [];
       construirListaDepartamentos();
+      construirResumenEjecutivo();
       aplicarFiltros();
     })
     .catch(function(err){
@@ -552,6 +679,23 @@
     });
     lista.sort(function(a, b){ return a.orden - b.orden; });
     estado.departamentos = lista;
+  }
+
+  function construirResumenEjecutivo(){
+    var direcciones = {};
+    var paises = {};
+    var cambios = 0;
+
+    estado.puestos.forEach(function(p){
+      if(p.encargado){ direcciones[p.encargado] = true; }
+      if(p.pais){ paises[p.pais] = true; }
+      if(p.puesto_propuesto){ cambios++; }
+    });
+
+    animarNumero(document.getElementById("stat-total"), estado.puestos.length, 500);
+    animarNumero(document.getElementById("stat-direcciones"), Object.keys(direcciones).length, 500);
+    animarNumero(document.getElementById("stat-paises"), Object.keys(paises).length, 500);
+    animarNumero(document.getElementById("stat-cambios"), cambios, 500);
   }
 
   /* ---------------- Buscador predictivo ---------------- */
@@ -670,34 +814,41 @@
   }
 
   function renderTabla(lista){
-    if(lista.length === 0){
-      elCuerpoTabla.innerHTML = "";
-      elSinDatos.style.display = "block";
-      return;
-    }
-    elSinDatos.style.display = "none";
+    elCuerpoTabla.style.opacity = "0";
 
-    elCuerpoTabla.innerHTML = lista.map(function(p){
-      var propuestoHtml = p.puesto_propuesto
-        ? '<span class="valor-propuesto">' + escaparHtml(p.puesto_propuesto) + '</span>'
-        : '<span class="guion">—</span>';
+    window.setTimeout(function(){
+      if(lista.length === 0){
+        elCuerpoTabla.innerHTML = "";
+        elSinDatos.style.display = "block";
+        elCuerpoTabla.style.opacity = "1";
+        return;
+      }
+      elSinDatos.style.display = "none";
 
-      return (
-        '<tr>' +
-          '<td class="col-departamento">' + escaparHtml(p.departamento) +
-            '<span class="encargado-tag">' + escaparHtml(p.encargado) + '</span>' +
-          '</td>' +
-          '<td class="col-pais"><span class="badge-pais">' + escaparHtml(p.pais) + '</span></td>' +
-          '<td class="col-empresa">' + escaparHtml(p.empresa) + '</td>' +
-          '<td class="col-vigente">' + escaparHtml(p.puesto_vigente || "—") + '</td>' +
-          '<td class="col-propuesto">' + propuestoHtml + '</td>' +
-        '</tr>'
-      );
-    }).join("");
+      elCuerpoTabla.innerHTML = lista.map(function(p){
+        var propuestoHtml = p.puesto_propuesto
+          ? '<span class="valor-propuesto">↗ ' + escaparHtml(p.puesto_propuesto) + '</span>'
+          : '<span class="sin-cambio">Sin cambio</span>';
+
+        return (
+          '<tr>' +
+            '<td class="col-departamento">' + escaparHtml(p.departamento) +
+              '<span class="encargado-tag">' + escaparHtml(p.encargado) + '</span>' +
+            '</td>' +
+            '<td class="col-pais"><span class="badge-pais">' + escaparHtml(p.pais) + '</span></td>' +
+            '<td class="col-empresa">' + escaparHtml(p.empresa) + '</td>' +
+            '<td class="col-vigente">' + escaparHtml(p.puesto_vigente || "—") + '</td>' +
+            '<td class="col-propuesto">' + propuestoHtml + '</td>' +
+          '</tr>'
+        );
+      }).join("");
+
+      elCuerpoTabla.style.opacity = "1";
+    }, 90);
   }
 
   function renderResumen(total){
-    elNumResultados.textContent = total;
+    animarNumero(elNumResultados, total, 320);
 
     var chips = [];
     if(estado.encargado !== "TODOS"){ chips.push(estado.encargado); }
