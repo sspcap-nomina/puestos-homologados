@@ -544,6 +544,15 @@
     </div>
 
     <div class="fila-filtros">
+      <label class="etiqueta-filtro" for="buscador-departamento">Buscar por departamento</label>
+      <div class="buscador">
+        <input type="text" id="buscador-departamento" autocomplete="off"
+               placeholder="Ej. Contabilidad, Auditoria Interna..." />
+        <div class="sugerencias" id="caja-sugerencias-departamento"></div>
+      </div>
+    </div>
+
+    <div class="fila-filtros">
       <label class="etiqueta-filtro">Dirección corporativa</label>
       <button class="pill direccion activa" data-encargado="TODOS">Todas</button>
       <button class="pill direccion" data-encargado="CIO">CIO</button>
@@ -607,10 +616,12 @@
   var estado = {
     puestos: [],
     resultadoActual: [],
-    opcionesBusqueda: [],
+    opcionesPuesto: [],
+    opcionesDepartamento: [],
     encargado: "TODOS",
     pais: "TODOS",
-    textoBusqueda: ""
+    textoBusqueda: "",
+    departamentoBusqueda: ""
   };
 
   var elCuerpoTabla = document.getElementById("cuerpo-tabla");
@@ -619,6 +630,8 @@
   var elChipsActivos = document.getElementById("chips-activos");
   var elInputBuscador = document.getElementById("buscador-general");
   var elCajaSugerencias = document.getElementById("caja-sugerencias");
+  var elInputBuscadorDepto = document.getElementById("buscador-departamento");
+  var elCajaSugerenciasDepto = document.getElementById("caja-sugerencias-departamento");
 
   function normalizar(texto){
     return (texto || "")
@@ -711,19 +724,26 @@
     });
 
   function construirOpcionesBusqueda(){
-    var vistos = {};
-    var lista = [];
+    var vistosPuesto = {};
+    var listaPuesto = [];
+    var vistosDepto = {};
+    var listaDepto = [];
 
     estado.puestos.forEach(function(p){
-      var clavePuesto = "puesto|" + p.puesto_vigente;
-      if(p.puesto_vigente && !vistos[clavePuesto]){
-        vistos[clavePuesto] = true;
-        lista.push({ tipo: "Puesto", valor: p.puesto_vigente });
+      if(p.puesto_vigente && !vistosPuesto[p.puesto_vigente]){
+        vistosPuesto[p.puesto_vigente] = true;
+        listaPuesto.push({ tipo: "Puesto", valor: p.puesto_vigente });
+      }
+      if(p.departamento && !vistosDepto[p.departamento]){
+        vistosDepto[p.departamento] = true;
+        listaDepto.push({ tipo: "Departamento", valor: p.departamento });
       }
     });
 
-    lista.sort(function(a, b){ return a.valor.localeCompare(b.valor, "es"); });
-    estado.opcionesBusqueda = lista;
+    listaPuesto.sort(function(a, b){ return a.valor.localeCompare(b.valor, "es"); });
+    listaDepto.sort(function(a, b){ return a.valor.localeCompare(b.valor, "es"); });
+    estado.opcionesPuesto = listaPuesto;
+    estado.opcionesDepartamento = listaDepto;
   }
 
   function construirResumenEjecutivo(todos){
@@ -744,6 +764,60 @@
   }
 
   /* ---------------- Buscador predictivo ---------------- */
+  // Función genérica: alimenta cualquier par input/caja de sugerencias
+  // (puesto o departamento) con su propia lista de opciones y su propio
+  // campo de estado, sin duplicar la lógica de filtrado/pintado.
+  function mostrarSugerenciasGenerico(texto, opciones, elInput, elCaja, onSeleccion){
+    var consulta = normalizar(texto);
+
+    if(consulta === ""){
+      elCaja.classList.remove("visible");
+      elCaja.innerHTML = "";
+      return;
+    }
+
+    var coincidencias = opciones.filter(function(op){
+      return normalizar(op.valor).indexOf(consulta) !== -1;
+    });
+
+    if(coincidencias.length === 0){
+      elCaja.innerHTML = '<div class="sin-resultados">Sin coincidencias</div>';
+      elCaja.classList.add("visible");
+      return;
+    }
+
+    elCaja.innerHTML = coincidencias.slice(0, 12).map(function(op){
+      return '<div data-valor="' + escaparHtml(op.valor) + '">' +
+             '<span class="sugerencia-tipo">' + escaparHtml(op.tipo) + '</span>' +
+             escaparHtml(op.valor) +
+             '</div>';
+    }).join("");
+    elCaja.classList.add("visible");
+
+    Array.prototype.forEach.call(elCaja.querySelectorAll("div[data-valor]"), function(item){
+      item.addEventListener("click", function(){
+        var valor = item.getAttribute("data-valor");
+        elInput.value = valor;
+        elCaja.classList.remove("visible");
+        onSeleccion(valor);
+      });
+    });
+  }
+
+  function mostrarSugerencias(texto){
+    mostrarSugerenciasGenerico(texto, estado.opcionesPuesto, elInputBuscador, elCajaSugerencias, function(valor){
+      estado.textoBusqueda = valor;
+      aplicarFiltros();
+    });
+  }
+
+  function mostrarSugerenciasDepartamento(texto){
+    mostrarSugerenciasGenerico(texto, estado.opcionesDepartamento, elInputBuscadorDepto, elCajaSugerenciasDepto, function(valor){
+      estado.departamentoBusqueda = valor;
+      aplicarFiltros();
+    });
+  }
+
   elInputBuscador.addEventListener("input", function(){
     estado.textoBusqueda = elInputBuscador.value;
     mostrarSugerencias(elInputBuscador.value);
@@ -754,48 +828,24 @@
     mostrarSugerencias(elInputBuscador.value);
   });
 
+  elInputBuscadorDepto.addEventListener("input", function(){
+    estado.departamentoBusqueda = elInputBuscadorDepto.value;
+    mostrarSugerenciasDepartamento(elInputBuscadorDepto.value);
+    aplicarFiltros();
+  });
+
+  elInputBuscadorDepto.addEventListener("focus", function(){
+    mostrarSugerenciasDepartamento(elInputBuscadorDepto.value);
+  });
+
   document.addEventListener("click", function(e){
     if(!elCajaSugerencias.contains(e.target) && e.target !== elInputBuscador){
       elCajaSugerencias.classList.remove("visible");
     }
+    if(!elCajaSugerenciasDepto.contains(e.target) && e.target !== elInputBuscadorDepto){
+      elCajaSugerenciasDepto.classList.remove("visible");
+    }
   });
-
-  function mostrarSugerencias(texto){
-    var consulta = normalizar(texto);
-
-    if(consulta === ""){
-      elCajaSugerencias.classList.remove("visible");
-      elCajaSugerencias.innerHTML = "";
-      return;
-    }
-
-    var coincidencias = estado.opcionesBusqueda.filter(function(op){
-      return normalizar(op.valor).indexOf(consulta) !== -1;
-    });
-
-    if(coincidencias.length === 0){
-      elCajaSugerencias.innerHTML = '<div class="sin-resultados">Sin coincidencias</div>';
-      elCajaSugerencias.classList.add("visible");
-      return;
-    }
-
-    elCajaSugerencias.innerHTML = coincidencias.slice(0, 12).map(function(op){
-      return '<div data-valor="' + escaparHtml(op.valor) + '">' +
-             '<span class="sugerencia-tipo">' + escaparHtml(op.tipo) + '</span>' +
-             escaparHtml(op.valor) +
-             '</div>';
-    }).join("");
-    elCajaSugerencias.classList.add("visible");
-
-    Array.prototype.forEach.call(elCajaSugerencias.querySelectorAll("div[data-valor]"), function(item){
-      item.addEventListener("click", function(){
-        elInputBuscador.value = item.getAttribute("data-valor");
-        estado.textoBusqueda = elInputBuscador.value;
-        elCajaSugerencias.classList.remove("visible");
-        aplicarFiltros();
-      });
-    });
-  }
 
   /* ---------------- Filtros rápidos ---------------- */
   Array.prototype.forEach.call(document.querySelectorAll(".pill[data-encargado]"), function(btn){
@@ -824,8 +874,11 @@
     estado.encargado = "TODOS";
     estado.pais = "TODOS";
     estado.textoBusqueda = "";
+    estado.departamentoBusqueda = "";
     elInputBuscador.value = "";
+    elInputBuscadorDepto.value = "";
     elCajaSugerencias.classList.remove("visible");
+    elCajaSugerenciasDepto.classList.remove("visible");
 
     Array.prototype.forEach.call(document.querySelectorAll(".pill[data-encargado]"), function(b){
       b.classList.toggle("activa", b.getAttribute("data-encargado") === "TODOS");
@@ -840,11 +893,15 @@
   /* ---------------- Render ---------------- */
   function aplicarFiltros(){
     var consulta = normalizar(estado.textoBusqueda);
+    var consultaDepto = normalizar(estado.departamentoBusqueda);
 
     var resultado = estado.puestos.filter(function(p){
       if(estado.encargado !== "TODOS" && p.encargado !== estado.encargado){ return false; }
       if(estado.pais !== "TODOS" && (p.paises_activos || []).indexOf(estado.pais) === -1){ return false; }
       if(consulta !== "" && normalizar(p.puesto_vigente).indexOf(consulta) === -1){
+        return false;
+      }
+      if(consultaDepto !== "" && normalizar(p.departamento).indexOf(consultaDepto) === -1){
         return false;
       }
       return true;
@@ -945,6 +1002,7 @@
     if(estado.encargado !== "TODOS"){ chips.push(estado.encargado); }
     if(estado.pais !== "TODOS"){ chips.push(estado.pais); }
     if(estado.textoBusqueda){ chips.push('"' + estado.textoBusqueda + '"'); }
+    if(estado.departamentoBusqueda){ chips.push('"' + estado.departamentoBusqueda + '"'); }
 
     elChipsActivos.innerHTML = chips.map(function(c){
       return '<span class="chip-filtro-activo">' + escaparHtml(c) + '</span>';
