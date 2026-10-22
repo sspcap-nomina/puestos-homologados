@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Formularios (registro para Netlify)</title>
+</head>
+<body>
+<!--
+  Esta página NO se enlaza desde ningún lado y no está pensada para que
+  nadie la visite. Su único propósito es que, al desplegarse este mismo
+  repositorio en Netlify (el mismo sitio que ya se usa como puente de
+  login de GitHub para /admin/, en hilarious-torte-ab8865.netlify.app),
+  el "bot" de Netlify que escanea el HTML en cada build encuentre estos
+  <form> con data-netlify="true" y registre sus nombres y campos.
+
+  Una vez registrados, el sitio público (index.html, que vive en GitHub
+  Pages y NO se construye con Netlify) puede enviar datos a estos mismos
+  formularios por fetch() hacia la URL de Netlify, sin tener que repetir
+  este HTML ahí. Si en algún momento se agrega o quita un campo en los
+  formularios reales de index.html, hay que reflejar el mismo cambio
+  aquí para que Netlify lo siga aceptando.
+-->
+
+<form name="propuesta-puesto" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="text" name="puesto_propuesto" />
+  <input type="text" name="departamento" />
+  <input type="text" name="funcion" />
+  <input type="text" name="direccion" />
+  <input type="email" name="email" />
+  <input type="text" name="telefono" />
+  <textarea name="comentario"></textarea>
+  <input type="text" name="origen" />
+  <input name="bot-field" />
+</form>
+
+<form name="solicitud-eliminacion" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="text" name="puesto" />
+  <input type="text" name="departamento" />
+  <input type="text" name="direccion" />
+  <textarea name="motivo"></textarea>
+  <input type="email" name="email" />
+  <input type="text" name="telefono" />
+  <input type="text" name="origen" />
+  <input name="bot-field" />
+</form>
+
+</body>
+</html>

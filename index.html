@@ -489,6 +489,277 @@
     margin-bottom: 6px;
   }
 
+  .sin-datos-mensaje{ margin: 0; }
+
+  .sin-datos-accion{ margin-top: 18px; }
+
+  .boton-proponer{
+    background: var(--verde-sspcap);
+    border: none;
+    color: var(--blanco);
+    font-size: 13.5px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 999px;
+    transition: background-color .15s ease, transform .15s ease;
+  }
+
+  .boton-proponer:hover{ background: var(--verde-hover); }
+  .boton-proponer:active{ transform: scale(0.96); }
+
+  /* Botón pequeño para reportar un puesto de la tabla como "a eliminar" */
+  .btn-reportar-baja{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 1;
+    padding: 2px 4px;
+    border-radius: 6px;
+    opacity: 0.45;
+    transition: opacity .15s ease, background-color .15s ease;
+    vertical-align: middle;
+  }
+
+  .btn-reportar-baja:hover{
+    opacity: 1;
+    background: #FCEAEA;
+  }
+
+  /* ---------- Modales (proponer puesto / reportar eliminación) ---------- */
+  .modal-overlay{
+    position: fixed;
+    inset: 0;
+    background: rgba(9,20,15,0.55);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px 16px;
+    overflow-y: auto;
+    z-index: 100;
+  }
+
+  .modal-overlay[hidden]{ display: none; }
+
+  .modal{
+    position: relative;
+    background: var(--blanco);
+    border-radius: 16px;
+    width: 100%;
+    max-width: 480px;
+    padding: 28px 24px 24px;
+    box-shadow: 0 20px 50px rgba(9,20,15,0.3);
+    animation: aparecerModal .18s ease;
+  }
+
+  @keyframes aparecerModal{
+    from{ opacity: 0; transform: translateY(8px); }
+    to{ opacity: 1; transform: translateY(0); }
+  }
+
+  .modal-cerrar{
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--texto-secundario);
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    transition: background-color .15s ease, color .15s ease;
+  }
+
+  .modal-cerrar:hover{ background: var(--fondo-platino); color: var(--texto-principal); }
+
+  .modal-cuerpo h2{
+    margin: 0 0 6px;
+    font-size: 19px;
+    color: var(--verde-oscuro);
+    padding-right: 28px;
+  }
+
+  .modal-subtitulo{
+    margin: 0 0 20px;
+    font-size: 13.5px;
+    color: var(--texto-secundario);
+    line-height: 1.45;
+  }
+
+  .resumen-puesto-reportado{
+    background: var(--verde-tint);
+    border: 1px solid var(--verde-borde-tint);
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 13px;
+    color: var(--verde-oscuro);
+    margin-bottom: 18px;
+    line-height: 1.5;
+  }
+
+  .resumen-puesto-reportado strong{ display: block; font-size: 14.5px; }
+
+  .campo{ margin-bottom: 16px; }
+
+  .campo label{
+    display: block;
+    font-size: 12.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--texto-secundario);
+    margin-bottom: 6px;
+  }
+
+  .campo input[type="text"],
+  .campo input[type="email"],
+  .campo input[type="tel"],
+  .campo select,
+  .campo textarea{
+    width: 100%;
+    padding: 10px 12px;
+    border: 1.5px solid var(--borde);
+    border-radius: 9px;
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--texto-principal);
+    background: var(--fondo-platino);
+    outline: none;
+    transition: border-color .15s, box-shadow .15s;
+  }
+
+  .campo textarea{ resize: vertical; min-height: 52px; }
+
+  .campo input:focus,
+  .campo select:focus,
+  .campo textarea:focus{
+    border-color: var(--verde-sspcap);
+    box-shadow: 0 0 0 3px rgba(17,107,50,0.14);
+    background-color: var(--blanco);
+  }
+
+  .campo input.campo-invalido,
+  .campo textarea.campo-invalido{
+    border-color: #C0392B;
+  }
+
+  .ayuda-campo{
+    margin: 6px 0 0;
+    font-size: 11.5px;
+    color: var(--texto-terciario);
+    line-height: 1.5;
+  }
+
+  .error-campo{
+    margin: 6px 0 0;
+    font-size: 12px;
+    font-weight: 600;
+    color: #C0392B;
+    display: none;
+  }
+
+  .error-campo.visible{ display: block; }
+
+  .campo-telefono{
+    display: flex;
+    gap: 8px;
+  }
+
+  .selector-prefijo{ flex: 0 0 120px; }
+  .campo-telefono input[type="tel"]{ flex: 1 1 auto; }
+
+  .campo-oculto{
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  .error-envio{
+    margin: 0 0 14px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #C0392B;
+    display: none;
+  }
+
+  .error-envio.visible{ display: block; }
+
+  .acciones-modal{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 8px;
+  }
+
+  .boton-primario{
+    background: var(--verde-sspcap);
+    border: none;
+    color: var(--blanco);
+    font-size: 13.5px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 999px;
+    transition: background-color .15s ease, transform .15s ease, opacity .15s ease;
+  }
+
+  .boton-primario:hover{ background: var(--verde-hover); }
+  .boton-primario:active{ transform: scale(0.96); }
+  .boton-primario:disabled{ opacity: 0.6; cursor: default; transform: none; }
+
+  .boton-secundario{
+    background: none;
+    border: 1.5px solid var(--borde);
+    color: var(--texto-secundario);
+    font-size: 13.5px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 9px 18px;
+    border-radius: 999px;
+    transition: border-color .15s ease, color .15s ease;
+  }
+
+  .boton-secundario:hover{ border-color: var(--verde-sspcap); color: var(--verde-sspcap); }
+
+  .modal-exito{
+    text-align: center;
+    padding: 12px 4px 6px;
+  }
+
+  .modal-exito[hidden]{ display: none; }
+
+  .modal-exito .icono-exito{
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--verde-tint);
+    color: var(--verde-sspcap);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0 auto 14px;
+  }
+
+  .modal-exito h2{
+    margin: 0 0 8px;
+    font-size: 18px;
+    color: var(--verde-oscuro);
+  }
+
+  .modal-exito p{
+    margin: 0 0 20px;
+    font-size: 13.5px;
+    color: var(--texto-secundario);
+    line-height: 1.5;
+  }
+
   footer{
     text-align: center;
     color: var(--texto-secundario);
@@ -638,7 +909,10 @@
     </table>
     <div class="sin-datos" id="sin-datos" style="display:none;">
       <strong>No se encontraron puestos</strong>
-      Ajusta los filtros o el término de búsqueda para ver resultados.
+      <p class="sin-datos-mensaje" id="sin-datos-mensaje">Ajusta los filtros o el término de búsqueda para ver resultados.</p>
+      <div class="sin-datos-accion" id="sin-datos-accion">
+        <button class="boton-proponer" id="btn-abrir-proponer" type="button">+ Proponer este puesto</button>
+      </div>
     </div>
   </div>
 
@@ -647,6 +921,138 @@
   </footer>
 
 </main>
+
+<!-- ======================= Modal: Proponer un puesto nuevo ======================= -->
+<div class="modal-overlay" id="modal-proponer" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="titulo-modal-proponer">
+    <button type="button" class="modal-cerrar" data-cerrar-modal="modal-proponer" aria-label="Cerrar">✕</button>
+
+    <div id="modal-proponer-cuerpo">
+      <h2 id="titulo-modal-proponer">Proponer un puesto nuevo</h2>
+      <p class="modal-subtitulo">¿No encontraste el puesto que buscabas? Complétalo y lo enviamos al equipo de Compensaciones para su evaluación.</p>
+
+      <form id="form-proponer" novalidate>
+        <div class="campo">
+          <label for="pp-puesto">Nombre del puesto propuesto *</label>
+          <input type="text" id="pp-puesto" name="puesto_propuesto" required maxlength="80" placeholder="Ej. Analista de Nóminas" />
+          <p class="ayuda-campo">No uses símbolos ni números de más; evita las palabras "Corporativo" o "Regional"; no diferencies el género con "(a)" (ej. "Encargado(a)"); y evita describir la actividad puntual del puesto (ej. "Ingeniero de reparación de motores Diesel") — usa un nombre genérico y homologable.</p>
+          <p class="error-campo" id="pp-puesto-error"></p>
+        </div>
+
+        <div class="campo">
+          <label for="pp-departamento">Departamento *</label>
+          <input type="text" id="pp-departamento" name="departamento" required maxlength="60" list="lista-departamentos-form" placeholder="Ej. Contabilidad" />
+          <datalist id="lista-departamentos-form"></datalist>
+        </div>
+
+        <div class="campo">
+          <label for="pp-funcion">Función *</label>
+          <select id="pp-funcion" name="funcion" required>
+            <option value="" disabled selected>Selecciona una función</option>
+            <option value="Back Office">Back Office</option>
+            <option value="Middle Office">Middle Office</option>
+            <option value="Front Office">Front Office</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="pp-direccion">Dirección corporativa *</label>
+          <select id="pp-direccion" name="direccion" required>
+            <option value="" disabled selected>Selecciona una dirección</option>
+            <option value="CIO">CIO</option>
+            <option value="COO">COO</option>
+            <option value="CFO">CFO</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="pp-email">Correo de contacto *</label>
+          <input type="email" id="pp-email" name="email" required placeholder="nombre@sspcapital.com" />
+        </div>
+
+        <div class="campo">
+          <label for="pp-telefono">Teléfono de contacto (opcional)</label>
+          <div class="campo-telefono">
+            <select id="pp-prefijo" class="selector-prefijo" aria-label="Prefijo de país"></select>
+            <input type="tel" id="pp-telefono" placeholder="Número" />
+          </div>
+        </div>
+
+        <div class="campo">
+          <label for="pp-comentario">Comentario adicional (opcional)</label>
+          <textarea id="pp-comentario" name="comentario" rows="2" maxlength="300"></textarea>
+        </div>
+
+        <p class="campo-oculto"><label>No llenar este campo: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+
+        <p class="error-envio" id="pp-error-envio">No se pudo enviar la propuesta. Verifica tu conexión e inténtalo de nuevo.</p>
+
+        <div class="acciones-modal">
+          <button type="button" class="boton-secundario" data-cerrar-modal="modal-proponer">Cancelar</button>
+          <button type="submit" class="boton-primario" id="pp-btn-enviar">Enviar para evaluación</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="modal-exito" id="modal-proponer-exito" hidden>
+      <div class="icono-exito">✓</div>
+      <h2>¡Listo! Tu propuesta fue enviada</h2>
+      <p>El equipo de Compensaciones la evaluará y te contactará con la respuesta (aprobada, rechazada o con una recomendación).</p>
+      <button type="button" class="boton-primario" data-cerrar-modal="modal-proponer">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<!-- ======================= Modal: Reportar puesto para eliminación ======================= -->
+<div class="modal-overlay" id="modal-eliminar" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="titulo-modal-eliminar">
+    <button type="button" class="modal-cerrar" data-cerrar-modal="modal-eliminar" aria-label="Cerrar">✕</button>
+
+    <div id="modal-eliminar-cuerpo">
+      <h2 id="titulo-modal-eliminar">Reportar puesto para eliminación</h2>
+      <p class="modal-subtitulo">Cuéntanos por qué este puesto ya no debería estar vigente. El equipo de Compensaciones lo evaluará.</p>
+
+      <div class="resumen-puesto-reportado" id="pe-resumen-puesto"></div>
+
+      <form id="form-eliminar" novalidate>
+        <div class="campo">
+          <label for="pe-motivo">Motivo *</label>
+          <textarea id="pe-motivo" name="motivo" rows="3" required maxlength="300" placeholder="Ej. El puesto ya no tiene personal asignado, fue reemplazado por otro, se fusionó con..."></textarea>
+          <p class="error-campo" id="pe-motivo-error"></p>
+        </div>
+
+        <div class="campo">
+          <label for="pe-email">Correo de contacto *</label>
+          <input type="email" id="pe-email" name="email" required placeholder="nombre@sspcapital.com" />
+        </div>
+
+        <div class="campo">
+          <label for="pe-telefono">Teléfono de contacto (opcional)</label>
+          <div class="campo-telefono">
+            <select id="pe-prefijo" class="selector-prefijo" aria-label="Prefijo de país"></select>
+            <input type="tel" id="pe-telefono" placeholder="Número" />
+          </div>
+        </div>
+
+        <p class="campo-oculto"><label>No llenar este campo: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+
+        <p class="error-envio" id="pe-error-envio">No se pudo enviar el reporte. Verifica tu conexión e inténtalo de nuevo.</p>
+
+        <div class="acciones-modal">
+          <button type="button" class="boton-secundario" data-cerrar-modal="modal-eliminar">Cancelar</button>
+          <button type="submit" class="boton-primario" id="pe-btn-enviar">Enviar reporte</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="modal-exito" id="modal-eliminar-exito" hidden>
+      <div class="icono-exito">✓</div>
+      <h2>¡Gracias! Reporte enviado</h2>
+      <p>El equipo de Compensaciones revisará este puesto y actualizará el catálogo si corresponde.</p>
+      <button type="button" class="boton-primario" data-cerrar-modal="modal-eliminar">Cerrar</button>
+    </div>
+  </div>
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script>
@@ -752,6 +1158,7 @@
       // cuando se contrate a alguien, pero no aparecen en la búsqueda pública.
       estado.puestos = todos.filter(function(p){ return p.activos_total > 0; });
       construirOpcionesBusqueda();
+      poblarDatalistDepartamentos();
       construirResumenEjecutivo(todos);
       aplicarFiltros();
     })
@@ -759,7 +1166,9 @@
       elCuerpoTabla.innerHTML = "";
       elSinDatos.style.display = "block";
       elSinDatos.querySelector("strong").textContent = "No se pudo cargar la información";
-      elSinDatos.lastChild.textContent = "Verifica que el archivo puestos.json esté disponible junto a esta página.";
+      document.getElementById("sin-datos-mensaje").textContent = "Verifica que el archivo puestos.json esté disponible junto a esta página.";
+      // Si no cargó el catálogo no tiene sentido ofrecer "proponer puesto".
+      document.getElementById("sin-datos-accion").style.display = "none";
       console.error(err);
     });
 
@@ -974,7 +1383,13 @@
     }
     elSinDatos.style.display = "none";
 
-    elCuerpoTabla.innerHTML = lista.map(function(p){
+    // Se guarda la lista tal cual se dibujó para poder ubicar el puesto
+    // exacto cuando se hace clic en "reportar para eliminar" de una fila
+    // (el botón solo lleva el índice, no todo el texto, para no pelear
+    // con comillas/caracteres especiales en el nombre del puesto).
+    estado.ultimaListaRenderizada = lista;
+
+    elCuerpoTabla.innerHTML = lista.map(function(p, indice){
       var paises = p.paises_activos || [];
       var presenciaHtml = paises.length
         ? '<div class="lista-paises">' + paises.map(function(pais){
@@ -987,7 +1402,9 @@
           '<td class="col-direccion">' + escaparHtml(p.encargado) + '</td>' +
           '<td class="col-departamento">' + escaparHtml(p.departamento) + '</td>' +
           '<td class="col-funcion">' + escaparHtml(p.funcion || "—") + '</td>' +
-          '<td class="col-vigente">' + escaparHtml(p.puesto_vigente || "—") + '</td>' +
+          '<td class="col-vigente">' + escaparHtml(p.puesto_vigente || "—") +
+            ' <button type="button" class="btn-reportar-baja" data-idx="' + indice + '" title="Reportar este puesto para eliminación">🗑</button>' +
+          '</td>' +
           '<td class="col-presencia">' + presenciaHtml + '</td>' +
         '</tr>'
       );
@@ -1034,6 +1451,253 @@
   }
 
   document.getElementById("btn-exportar").addEventListener("click", exportarExcel);
+
+  /* ================================================================
+     Formularios: "Proponer puesto" y "Reportar puesto para eliminación"
+     Se envían a Netlify Forms (mismo sitio que usa el panel admin para
+     el login por GitHub), vía POST con fetch en modo "no-cors": el envío
+     SI llega a Netlify aunque el navegador no pueda leer la respuesta
+     (Netlify no agrega cabeceras CORS a ese endpoint). Los formularios
+     deben estar además registrados de antemano en ese sitio de Netlify
+     -ver netlify-formularios.html en la raíz del repo- para que Netlify
+     sepa que existen y los muestre en su panel de envíos/notificaciones.
+  ================================================================ */
+  var URL_NETLIFY_FORMULARIOS = "https://hilarious-torte-ab8865.netlify.app/";
+
+  var PREFIJOS_TELEFONO = [
+    { pais: "Perú", bandera: "🇵🇪", prefijo: "+51" },
+    { pais: "Bolivia", bandera: "🇧🇴", prefijo: "+591" },
+    { pais: "Nicaragua", bandera: "🇳🇮", prefijo: "+505" },
+    { pais: "Guatemala", bandera: "🇬🇹", prefijo: "+502" },
+    { pais: "Honduras", bandera: "🇭🇳", prefijo: "+504" },
+    { pais: "El Salvador", bandera: "🇸🇻", prefijo: "+503" }
+  ];
+
+  function poblarSelectorPrefijos(select){
+    select.innerHTML = PREFIJOS_TELEFONO.map(function(p){
+      return '<option value="' + p.prefijo + '">' + p.bandera + ' ' + p.prefijo + '</option>';
+    }).join("");
+  }
+  poblarSelectorPrefijos(document.getElementById("pp-prefijo"));
+  poblarSelectorPrefijos(document.getElementById("pe-prefijo"));
+
+  function poblarDatalistDepartamentos(){
+    var elLista = document.getElementById("lista-departamentos-form");
+    elLista.innerHTML = estado.opcionesDepartamento.map(function(op){
+      return '<option value="' + escaparHtml(op.valor) + '"></option>';
+    }).join("");
+  }
+
+  function enviarFormularioNetlify(nombreFormulario, datos){
+    var params = new URLSearchParams();
+    params.set("form-name", nombreFormulario);
+    Object.keys(datos).forEach(function(clave){ params.set(clave, datos[clave] || ""); });
+    return fetch(URL_NETLIFY_FORMULARIOS, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: params.toString()
+    });
+  }
+
+  /* ---------------- Apertura/cierre de modales ---------------- */
+  function abrirModal(id){
+    document.getElementById(id).removeAttribute("hidden");
+    document.body.style.overflow = "hidden";
+  }
+
+  function cerrarModal(id){
+    document.getElementById(id).setAttribute("hidden", "");
+    document.body.style.overflow = "";
+  }
+
+  Array.prototype.forEach.call(document.querySelectorAll("[data-cerrar-modal]"), function(btn){
+    btn.addEventListener("click", function(){ cerrarModal(btn.getAttribute("data-cerrar-modal")); });
+  });
+
+  Array.prototype.forEach.call(document.querySelectorAll(".modal-overlay"), function(overlay){
+    overlay.addEventListener("click", function(e){
+      if(e.target === overlay){ cerrarModal(overlay.id); }
+    });
+  });
+
+  document.addEventListener("keydown", function(e){
+    if(e.key !== "Escape"){ return; }
+    Array.prototype.forEach.call(document.querySelectorAll(".modal-overlay"), function(overlay){
+      if(!overlay.hasAttribute("hidden")){ cerrarModal(overlay.id); }
+    });
+  });
+
+  /* ---------------- Validación del nombre del puesto propuesto ----------------
+     Reglas pedidas por Compensaciones: sin símbolos, sin "Corporativo"/"Regional",
+     sin diferenciar género con "(a)"/"/a". La quinta regla (no describir la
+     actividad puntual, ej. "Ingeniero de reparación de motores Diesel") es
+     subjetiva y no se puede detectar de forma confiable con una expresión
+     regular, así que se deja como guía visible (ver .ayuda-campo) y queda a
+     criterio de la revisión manual del equipo antes de aprobar la propuesta. */
+  function validarNombrePuesto(texto){
+    var valor = (texto || "").trim();
+    if(!valor){ return "Escribe el nombre del puesto."; }
+    if(!/^[0-9A-Za-zÀ-ÖØ-öø-ÿñÑ\s]+$/.test(valor)){
+      return "Usa solo letras y espacios, sin símbolos (#, /, -, *, @...).";
+    }
+    if(/corporativ/i.test(valor)){
+      return 'No incluyas la palabra "Corporativo".';
+    }
+    if(/regional/i.test(valor)){
+      return 'No incluyas la palabra "Regional".';
+    }
+    if(/\(\s*a\s*\)|\/\s*a\b/i.test(valor)){
+      return 'No diferencies el género con "(a)" o "/a" (ej. "Encargado(a)"). Usa un nombre neutro.';
+    }
+    return null;
+  }
+
+  var elPpPuesto = document.getElementById("pp-puesto");
+  var elPpPuestoError = document.getElementById("pp-puesto-error");
+
+  function revisarNombrePuesto(){
+    var error = validarNombrePuesto(elPpPuesto.value);
+    if(error){
+      elPpPuesto.classList.add("campo-invalido");
+      elPpPuestoError.textContent = error;
+      elPpPuestoError.classList.add("visible");
+    } else {
+      elPpPuesto.classList.remove("campo-invalido");
+      elPpPuestoError.classList.remove("visible");
+    }
+    return !error;
+  }
+
+  elPpPuesto.addEventListener("blur", revisarNombrePuesto);
+  elPpPuesto.addEventListener("input", function(){
+    if(elPpPuesto.classList.contains("campo-invalido")){ revisarNombrePuesto(); }
+  });
+
+  /* ---------------- "Proponer puesto": abrir desde "sin resultados" ---------------- */
+  document.getElementById("btn-abrir-proponer").addEventListener("click", function(){
+    document.getElementById("form-proponer").reset();
+    elPpPuesto.classList.remove("campo-invalido");
+    elPpPuestoError.classList.remove("visible");
+    document.getElementById("pp-error-envio").classList.remove("visible");
+    document.getElementById("pp-puesto").value = estado.textoBusqueda || "";
+    document.getElementById("modal-proponer-cuerpo").hidden = false;
+    document.getElementById("modal-proponer-exito").hidden = true;
+    abrirModal("modal-proponer");
+  });
+
+  document.getElementById("form-proponer").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    var nombreValido = revisarNombrePuesto();
+    var formularioValido = e.target.reportValidity() && nombreValido;
+    if(!formularioValido){ return; }
+
+    var elBoton = document.getElementById("pp-btn-enviar");
+    var elErrorEnvio = document.getElementById("pp-error-envio");
+    elErrorEnvio.classList.remove("visible");
+    elBoton.disabled = true;
+    elBoton.textContent = "Enviando...";
+
+    var prefijo = document.getElementById("pp-prefijo").value;
+    var numero = document.getElementById("pp-telefono").value.trim();
+
+    enviarFormularioNetlify("propuesta-puesto", {
+      puesto_propuesto: elPpPuesto.value.trim(),
+      departamento: document.getElementById("pp-departamento").value.trim(),
+      funcion: document.getElementById("pp-funcion").value,
+      direccion: document.getElementById("pp-direccion").value,
+      email: document.getElementById("pp-email").value.trim(),
+      telefono: numero ? (prefijo + " " + numero) : "",
+      comentario: document.getElementById("pp-comentario").value.trim(),
+      origen: window.location.href
+    })
+      .then(function(){
+        document.getElementById("modal-proponer-cuerpo").hidden = true;
+        document.getElementById("modal-proponer-exito").hidden = false;
+      })
+      .catch(function(err){
+        elErrorEnvio.classList.add("visible");
+        console.error(err);
+      })
+      .then(function(){
+        elBoton.disabled = false;
+        elBoton.textContent = "Enviar para evaluación";
+      });
+  });
+
+  /* ---------------- "Reportar para eliminar": abrir desde una fila de la tabla ---------------- */
+  elCuerpoTabla.addEventListener("click", function(e){
+    var boton = e.target.closest(".btn-reportar-baja");
+    if(!boton){ return; }
+
+    var indice = Number(boton.getAttribute("data-idx"));
+    var puesto = (estado.ultimaListaRenderizada || [])[indice];
+    if(!puesto){ return; }
+
+    document.getElementById("form-eliminar").reset();
+    document.getElementById("pe-motivo-error").classList.remove("visible");
+    document.getElementById("pe-error-envio").classList.remove("visible");
+
+    document.getElementById("pe-resumen-puesto").innerHTML =
+      '<strong>' + escaparHtml(puesto.puesto_vigente || "—") + '</strong>' +
+      escaparHtml(puesto.encargado || "—") + ' · ' + escaparHtml(puesto.departamento || "—");
+
+    var form = document.getElementById("form-eliminar");
+    form.setAttribute("data-puesto", puesto.puesto_vigente || "");
+    form.setAttribute("data-departamento", puesto.departamento || "");
+    form.setAttribute("data-direccion", puesto.encargado || "");
+
+    document.getElementById("modal-eliminar-cuerpo").hidden = false;
+    document.getElementById("modal-eliminar-exito").hidden = true;
+    abrirModal("modal-eliminar");
+  });
+
+  document.getElementById("form-eliminar").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    var elMotivo = document.getElementById("pe-motivo");
+    var elMotivoError = document.getElementById("pe-motivo-error");
+    var motivoValido = elMotivo.value.trim().length > 0;
+    elMotivo.classList.toggle("campo-invalido", !motivoValido);
+    elMotivoError.classList.toggle("visible", !motivoValido);
+    elMotivoError.textContent = "Cuéntanos brevemente el motivo.";
+
+    var formularioValido = e.target.reportValidity() && motivoValido;
+    if(!formularioValido){ return; }
+
+    var elBoton = document.getElementById("pe-btn-enviar");
+    var elErrorEnvio = document.getElementById("pe-error-envio");
+    elErrorEnvio.classList.remove("visible");
+    elBoton.disabled = true;
+    elBoton.textContent = "Enviando...";
+
+    var prefijo = document.getElementById("pe-prefijo").value;
+    var numero = document.getElementById("pe-telefono").value.trim();
+    var form = e.target;
+
+    enviarFormularioNetlify("solicitud-eliminacion", {
+      puesto: form.getAttribute("data-puesto") || "",
+      departamento: form.getAttribute("data-departamento") || "",
+      direccion: form.getAttribute("data-direccion") || "",
+      motivo: elMotivo.value.trim(),
+      email: document.getElementById("pe-email").value.trim(),
+      telefono: numero ? (prefijo + " " + numero) : "",
+      origen: window.location.href
+    })
+      .then(function(){
+        document.getElementById("modal-eliminar-cuerpo").hidden = true;
+        document.getElementById("modal-eliminar-exito").hidden = false;
+      })
+      .catch(function(err){
+        elErrorEnvio.classList.add("visible");
+        console.error(err);
+      })
+      .then(function(){
+        elBoton.disabled = false;
+        elBoton.textContent = "Enviar reporte";
+      });
+  });
 
   function renderResumen(total){
     animarNumero(elNumResultados, total, 320);
