@@ -8,5 +8,80 @@
 <body>
   <!-- Incluye el script que construye la página y activa Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+  <!--
+    Buscador dentro del listado "Puestos Homologados".
+    Decap CMS no trae un buscador nativo para una lista dentro de una
+    colección de un solo archivo (tipo "files"), así que este script lo
+    agrega por encima, filtrando las 272 tarjetas por su título visible
+    (igual al que arma "summary" en admin/config.yml). No toca cómo se
+    guardan los datos: solo oculta/muestra tarjetas en pantalla.
+
+    Se reintenta por intervalo (en vez de una sola vez al cargar) porque
+    Decap es una aplicación de una sola página: el listado se puede volver
+    a dibujar (al agregar/borrar un puesto, al reabrir la entrada, etc.) y
+    el buscador necesita reinyectarse si eso pasa.
+  -->
+  <script>
+  (function(){
+    "use strict";
+
+    function normalizar(texto){
+      return (texto || "")
+        .toString()
+        .normalize("NFD")
+        .replace(/[̀-ͯ]/g, "")
+        .toLowerCase()
+        .trim();
+    }
+
+    function obtenerItems(contenedor){
+      return Array.prototype.slice.call(contenedor.querySelectorAll('[class*="SortableListItem"]'));
+    }
+
+    function etiquetaDe(item){
+      var etiqueta = item.querySelector('[class*="NestedObjectLabel"]');
+      return etiqueta ? etiqueta.textContent : "";
+    }
+
+    function filtrar(contenedor, consultaCruda){
+      var consulta = normalizar(consultaCruda);
+      obtenerItems(contenedor).forEach(function(item){
+        var coincide = consulta === "" || normalizar(etiquetaDe(item)).indexOf(consulta) !== -1;
+        item.style.display = coincide ? "" : "none";
+      });
+    }
+
+    function intentarInyectar(){
+      var contenedor = document.querySelector('[id^="puestos-field-"]');
+      if(!contenedor){ return; }
+      if(contenedor.querySelector("#buscador-admin-puestos")){ return; }
+
+      var itemsWrapper = contenedor.querySelector('[class*="SortableListItem"]');
+      itemsWrapper = itemsWrapper ? itemsWrapper.parentElement : null;
+      if(!itemsWrapper){ return; }
+
+      var caja = document.createElement("div");
+      caja.id = "buscador-admin-puestos";
+      caja.style.cssText = "position:sticky;top:0;z-index:50;background:#fff;padding:8px 0;";
+
+      var input = document.createElement("input");
+      input.type = "text";
+      input.placeholder = "Buscar puesto, departamento o dirección...";
+      input.autocomplete = "off";
+      input.style.cssText =
+        "width:100%;box-sizing:border-box;padding:10px 12px;" +
+        "border:1.5px solid #CBD5E1;border-radius:8px;font-size:14px;outline:none;";
+      input.addEventListener("focus", function(){ input.style.borderColor = "#116B32"; });
+      input.addEventListener("blur", function(){ input.style.borderColor = "#CBD5E1"; });
+      input.addEventListener("input", function(){ filtrar(contenedor, input.value); });
+
+      caja.appendChild(input);
+      contenedor.insertBefore(caja, itemsWrapper);
+    }
+
+    window.setInterval(intentarInyectar, 700);
+  })();
+  </script>
 </body>
 </html>
