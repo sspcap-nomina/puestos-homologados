@@ -308,6 +308,25 @@
 
   .boton-limpiar:hover{ color: var(--verde-sspcap); }
 
+  .boton-exportar{
+    background: var(--verde-sspcap);
+    border: none;
+    color: var(--blanco);
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 9px 16px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: background-color .15s ease, transform .15s ease;
+    white-space: nowrap;
+  }
+
+  .boton-exportar:hover{ background: var(--verde-hover); }
+  .boton-exportar:active{ transform: scale(0.96); }
+
   /* ---------- Resumen de resultados filtrados ---------- */
   .resumen{
     display: flex;
@@ -369,8 +388,9 @@
     top: var(--alto-header);
   }
 
-  tbody{
-    transition: opacity .16s ease;
+  @keyframes aparecerFila{ from{ opacity: 0; } to{ opacity: 1; } }
+  tbody tr{
+    animation: aparecerFila .18s ease;
   }
 
   tbody td{
@@ -551,6 +571,9 @@
       <strong id="num-resultados">0</strong> puestos encontrados
       <span id="chips-activos"></span>
     </div>
+    <button class="boton-exportar" id="btn-exportar" title="Descarga el catálogo completo (incluye puestos sin personal activo), con el mismo formato del Excel original">
+      ⬇ Exportar base de datos (Excel)
+    </button>
   </div>
 
   <div class="contenedor-tabla">
@@ -577,12 +600,14 @@
 
 </main>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script>
 (function(){
   "use strict";
 
   var estado = {
     puestos: [],
+    todos: [],
     opcionesBusqueda: [],
     encargado: "TODOS",
     pais: "TODOS",
@@ -670,6 +695,9 @@
     })
     .then(function(data){
       var todos = ((data && data.puestos) ? data.puestos : []).map(derivarPresencia);
+      // Se guarda el catálogo completo (incluye los puestos con 0 activos) para
+      // poder exportarlo íntegro a Excel, igual que la base de datos original.
+      estado.todos = todos;
       // Solo se muestran puestos con al menos una persona activa en alguna empresa.
       // Los puestos "en catálogo" con 0 activos quedan en la base de datos para
       // cuando se contrate a alguien, pero no aparecen en la búsqueda pública.
@@ -847,40 +875,121 @@
   }
 
   function renderTabla(lista){
-    elCuerpoTabla.style.opacity = "0";
+    // El contenido se inserta de inmediato (sin temporizador): si se retrasara
+    // detrás de un setTimeout, un navegador que pausa temporizadores en pestañas
+    // sin foco (p. ej. al cambiar de ventana para tomar una captura) podía dejar
+    // la tabla en blanco. La animación de aparición ahora es puramente CSS.
+    if(lista.length === 0){
+      elCuerpoTabla.innerHTML = "";
+      elSinDatos.style.display = "block";
+      return;
+    }
+    elSinDatos.style.display = "none";
 
-    window.setTimeout(function(){
-      if(lista.length === 0){
-        elCuerpoTabla.innerHTML = "";
-        elSinDatos.style.display = "block";
-        elCuerpoTabla.style.opacity = "1";
-        return;
-      }
-      elSinDatos.style.display = "none";
+    elCuerpoTabla.innerHTML = lista.map(function(p){
+      var paises = p.paises_activos || [];
+      var presenciaHtml = paises.length
+        ? '<div class="lista-paises">' + paises.map(function(pais){
+            return '<span class="badge-pais">' + escaparHtml(pais) + '</span>';
+          }).join("") + '</div>'
+        : '<span class="sin-presencia">—</span>';
 
-      elCuerpoTabla.innerHTML = lista.map(function(p){
-        var paises = p.paises_activos || [];
-        var presenciaHtml = paises.length
-          ? '<div class="lista-paises">' + paises.map(function(pais){
-              return '<span class="badge-pais">' + escaparHtml(pais) + '</span>';
-            }).join("") + '</div>'
-          : '<span class="sin-presencia">—</span>';
-
-        return (
-          '<tr>' +
-            '<td class="col-departamento">' + escaparHtml(p.departamento) +
-              '<span class="encargado-tag">' + escaparHtml(p.encargado) + '</span>' +
-            '</td>' +
-            '<td class="col-funcion">' + escaparHtml(p.funcion || "—") + '</td>' +
-            '<td class="col-vigente">' + escaparHtml(p.puesto_vigente || "—") + '</td>' +
-            '<td class="col-presencia">' + presenciaHtml + '</td>' +
-          '</tr>'
-        );
-      }).join("");
-
-      elCuerpoTabla.style.opacity = "1";
-    }, 90);
+      return (
+        '<tr>' +
+          '<td class="col-departamento">' + escaparHtml(p.departamento) +
+            '<span class="encargado-tag">' + escaparHtml(p.encargado) + '</span>' +
+          '</td>' +
+          '<td class="col-funcion">' + escaparHtml(p.funcion || "—") + '</td>' +
+          '<td class="col-vigente">' + escaparHtml(p.puesto_vigente || "—") + '</td>' +
+          '<td class="col-presencia">' + presenciaHtml + '</td>' +
+        '</tr>'
+      );
+    }).join("");
   }
+
+  /* ---------------- Exportar a Excel ---------------- */
+  // Exporta el catálogo COMPLETO (incluye puestos con 0 activos), con el mismo
+  // agrupamiento por país/empresa del Excel original que se usó para crear
+  // puestos.json. No depende de los filtros aplicados en pantalla.
+  var EMPRESA_COLS = ["EILC","PCT","PDM","CDF","AFG","MPG","AFH","MPH","ECH","AFS","PST","ECS"];
+  var BLOQUES_PAIS = [
+    { pais: "Perú", cols: ["EILC","PCT"] },
+    { pais: "Bolivia", cols: ["PDM"] },
+    { pais: "Nicaragua", cols: ["CDF"] },
+    { pais: "Guatemala", cols: ["AFG","MPG"] },
+    { pais: "Honduras", cols: ["AFH","MPH","ECH"] },
+    { pais: "El Salvador", cols: ["AFS","PST","ECS"] }
+  ];
+
+  function exportarExcel(){
+    if(typeof XLSX === "undefined"){
+      alert("No se pudo cargar la librería de Excel. Verifica tu conexión a internet e inténtalo de nuevo.");
+      return;
+    }
+    if(!estado.todos || !estado.todos.length){
+      alert("Los datos aún no han terminado de cargar. Espera un momento e inténtalo de nuevo.");
+      return;
+    }
+
+    var filaHeader1 = ["", "", "", ""];
+    var filaHeader2 = ["Dirección", "Departamento", "Función", "Puesto Vigente"];
+
+    BLOQUES_PAIS.forEach(function(bloque){
+      filaHeader1.push(bloque.pais);
+      for(var i = 1; i < bloque.cols.length; i++){ filaHeader1.push(""); }
+      bloque.cols.forEach(function(codigo){ filaHeader2.push(codigo); });
+    });
+    filaHeader1.push("");
+    filaHeader2.push("Total activos");
+
+    var ordenados = estado.todos.slice().sort(function(a, b){
+      var da = a.departamento_orden != null ? a.departamento_orden : 999;
+      var db = b.departamento_orden != null ? b.departamento_orden : 999;
+      if(da !== db){ return da - db; }
+      return (a.orden || 0) - (b.orden || 0);
+    });
+
+    var filas = ordenados.map(function(p){
+      var empresas = p.empresas || {};
+      var fila = [p.encargado || "", p.departamento || "", p.funcion || "", p.puesto_vigente || ""];
+      var total = 0;
+      EMPRESA_COLS.forEach(function(codigo){
+        var cantidad = Number(empresas[codigo]) || 0;
+        total += cantidad;
+        fila.push(cantidad);
+      });
+      fila.push(total);
+      return fila;
+    });
+
+    var datos = [filaHeader1, filaHeader2].concat(filas);
+    var hoja = XLSX.utils.aoa_to_sheet(datos);
+
+    var merges = [];
+    var colIndice = 4;
+    BLOQUES_PAIS.forEach(function(bloque){
+      if(bloque.cols.length > 1){
+        merges.push({ s: { r: 0, c: colIndice }, e: { r: 0, c: colIndice + bloque.cols.length - 1 } });
+      }
+      colIndice += bloque.cols.length;
+    });
+    [0, 1, 2, 3, colIndice].forEach(function(c){
+      merges.push({ s: { r: 0, c: c }, e: { r: 1, c: c } });
+    });
+    hoja["!merges"] = merges;
+
+    hoja["!cols"] = [{ wch: 10 }, { wch: 28 }, { wch: 14 }, { wch: 32 }]
+      .concat(EMPRESA_COLS.map(function(){ return { wch: 8 }; }))
+      .concat([{ wch: 13 }]);
+
+    var libro = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(libro, hoja, "Puestos Homologados");
+
+    var fecha = new Date().toISOString().slice(0, 10);
+    XLSX.writeFile(libro, "puestos_homologados_" + fecha + ".xlsx");
+  }
+
+  document.getElementById("btn-exportar").addEventListener("click", exportarExcel);
 
   function renderResumen(total){
     animarNumero(elNumResultados, total, 320);
