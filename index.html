@@ -34,15 +34,28 @@
   header{
     background: linear-gradient(135deg, var(--verde-oscuro) 0%, #0C4C25 100%);
     color: var(--blanco);
-    padding: 15px 24px;
     min-height: var(--alto-header);
-    display: flex;
-    align-items: center;
-    gap: 16px;
     position: sticky;
     top: 0;
     z-index: 50;
     box-shadow: 0 2px 10px rgba(0,0,0,0.18);
+  }
+
+  /* La franja del header ocupa todo el ancho, pero su contenido se alinea
+     con el mismo ancho/margen que el resto de la página (ver .envoltorio)
+     para que el logo no quede "flotando" lejos del contenido de abajo. */
+  .envoltorio{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: clamp(20px, 3vw, 40px);
+    padding-right: clamp(20px, 3vw, 40px);
+  }
+
+  header .envoltorio{
+    min-height: var(--alto-header);
+    display: flex;
+    align-items: center;
+    gap: 16px;
   }
 
   .marca{
@@ -86,10 +99,14 @@
   }
 
   /* ---------- Contenedor general ---------- */
+  /* Mismo ancho máximo que .envoltorio del header, para que todo quede
+     alineado verticalmente. En monitores muy anchos se limita a 1440px
+     (una tabla de 5 columnas pierde legibilidad si se estira demasiado),
+     y por debajo de eso usa casi todo el viewport con aire a los costados. */
   main{
-    max-width: 1180px;
+    max-width: 1440px;
     margin: 0 auto;
-    padding: 24px 20px 60px;
+    padding: 24px clamp(20px, 3vw, 40px) 60px;
   }
 
   /* ---------- Resumen ejecutivo ---------- */
@@ -458,7 +475,7 @@
   }
 
   @media (max-width: 760px){
-    header{ padding: 12px 16px; flex-wrap: wrap; }
+    header .envoltorio{ padding-top: 12px; padding-bottom: 12px; flex-wrap: wrap; }
     .titulo-app{ border-left: none; padding-left: 0; font-size: 13px; }
 
     .resumen-ejecutivo{ grid-template-columns: repeat(2, 1fr); gap: 10px; }
@@ -493,15 +510,17 @@
 <body>
 
 <header>
-  <div class="marca">
-    <span class="marca-chip">
-      <img src="assets/logo-sspcap.png" alt="SSP Capital" />
-    </span>
+  <div class="envoltorio">
+    <div class="marca">
+      <span class="marca-chip">
+        <img src="assets/logo-sspcap.png" alt="SSP Capital" />
+      </span>
+    </div>
+    <p class="titulo-app">
+      <strong>Puestos Homologados</strong>
+      Nómina LATAM
+    </p>
   </div>
-  <p class="titulo-app">
-    <strong>Puestos Homologados</strong>
-    Nómina LATAM
-  </p>
 </header>
 
 <main>
