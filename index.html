@@ -166,15 +166,41 @@
     box-shadow: 0 1px 3px rgba(15,35,55,0.04);
   }
 
-  .fila-filtros{
+  .panel-filtros-encabezado{
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
     align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 16px;
   }
 
-  .fila-filtros + .fila-filtros{
-    margin-top: 16px;
+  .panel-filtros-titulo{
+    margin: 0;
+    font-size: 12.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--texto-secundario);
+  }
+
+  /* Los 4 filtros (puesto, departamento, dirección, país) en una sola
+     fila en pantallas amplias; se envuelven con elegancia en pantallas
+     angostas gracias a flex-wrap, sin perder alineación. */
+  .barra-filtros{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .grupo-filtro{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 0 0 170px;
+  }
+
+  .grupo-filtro--buscador{
+    flex: 1 1 230px;
   }
 
   label.etiqueta-filtro{
@@ -183,8 +209,26 @@
     text-transform: uppercase;
     letter-spacing: 0.06em;
     color: var(--texto-secundario);
+  }
+
+  .grupo-filtro select{
     width: 100%;
-    margin-bottom: 4px;
+    padding: 11px 14px;
+    border: 1.5px solid var(--borde);
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--texto-principal);
+    background: var(--fondo-platino);
+    outline: none;
+    cursor: pointer;
+    transition: border-color .15s, box-shadow .15s;
+  }
+
+  .grupo-filtro select:focus{
+    border-color: var(--verde-sspcap);
+    box-shadow: 0 0 0 3px rgba(17,107,50,0.14);
+    background-color: var(--blanco);
   }
 
   /* ---------- Buscador predictivo ---------- */
@@ -304,24 +348,6 @@
     box-shadow: 0 2px 8px rgba(9,59,28,0.25);
   }
 
-  /* Fila label + acción a la misma altura: la etiqueta "Buscar por puesto"
-     queda a la izquierda y "Limpiar filtros" a la derecha, como un botón
-     más (igual estilo que los pills de Dirección/País), para que el campo
-     de abajo quede tan simétrico como el de "Buscar por departamento". */
-  .encabezado-filtro{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    margin-bottom: 4px;
-  }
-
-  .encabezado-filtro .etiqueta-filtro{
-    width: auto;
-    margin-bottom: 0;
-  }
-
   .boton-limpiar{
     background: var(--blanco);
     border: 1.5px solid var(--borde);
@@ -366,12 +392,41 @@
   .boton-exportar:hover{ background: var(--verde-hover); }
   .boton-exportar:active{ transform: scale(0.96); }
 
+  /* Botones de "Proponer puesto" / "Eliminar puesto", al costado de
+     Exportar: mismo alto y forma de píldora, pero en estilo neutro
+     (outline) para no competir visualmente con la acción principal
+     (Exportar, que sí lleva el verde sólido). */
+  .boton-accion-secundaria{
+    background: var(--blanco);
+    border: 1.5px solid var(--borde);
+    color: var(--texto-principal);
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 9px 16px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: border-color .15s ease, color .15s ease, transform .15s ease;
+    white-space: nowrap;
+  }
+
+  .boton-accion-secundaria:hover{ border-color: var(--verde-sspcap); color: var(--verde-sspcap); }
+  .boton-accion-secundaria:active{ transform: scale(0.96); }
+
   /* ---------- Resumen de resultados filtrados ---------- */
   .resumen{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 14px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .acciones-resultados{
+    display: flex;
     flex-wrap: wrap;
     gap: 8px;
   }
@@ -402,11 +457,19 @@
   }
 
   /* ---------- Tabla de resultados ---------- */
+  /* OJO: esta tabla ya tuvo un bug real con el encabezado "sticky" (se
+     pintaba entre filas) causado por combinar position:sticky con
+     overflow:hidden en este mismo contenedor más el re-render dinámico
+     del tbody en cada tecla de búsqueda. Para traer de vuelta el
+     encabezado fijo sin repetir ese bug, el contenedor YA NO usa
+     overflow:hidden para las esquinas redondeadas -las esquinas se
+     redondean a mano en las celdas de punta (ver más abajo)-, así el
+     "sticky" queda relativo al scroll de la página, sin un ancestro con
+     overflow que lo pueda hacer pintar mal. */
   .contenedor-tabla{
     background: var(--blanco);
     border: 1px solid var(--borde);
     border-radius: 14px;
-    overflow: hidden;
     box-shadow: 0 1px 3px rgba(15,35,55,0.04);
   }
 
@@ -423,7 +486,19 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     padding: 13px 16px;
+    position: sticky;
+    top: var(--alto-header);
+    z-index: 20;
   }
+
+  /* Esquinas redondeadas "a mano" (sin overflow:hidden en el contenedor,
+     justo lo que rompía el encabezado fijo antes). Los selectores
+     :first-child/:last-child se re-evalúan solos cuando la tabla se
+     vuelve a dibujar con cada búsqueda, así que no hace falta JS extra. */
+  thead tr:first-child th:first-child{ border-top-left-radius: 14px; }
+  thead tr:first-child th:last-child{ border-top-right-radius: 14px; }
+  tbody tr:last-child td:first-child{ border-bottom-left-radius: 14px; }
+  tbody tr:last-child td:last-child{ border-bottom-right-radius: 14px; }
 
   @keyframes aparecerFila{ from{ opacity: 0; } to{ opacity: 1; } }
   tbody tr{
@@ -480,6 +555,8 @@
     text-align: center;
     padding: 60px 20px;
     color: var(--texto-secundario);
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
   }
 
   .sin-datos strong{
@@ -490,23 +567,6 @@
   }
 
   .sin-datos-mensaje{ margin: 0; }
-
-  .sin-datos-accion{ margin-top: 18px; }
-
-  .boton-proponer{
-    background: var(--verde-sspcap);
-    border: none;
-    color: var(--blanco);
-    font-size: 13.5px;
-    font-weight: 700;
-    cursor: pointer;
-    padding: 10px 20px;
-    border-radius: 999px;
-    transition: background-color .15s ease, transform .15s ease;
-  }
-
-  .boton-proponer:hover{ background: var(--verde-hover); }
-  .boton-proponer:active{ transform: scale(0.96); }
 
   /* Botón pequeño para reportar un puesto de la tabla como "a eliminar" */
   .btn-reportar-baja{
@@ -589,19 +649,6 @@
     line-height: 1.45;
   }
 
-  .resumen-puesto-reportado{
-    background: var(--verde-tint);
-    border: 1px solid var(--verde-borde-tint);
-    border-radius: 10px;
-    padding: 12px 14px;
-    font-size: 13px;
-    color: var(--verde-oscuro);
-    margin-bottom: 18px;
-    line-height: 1.5;
-  }
-
-  .resumen-puesto-reportado strong{ display: block; font-size: 14.5px; }
-
   .campo{ margin-bottom: 16px; }
 
   .campo label{
@@ -670,6 +717,23 @@
 
   .selector-prefijo{ flex: 0 0 120px; }
   .campo-telefono input[type="tel"]{ flex: 1 1 auto; }
+
+  /* Selector de país(es) dentro de los modales: reutiliza el estilo de
+     .pill (mismo lenguaje visual que el resto del sitio) pero un poco
+     más compacto para que quepan los 6 países sin ocupar tanto alto. */
+  .grupo-paises{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+
+  .grupo-paises .pill{
+    padding: 6px 13px;
+    font-size: 12.5px;
+  }
+
+  #pe-puesto-auto{ display: none; }
+  #pe-puesto-auto.visible{ display: block; color: var(--verde-sspcap); font-weight: 600; }
 
   .campo-oculto{
     position: absolute;
@@ -776,6 +840,14 @@
     .stat-valor{ font-size: 22px; }
     .stat-detalle{ display: none; }
 
+    /* En mobile cada filtro ocupa su propia línea en vez de compartir
+       una sola fila -ahí sí hay espacio de sobra para apretarlos-. */
+    .grupo-filtro{ flex-basis: 100%; }
+    .panel-filtros-encabezado{ align-items: flex-start; }
+
+    .acciones-resultados{ width: 100%; }
+    .acciones-resultados .boton-exportar{ flex: 1 1 100%; justify-content: center; }
+
     thead{ display: none; }
     table, tbody, tr, td{ display: block; width: 100%; }
     tbody tr{
@@ -842,44 +914,52 @@
 
   <section class="panel-filtros">
 
-    <div class="fila-filtros">
-      <div class="encabezado-filtro">
-        <label class="etiqueta-filtro" for="buscador-general">Buscar por puesto</label>
-        <button class="boton-limpiar" id="btn-limpiar">✕ Limpiar filtros</button>
-      </div>
-      <div class="buscador">
-        <input type="text" id="buscador-general" autocomplete="off"
-               placeholder="Ej. Analista Contable, Gerente de Nóminas..." />
-        <div class="sugerencias" id="caja-sugerencias"></div>
-      </div>
+    <div class="panel-filtros-encabezado">
+      <h2 class="panel-filtros-titulo">Filtros de búsqueda</h2>
+      <button type="button" class="boton-limpiar" id="btn-limpiar">✕ Limpiar filtros</button>
     </div>
 
-    <div class="fila-filtros">
-      <label class="etiqueta-filtro" for="buscador-departamento">Buscar por departamento</label>
-      <div class="buscador">
-        <input type="text" id="buscador-departamento" autocomplete="off"
-               placeholder="Ej. Contabilidad, Auditoria Interna..." />
-        <div class="sugerencias" id="caja-sugerencias-departamento"></div>
+    <div class="barra-filtros">
+      <div class="grupo-filtro grupo-filtro--buscador">
+        <label class="etiqueta-filtro" for="buscador-general">Puesto</label>
+        <div class="buscador">
+          <input type="text" id="buscador-general" autocomplete="off"
+                 placeholder="Ej. Analista Contable, Gerente de Nóminas..." />
+          <div class="sugerencias" id="caja-sugerencias"></div>
+        </div>
       </div>
-    </div>
 
-    <div class="fila-filtros">
-      <label class="etiqueta-filtro">Dirección corporativa</label>
-      <button class="pill direccion activa" data-encargado="TODOS">Todas</button>
-      <button class="pill direccion" data-encargado="CIO">CIO</button>
-      <button class="pill direccion" data-encargado="COO">COO</button>
-      <button class="pill direccion" data-encargado="CFO">CFO</button>
-    </div>
+      <div class="grupo-filtro grupo-filtro--buscador">
+        <label class="etiqueta-filtro" for="buscador-departamento">Departamento</label>
+        <div class="buscador">
+          <input type="text" id="buscador-departamento" autocomplete="off"
+                 placeholder="Ej. Contabilidad, Auditoria Interna..." />
+          <div class="sugerencias" id="caja-sugerencias-departamento"></div>
+        </div>
+      </div>
 
-    <div class="fila-filtros">
-      <label class="etiqueta-filtro">País</label>
-      <button class="pill activa" data-pais="TODOS">Todos</button>
-      <button class="pill" data-pais="Perú">Perú</button>
-      <button class="pill" data-pais="Bolivia">Bolivia</button>
-      <button class="pill" data-pais="Nicaragua">Nicaragua</button>
-      <button class="pill" data-pais="Guatemala">Guatemala</button>
-      <button class="pill" data-pais="Honduras">Honduras</button>
-      <button class="pill" data-pais="El Salvador">El Salvador</button>
+      <div class="grupo-filtro">
+        <label class="etiqueta-filtro" for="filtro-direccion">Dirección</label>
+        <select id="filtro-direccion">
+          <option value="TODOS">Todas</option>
+          <option value="CIO">CIO</option>
+          <option value="COO">COO</option>
+          <option value="CFO">CFO</option>
+        </select>
+      </div>
+
+      <div class="grupo-filtro">
+        <label class="etiqueta-filtro" for="filtro-pais">País</label>
+        <select id="filtro-pais">
+          <option value="TODOS">Todos</option>
+          <option value="Perú">Perú</option>
+          <option value="Bolivia">Bolivia</option>
+          <option value="Nicaragua">Nicaragua</option>
+          <option value="Guatemala">Guatemala</option>
+          <option value="Honduras">Honduras</option>
+          <option value="El Salvador">El Salvador</option>
+        </select>
+      </div>
     </div>
 
   </section>
@@ -889,9 +969,13 @@
       <strong id="num-resultados">0</strong> puestos encontrados
       <span id="chips-activos"></span>
     </div>
-    <button class="boton-exportar" id="btn-exportar" title="Descarga los puestos que ves en pantalla (según tu búsqueda y filtros actuales), con presencia por país — sin cantidades de personal">
-      ⬇ Exportar resultados (Excel)
-    </button>
+    <div class="acciones-resultados">
+      <button class="boton-accion-secundaria" id="btn-abrir-proponer" type="button">+ Proponer puesto</button>
+      <button class="boton-accion-secundaria" id="btn-abrir-eliminar" type="button">🗑 Eliminar puesto</button>
+      <button class="boton-exportar" id="btn-exportar" title="Descarga los puestos que ves en pantalla (según tu búsqueda y filtros actuales), con presencia por país — sin cantidades de personal">
+        ⬇ Exportar resultados
+      </button>
+    </div>
   </div>
 
   <div class="contenedor-tabla">
@@ -909,10 +993,7 @@
     </table>
     <div class="sin-datos" id="sin-datos" style="display:none;">
       <strong>No se encontraron puestos</strong>
-      <p class="sin-datos-mensaje" id="sin-datos-mensaje">Ajusta los filtros o el término de búsqueda para ver resultados.</p>
-      <div class="sin-datos-accion" id="sin-datos-accion">
-        <button class="boton-proponer" id="btn-abrir-proponer" type="button">+ Proponer este puesto</button>
-      </div>
+      <p class="sin-datos-mensaje" id="sin-datos-mensaje">Ajusta los filtros o el término de búsqueda para ver resultados. También puedes proponer este puesto con el botón de arriba.</p>
     </div>
   </div>
 
@@ -966,6 +1047,12 @@
         </div>
 
         <div class="campo">
+          <label>País(es) donde aplicaría *</label>
+          <div class="grupo-paises" id="pp-paises"></div>
+          <p class="error-campo" id="pp-paises-error">Selecciona al menos un país.</p>
+        </div>
+
+        <div class="campo">
           <label for="pp-email">Correo de contacto *</label>
           <input type="email" id="pp-email" name="email" required placeholder="nombre@sspcapital.com" />
         </div>
@@ -1010,11 +1097,22 @@
 
     <div id="modal-eliminar-cuerpo">
       <h2 id="titulo-modal-eliminar">Reportar puesto para eliminación</h2>
-      <p class="modal-subtitulo">Cuéntanos por qué este puesto ya no debería estar vigente. El equipo de Compensaciones lo evaluará.</p>
-
-      <div class="resumen-puesto-reportado" id="pe-resumen-puesto"></div>
+      <p class="modal-subtitulo">Indícanos qué puesto y en qué país(es) ya no debería estar vigente. El equipo de Compensaciones lo evaluará.</p>
 
       <form id="form-eliminar" novalidate>
+        <div class="campo">
+          <label for="pe-puesto">Puesto a eliminar *</label>
+          <input type="text" id="pe-puesto" name="puesto" required maxlength="80" list="lista-puestos-form" placeholder="Escribe o elige el puesto del catálogo" />
+          <datalist id="lista-puestos-form"></datalist>
+          <p class="ayuda-campo" id="pe-puesto-auto"></p>
+        </div>
+
+        <div class="campo">
+          <label>País(es) donde se debe eliminar *</label>
+          <div class="grupo-paises" id="pe-paises"></div>
+          <p class="error-campo" id="pe-paises-error">Selecciona al menos un país.</p>
+        </div>
+
         <div class="campo">
           <label for="pe-motivo">Motivo *</label>
           <textarea id="pe-motivo" name="motivo" rows="3" required maxlength="300" placeholder="Ej. El puesto ya no tiene personal asignado, fue reemplazado por otro, se fusionó con..."></textarea>
@@ -1159,6 +1257,7 @@
       estado.puestos = todos.filter(function(p){ return p.activos_total > 0; });
       construirOpcionesBusqueda();
       poblarDatalistDepartamentos();
+      poblarDatalistPuestos();
       construirResumenEjecutivo(todos);
       aplicarFiltros();
     })
@@ -1167,8 +1266,9 @@
       elSinDatos.style.display = "block";
       elSinDatos.querySelector("strong").textContent = "No se pudo cargar la información";
       document.getElementById("sin-datos-mensaje").textContent = "Verifica que el archivo puestos.json esté disponible junto a esta página.";
-      // Si no cargó el catálogo no tiene sentido ofrecer "proponer puesto".
-      document.getElementById("sin-datos-accion").style.display = "none";
+      // Si no cargó el catálogo, las sugerencias de departamento/puesto de
+      // los formularios quedarían vacías: mejor ocultar esas acciones.
+      document.querySelector(".acciones-resultados").style.display = "none";
       console.error(err);
     });
 
@@ -1296,27 +1396,18 @@
     }
   });
 
-  /* ---------------- Filtros rápidos ---------------- */
-  Array.prototype.forEach.call(document.querySelectorAll(".pill[data-encargado]"), function(btn){
-    btn.addEventListener("click", function(){
-      Array.prototype.forEach.call(document.querySelectorAll(".pill[data-encargado]"), function(b){
-        b.classList.remove("activa");
-      });
-      btn.classList.add("activa");
-      estado.encargado = btn.getAttribute("data-encargado");
-      aplicarFiltros();
-    });
+  /* ---------------- Filtros rápidos (Dirección y País como selects) ---------------- */
+  var elFiltroDireccion = document.getElementById("filtro-direccion");
+  var elFiltroPais = document.getElementById("filtro-pais");
+
+  elFiltroDireccion.addEventListener("change", function(){
+    estado.encargado = elFiltroDireccion.value;
+    aplicarFiltros();
   });
 
-  Array.prototype.forEach.call(document.querySelectorAll(".pill[data-pais]"), function(btn){
-    btn.addEventListener("click", function(){
-      Array.prototype.forEach.call(document.querySelectorAll(".pill[data-pais]"), function(b){
-        b.classList.remove("activa");
-      });
-      btn.classList.add("activa");
-      estado.pais = btn.getAttribute("data-pais");
-      aplicarFiltros();
-    });
+  elFiltroPais.addEventListener("change", function(){
+    estado.pais = elFiltroPais.value;
+    aplicarFiltros();
   });
 
   document.getElementById("btn-limpiar").addEventListener("click", function(){
@@ -1328,13 +1419,8 @@
     elInputBuscadorDepto.value = "";
     elCajaSugerencias.classList.remove("visible");
     elCajaSugerenciasDepto.classList.remove("visible");
-
-    Array.prototype.forEach.call(document.querySelectorAll(".pill[data-encargado]"), function(b){
-      b.classList.toggle("activa", b.getAttribute("data-encargado") === "TODOS");
-    });
-    Array.prototype.forEach.call(document.querySelectorAll(".pill[data-pais]"), function(b){
-      b.classList.toggle("activa", b.getAttribute("data-pais") === "TODOS");
-    });
+    elFiltroDireccion.value = "TODOS";
+    elFiltroPais.value = "TODOS";
 
     aplicarFiltros();
   });
@@ -1488,6 +1574,55 @@
     }).join("");
   }
 
+  function poblarDatalistPuestos(){
+    var elLista = document.getElementById("lista-puestos-form");
+    elLista.innerHTML = (estado.opcionesPuesto || []).map(function(op){
+      return '<option value="' + escaparHtml(op.valor) + '"></option>';
+    }).join("");
+  }
+
+  function buscarPuestoPorNombre(nombre){
+    var buscado = normalizar(nombre);
+    if(!buscado){ return null; }
+    var coincidencias = estado.puestos.filter(function(p){
+      return normalizar(p.puesto_vigente) === buscado;
+    });
+    return coincidencias[0] || null;
+  }
+
+  /* ---------------- Selector de país(es): pills multi-selección reutilizables ---------------- */
+  function crearPillsPaises(contenedorId, preseleccion){
+    var contenedor = document.getElementById(contenedorId);
+    contenedor.innerHTML = ORDEN_PAISES.map(function(pais){
+      var activa = (preseleccion || []).indexOf(pais) !== -1;
+      return '<button type="button" class="pill' + (activa ? ' activa' : '') + '" data-pais="' + escaparHtml(pais) + '">' + escaparHtml(pais) + '</button>';
+    }).join("");
+  }
+
+  function obtenerPaisesSeleccionados(contenedorId){
+    return Array.prototype.map.call(
+      document.querySelectorAll("#" + contenedorId + " .pill.activa"),
+      function(btn){ return btn.getAttribute("data-pais"); }
+    );
+  }
+
+  function validarPaisesSeleccionados(contenedorId, errorId){
+    var hayAlMenosUno = obtenerPaisesSeleccionados(contenedorId).length > 0;
+    document.getElementById(errorId).classList.toggle("visible", !hayAlMenosUno);
+    return hayAlMenosUno;
+  }
+
+  // Delegación de clics: los pills de cada grupo se regeneran por completo
+  // cada vez que se abre un modal (crearPillsPaises), así que el listener
+  // va en el contenedor fijo, no en cada botón.
+  ["pp-paises", "pe-paises"].forEach(function(id){
+    document.getElementById(id).addEventListener("click", function(e){
+      var boton = e.target.closest(".pill");
+      if(!boton){ return; }
+      boton.classList.toggle("activa");
+    });
+  });
+
   function enviarFormularioNetlify(nombreFormulario, datos){
     var params = new URLSearchParams();
     params.set("form-name", nombreFormulario);
@@ -1578,13 +1713,17 @@
     if(elPpPuesto.classList.contains("campo-invalido")){ revisarNombrePuesto(); }
   });
 
-  /* ---------------- "Proponer puesto": abrir desde "sin resultados" ---------------- */
+  /* ---------------- "Proponer puesto": botón persistente junto a Exportar ---------------- */
   document.getElementById("btn-abrir-proponer").addEventListener("click", function(){
     document.getElementById("form-proponer").reset();
     elPpPuesto.classList.remove("campo-invalido");
     elPpPuestoError.classList.remove("visible");
     document.getElementById("pp-error-envio").classList.remove("visible");
+    // Si venía de una búsqueda sin resultados, se aprovecha el texto
+    // buscado como punto de partida del nombre propuesto.
     document.getElementById("pp-puesto").value = estado.textoBusqueda || "";
+    crearPillsPaises("pp-paises", []);
+    document.getElementById("pp-paises-error").classList.remove("visible");
     document.getElementById("modal-proponer-cuerpo").hidden = false;
     document.getElementById("modal-proponer-exito").hidden = true;
     abrirModal("modal-proponer");
@@ -1594,7 +1733,8 @@
     e.preventDefault();
 
     var nombreValido = revisarNombrePuesto();
-    var formularioValido = e.target.reportValidity() && nombreValido;
+    var paisesValidos = validarPaisesSeleccionados("pp-paises", "pp-paises-error");
+    var formularioValido = e.target.reportValidity() && nombreValido && paisesValidos;
     if(!formularioValido){ return; }
 
     var elBoton = document.getElementById("pp-btn-enviar");
@@ -1611,6 +1751,7 @@
       departamento: document.getElementById("pp-departamento").value.trim(),
       funcion: document.getElementById("pp-funcion").value,
       direccion: document.getElementById("pp-direccion").value,
+      paises: obtenerPaisesSeleccionados("pp-paises").join(", "),
       email: document.getElementById("pp-email").value.trim(),
       telefono: numero ? (prefijo + " " + numero) : "",
       comentario: document.getElementById("pp-comentario").value.trim(),
@@ -1630,7 +1771,48 @@
       });
   });
 
-  /* ---------------- "Reportar para eliminar": abrir desde una fila de la tabla ---------------- */
+  /* ---------------- "Reportar para eliminar": auto-detección al escribir el puesto ----------------
+     Si lo que se escribe/elige coincide exactamente con un puesto del
+     catálogo, se auto-completan departamento/dirección (ocultos, van en
+     el envío) y se preseleccionan los países donde hoy tiene presencia
+     -editable igual-. Si no hay coincidencia (puesto nuevo o mal
+     escrito) simplemente no se auto-completa nada y el equipo lo revisa
+     con lo que la persona haya escrito. */
+  function aplicarAutoDeteccionEliminar(){
+    var encontrado = buscarPuestoPorNombre(document.getElementById("pe-puesto").value);
+    var form = document.getElementById("form-eliminar");
+    var elAuto = document.getElementById("pe-puesto-auto");
+    if(encontrado){
+      form.setAttribute("data-departamento", encontrado.departamento || "");
+      form.setAttribute("data-direccion", encontrado.encargado || "");
+      elAuto.textContent = "Detectado en el catálogo: " + (encontrado.departamento || "—") + " · " + (encontrado.encargado || "—");
+      elAuto.classList.add("visible");
+      crearPillsPaises("pe-paises", encontrado.paises_activos || []);
+    } else {
+      form.removeAttribute("data-departamento");
+      form.removeAttribute("data-direccion");
+      elAuto.textContent = "";
+      elAuto.classList.remove("visible");
+    }
+  }
+  document.getElementById("pe-puesto").addEventListener("input", aplicarAutoDeteccionEliminar);
+
+  /* ---------------- "Eliminar puesto": botón persistente junto a Exportar (sin partir de una fila) ---------------- */
+  document.getElementById("btn-abrir-eliminar").addEventListener("click", function(){
+    document.getElementById("form-eliminar").reset();
+    document.getElementById("form-eliminar").removeAttribute("data-departamento");
+    document.getElementById("form-eliminar").removeAttribute("data-direccion");
+    document.getElementById("pe-motivo-error").classList.remove("visible");
+    document.getElementById("pe-paises-error").classList.remove("visible");
+    document.getElementById("pe-error-envio").classList.remove("visible");
+    document.getElementById("pe-puesto-auto").classList.remove("visible");
+    crearPillsPaises("pe-paises", []);
+    document.getElementById("modal-eliminar-cuerpo").hidden = false;
+    document.getElementById("modal-eliminar-exito").hidden = true;
+    abrirModal("modal-eliminar");
+  });
+
+  /* ---------------- "Eliminar puesto": abrir desde el ícono de una fila de la tabla ---------------- */
   elCuerpoTabla.addEventListener("click", function(e){
     var boton = e.target.closest(".btn-reportar-baja");
     if(!boton){ return; }
@@ -1641,16 +1823,19 @@
 
     document.getElementById("form-eliminar").reset();
     document.getElementById("pe-motivo-error").classList.remove("visible");
+    document.getElementById("pe-paises-error").classList.remove("visible");
     document.getElementById("pe-error-envio").classList.remove("visible");
 
-    document.getElementById("pe-resumen-puesto").innerHTML =
-      '<strong>' + escaparHtml(puesto.puesto_vigente || "—") + '</strong>' +
-      escaparHtml(puesto.encargado || "—") + ' · ' + escaparHtml(puesto.departamento || "—");
-
+    document.getElementById("pe-puesto").value = puesto.puesto_vigente || "";
     var form = document.getElementById("form-eliminar");
-    form.setAttribute("data-puesto", puesto.puesto_vigente || "");
     form.setAttribute("data-departamento", puesto.departamento || "");
     form.setAttribute("data-direccion", puesto.encargado || "");
+
+    var elAuto = document.getElementById("pe-puesto-auto");
+    elAuto.textContent = "Detectado en el catálogo: " + (puesto.departamento || "—") + " · " + (puesto.encargado || "—");
+    elAuto.classList.add("visible");
+
+    crearPillsPaises("pe-paises", puesto.paises_activos || []);
 
     document.getElementById("modal-eliminar-cuerpo").hidden = false;
     document.getElementById("modal-eliminar-exito").hidden = true;
@@ -1667,7 +1852,8 @@
     elMotivoError.classList.toggle("visible", !motivoValido);
     elMotivoError.textContent = "Cuéntanos brevemente el motivo.";
 
-    var formularioValido = e.target.reportValidity() && motivoValido;
+    var paisesValidos = validarPaisesSeleccionados("pe-paises", "pe-paises-error");
+    var formularioValido = e.target.reportValidity() && motivoValido && paisesValidos;
     if(!formularioValido){ return; }
 
     var elBoton = document.getElementById("pe-btn-enviar");
@@ -1681,9 +1867,10 @@
     var form = e.target;
 
     enviarFormularioNetlify("solicitud-eliminacion", {
-      puesto: form.getAttribute("data-puesto") || "",
+      puesto: document.getElementById("pe-puesto").value.trim(),
       departamento: form.getAttribute("data-departamento") || "",
       direccion: form.getAttribute("data-direccion") || "",
+      paises: obtenerPaisesSeleccionados("pe-paises").join(", "),
       motivo: elMotivo.value.trim(),
       email: document.getElementById("pe-email").value.trim(),
       telefono: numero ? (prefijo + " " + numero) : "",
