@@ -18,7 +18,8 @@
     --texto-terciario: #8694A3;
     --borde: #E2E8F0;
     --blanco: #FFFFFF;
-    --alto-header: 76px;
+    --alto-header: 76px;   /* valor inicial; se recalcula por JS según el alto real */
+    --alto-barra-fija: 0px; /* alto real de .barra-fija (resumen + filtros), lo fija JS */
   }
 
   *{ box-sizing: border-box; }
@@ -98,6 +99,34 @@
     color: var(--blanco);
   }
 
+  /* Enlace de descarga de la política de puestos: a la derecha del
+     header, en la misma línea que el título. */
+  .enlace-politica{
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--blanco);
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 8px 15px;
+    border-radius: 999px;
+    font-size: 12.5px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: background-color .15s ease, border-color .15s ease, transform .15s ease;
+  }
+
+  .enlace-politica:hover{
+    background: rgba(255,255,255,0.18);
+    border-color: rgba(255,255,255,0.5);
+    transform: translateY(-1px);
+  }
+
+  .enlace-politica:active{ transform: scale(0.97); }
+
   /* ---------- Contenedor general ---------- */
   /* Mismo ancho máximo que .envoltorio del header, para que todo quede
      alineado verticalmente. En monitores muy anchos se limita a 1440px
@@ -109,23 +138,38 @@
     padding: 24px clamp(20px, 3vw, 40px) 60px;
   }
 
+  /* ---------- Bloque fijo: resumen ejecutivo + filtros ----------
+     Se inmoviliza (position:sticky) justo debajo del header al hacer
+     scroll, para que la información general y los filtros queden
+     siempre visibles. El alto real (que cambia según breakpoint) lo
+     calcula JS y lo guarda en --alto-barra-fija, que a su vez usa el
+     <thead> para apilarse justo debajo sin dejar hueco ni taparse. */
+  .barra-fija{
+    position: sticky;
+    top: var(--alto-header);
+    z-index: 40;
+    background: var(--fondo-platino);
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
   /* ---------- Resumen ejecutivo ---------- */
   .resumen-ejecutivo{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 14px;
-    margin-bottom: 22px;
+    gap: 10px;
+    margin-bottom: 14px;
   }
 
   .stat-tile{
     background: var(--blanco);
     border: 1px solid var(--borde);
-    border-radius: 14px;
-    padding: 16px 18px;
+    border-radius: 12px;
+    padding: 11px 15px;
     box-shadow: 0 1px 3px rgba(15,35,55,0.04);
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: 2px;
     transition: box-shadow .15s ease, transform .15s ease;
   }
 
@@ -135,15 +179,15 @@
   }
 
   .stat-valor{
-    font-size: 27px;
+    font-size: 21px;
     font-weight: 800;
     color: var(--verde-oscuro);
-    line-height: 1.1;
+    line-height: 1.15;
     font-variant-numeric: tabular-nums;
   }
 
   .stat-etiqueta{
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
     color: var(--texto-secundario);
     text-transform: uppercase;
@@ -151,7 +195,7 @@
   }
 
   .stat-detalle{
-    font-size: 11.5px;
+    font-size: 10.5px;
     color: var(--texto-terciario);
     margin-top: 1px;
   }
@@ -160,9 +204,9 @@
   .panel-filtros{
     background: var(--blanco);
     border: 1px solid var(--borde);
-    border-radius: 14px;
-    padding: 20px;
-    margin-bottom: 22px;
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 14px;
     box-shadow: 0 1px 3px rgba(15,35,55,0.04);
   }
 
@@ -171,7 +215,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 10px;
-    margin-bottom: 16px;
+    margin-bottom: 11px;
   }
 
   .panel-filtros-titulo{
@@ -189,7 +233,7 @@
   .barra-filtros{
     display: flex;
     flex-wrap: wrap;
-    gap: 14px;
+    gap: 12px;
   }
 
   .grupo-filtro{
@@ -201,6 +245,16 @@
 
   .grupo-filtro--buscador{
     flex: 1 1 230px;
+  }
+
+  /* Departamento es un texto más largo que CIO/COO/CFO o un país, así
+     que necesita más ancho propio para no truncarse. */
+  .grupo-filtro--departamento{
+    flex: 1 1 200px;
+  }
+
+  .grupo-filtro--direccion{
+    flex: 0 0 140px;
   }
 
   label.etiqueta-filtro{
@@ -494,7 +548,7 @@
     letter-spacing: 0.05em;
     padding: 13px 16px;
     position: sticky;
-    top: var(--alto-header);
+    top: calc(var(--alto-header) + var(--alto-barra-fija));
     z-index: 20;
   }
 
@@ -841,10 +895,11 @@
   @media (max-width: 760px){
     header .envoltorio{ padding-top: 12px; padding-bottom: 12px; flex-wrap: wrap; }
     .titulo-app{ border-left: none; padding-left: 0; font-size: 13px; }
+    .enlace-politica{ margin-left: 0; width: 100%; justify-content: center; margin-top: 4px; }
 
-    .resumen-ejecutivo{ grid-template-columns: repeat(2, 1fr); gap: 10px; }
-    .stat-tile{ padding: 13px 14px; }
-    .stat-valor{ font-size: 22px; }
+    .resumen-ejecutivo{ grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .stat-tile{ padding: 9px 12px; }
+    .stat-valor{ font-size: 19px; }
     .stat-detalle{ display: none; }
 
     /* En mobile cada filtro ocupa su propia línea en vez de compartir
@@ -892,84 +947,90 @@
       <strong>Puestos Homologados</strong>
       Nómina LATAM
     </p>
+    <a class="enlace-politica" href="assets/politica-creacion-de-puestos.pdf" target="_blank" rel="noopener"
+       download="Politica_Creacion_de_Puestos_SSP_Capital.pdf">
+      ⬇ Política de puestos
+    </a>
   </div>
 </header>
 
 <main>
 
-  <section class="resumen-ejecutivo" aria-label="Resumen ejecutivo">
-    <div class="stat-tile">
-      <span class="stat-valor" id="stat-total">0</span>
-      <span class="stat-etiqueta">Puestos con personal</span>
-    </div>
-    <div class="stat-tile">
-      <span class="stat-valor" id="stat-direcciones">0</span>
-      <span class="stat-etiqueta">Direcciones corporativas</span>
-      <span class="stat-detalle">CIO · COO · CFO</span>
-    </div>
-    <div class="stat-tile">
-      <span class="stat-valor" id="stat-paises">0</span>
-      <span class="stat-etiqueta">Países</span>
-      <span class="stat-detalle">Perú · Bolivia · Nicaragua · Guatemala · Honduras · El Salvador</span>
-    </div>
-    <div class="stat-tile">
-      <span class="stat-valor" id="stat-funciones">0</span>
-      <span class="stat-etiqueta">Funciones</span>
-      <span class="stat-detalle">Back · Middle · Front Office</span>
-    </div>
-  </section>
+  <div class="barra-fija">
 
-  <section class="panel-filtros">
+    <section class="resumen-ejecutivo" aria-label="Resumen ejecutivo">
+      <div class="stat-tile">
+        <span class="stat-valor" id="stat-total">0</span>
+        <span class="stat-etiqueta">Puestos con personal</span>
+      </div>
+      <div class="stat-tile">
+        <span class="stat-valor" id="stat-direcciones">0</span>
+        <span class="stat-etiqueta">Direcciones corporativas</span>
+        <span class="stat-detalle">CIO · COO · CFO</span>
+      </div>
+      <div class="stat-tile">
+        <span class="stat-valor" id="stat-paises">0</span>
+        <span class="stat-etiqueta">Países</span>
+        <span class="stat-detalle">Perú · Bolivia · Nicaragua · Guatemala · Honduras · El Salvador</span>
+      </div>
+      <div class="stat-tile">
+        <span class="stat-valor" id="stat-funciones">0</span>
+        <span class="stat-etiqueta">Funciones</span>
+        <span class="stat-detalle">Back · Middle · Front Office</span>
+      </div>
+    </section>
 
-    <div class="panel-filtros-encabezado">
-      <h2 class="panel-filtros-titulo">Filtros de búsqueda</h2>
-      <button type="button" class="boton-limpiar" id="btn-limpiar">✕ Limpiar filtros</button>
-    </div>
+    <section class="panel-filtros">
 
-    <div class="barra-filtros">
-      <div class="grupo-filtro grupo-filtro--buscador">
-        <label class="etiqueta-filtro" for="buscador-general">Puesto</label>
-        <div class="buscador">
-          <input type="text" id="buscador-general" autocomplete="off"
-                 placeholder="Ej. Analista Contable, Gerente de Nóminas..." />
-          <div class="sugerencias" id="caja-sugerencias"></div>
+      <div class="panel-filtros-encabezado">
+        <h2 class="panel-filtros-titulo">Filtros de búsqueda</h2>
+        <button type="button" class="boton-limpiar" id="btn-limpiar">✕ Limpiar filtros</button>
+      </div>
+
+      <div class="barra-filtros">
+        <div class="grupo-filtro grupo-filtro--buscador">
+          <label class="etiqueta-filtro" for="buscador-general">Puesto</label>
+          <div class="buscador">
+            <input type="text" id="buscador-general" autocomplete="off"
+                   placeholder="Ej. Analista Contable, Gerente de Nóminas..." />
+            <div class="sugerencias" id="caja-sugerencias"></div>
+          </div>
+        </div>
+
+        <div class="grupo-filtro grupo-filtro--departamento">
+          <label class="etiqueta-filtro" for="filtro-departamento">Departamento</label>
+          <select id="filtro-departamento">
+            <option value="TODOS">Todos</option>
+          </select>
+        </div>
+
+        <div class="grupo-filtro grupo-filtro--direccion">
+          <label class="etiqueta-filtro" for="filtro-direccion">Dirección</label>
+          <select id="filtro-direccion">
+            <option value="TODOS">Todas</option>
+            <option value="CIO">CIO</option>
+            <option value="COO">COO</option>
+            <option value="CFO">CFO</option>
+          </select>
+        </div>
+
+        <div class="grupo-filtro">
+          <label class="etiqueta-filtro" for="filtro-pais">País</label>
+          <select id="filtro-pais">
+            <option value="TODOS">Todos</option>
+            <option value="Perú">Perú</option>
+            <option value="Bolivia">Bolivia</option>
+            <option value="Nicaragua">Nicaragua</option>
+            <option value="Guatemala">Guatemala</option>
+            <option value="Honduras">Honduras</option>
+            <option value="El Salvador">El Salvador</option>
+          </select>
         </div>
       </div>
 
-      <div class="grupo-filtro grupo-filtro--buscador">
-        <label class="etiqueta-filtro" for="buscador-departamento">Departamento</label>
-        <div class="buscador">
-          <input type="text" id="buscador-departamento" autocomplete="off"
-                 placeholder="Ej. Contabilidad, Auditoria Interna..." />
-          <div class="sugerencias" id="caja-sugerencias-departamento"></div>
-        </div>
-      </div>
+    </section>
 
-      <div class="grupo-filtro">
-        <label class="etiqueta-filtro" for="filtro-direccion">Dirección</label>
-        <select id="filtro-direccion">
-          <option value="TODOS">Todas</option>
-          <option value="CIO">CIO</option>
-          <option value="COO">COO</option>
-          <option value="CFO">CFO</option>
-        </select>
-      </div>
-
-      <div class="grupo-filtro">
-        <label class="etiqueta-filtro" for="filtro-pais">País</label>
-        <select id="filtro-pais">
-          <option value="TODOS">Todos</option>
-          <option value="Perú">Perú</option>
-          <option value="Bolivia">Bolivia</option>
-          <option value="Nicaragua">Nicaragua</option>
-          <option value="Guatemala">Guatemala</option>
-          <option value="Honduras">Honduras</option>
-          <option value="El Salvador">El Salvador</option>
-        </select>
-      </div>
-    </div>
-
-  </section>
+  </div>
 
   <div class="resumen">
     <div class="contador">
@@ -989,11 +1050,11 @@
     <table>
       <thead>
         <tr>
-          <th style="width:12%">Dirección</th>
-          <th style="width:22%">Departamento</th>
-          <th style="width:13%">Función</th>
+          <th style="width:7%">Dirección</th>
+          <th style="width:19%">Departamento</th>
+          <th style="width:11%">Función</th>
           <th style="width:28%">Puesto vigente</th>
-          <th style="width:25%">Presencia por país</th>
+          <th style="width:35%">Presencia por país</th>
         </tr>
       </thead>
       <tbody id="cuerpo-tabla"></tbody>
@@ -1017,7 +1078,7 @@
 
     <div id="modal-proponer-cuerpo">
       <h2 id="titulo-modal-proponer">Proponer un puesto nuevo</h2>
-      <p class="modal-subtitulo">¿No encontraste el puesto que buscabas? Complétalo y lo enviamos al equipo de Compensaciones para su evaluación.</p>
+      <p class="modal-subtitulo">¿No encontraste el puesto que buscabas? Complétalo y lo enviamos al área encargada para su evaluación.</p>
 
       <form id="form-proponer" novalidate>
         <div class="campo">
@@ -1034,42 +1095,24 @@
         </div>
 
         <div class="campo">
-          <label for="pp-funcion">Función *</label>
-          <select id="pp-funcion" name="funcion" required>
-            <option value="" disabled selected>Selecciona una función</option>
-            <option value="Back Office">Back Office</option>
-            <option value="Middle Office">Middle Office</option>
-            <option value="Front Office">Front Office</option>
-          </select>
-        </div>
-
-        <div class="campo">
-          <label for="pp-direccion">Dirección corporativa *</label>
-          <select id="pp-direccion" name="direccion" required>
-            <option value="" disabled selected>Selecciona una dirección</option>
-            <option value="CIO">CIO</option>
-            <option value="COO">COO</option>
-            <option value="CFO">CFO</option>
-          </select>
-        </div>
-
-        <div class="campo">
           <label>País(es) donde aplicaría *</label>
           <div class="grupo-paises" id="pp-paises"></div>
           <p class="error-campo" id="pp-paises-error">Selecciona al menos un país.</p>
         </div>
 
         <div class="campo">
-          <label for="pp-email">Correo de contacto *</label>
-          <input type="email" id="pp-email" name="email" required placeholder="nombre@sspcapital.com" />
+          <label for="pp-email">Correo del solicitante</label>
+          <input type="email" id="pp-email" name="email" placeholder="nombre@sspcapital.com" />
         </div>
 
         <div class="campo">
-          <label for="pp-telefono">Teléfono de contacto (opcional)</label>
+          <label for="pp-telefono">Teléfono del solicitante</label>
           <div class="campo-telefono">
             <select id="pp-prefijo" class="selector-prefijo" aria-label="Prefijo de país"></select>
             <input type="tel" id="pp-telefono" placeholder="Número" />
           </div>
+          <p class="ayuda-campo">Completa al menos uno: correo electrónico o teléfono.</p>
+          <p class="error-campo" id="pp-contacto-error">Debes ingresar un correo o un teléfono de contacto.</p>
         </div>
 
         <div class="campo">
@@ -1127,12 +1170,12 @@
         </div>
 
         <div class="campo">
-          <label for="pe-email">Correo de contacto *</label>
+          <label for="pe-email">Correo del solicitante *</label>
           <input type="email" id="pe-email" name="email" required placeholder="nombre@sspcapital.com" />
         </div>
 
         <div class="campo">
-          <label for="pe-telefono">Teléfono de contacto (opcional)</label>
+          <label for="pe-telefono">Teléfono del solicitante (opcional)</label>
           <div class="campo-telefono">
             <select id="pe-prefijo" class="selector-prefijo" aria-label="Prefijo de país"></select>
             <input type="tel" id="pe-telefono" placeholder="Número" />
@@ -1171,8 +1214,8 @@
     opcionesDepartamento: [],
     encargado: "TODOS",
     pais: "TODOS",
-    textoBusqueda: "",
-    departamentoBusqueda: ""
+    departamento: "TODOS",
+    textoBusqueda: ""
   };
 
   var elCuerpoTabla = document.getElementById("cuerpo-tabla");
@@ -1181,8 +1224,26 @@
   var elChipsActivos = document.getElementById("chips-activos");
   var elInputBuscador = document.getElementById("buscador-general");
   var elCajaSugerencias = document.getElementById("caja-sugerencias");
-  var elInputBuscadorDepto = document.getElementById("buscador-departamento");
-  var elCajaSugerenciasDepto = document.getElementById("caja-sugerencias-departamento");
+
+  /* ---------------- Alto real del header y de la barra fija ----------------
+     El header puede partirse en dos líneas en móvil y la barra fija
+     (resumen + filtros) cambia de alto según breakpoint o contenido, así
+     que en vez de valores fijos en CSS, se miden en cada carga/resize y
+     se guardan como variables CSS (--alto-header / --alto-barra-fija) que
+     usan tanto .barra-fija como el <thead> para apilarse sin huecos. */
+  function actualizarAlturasFijas(){
+    var elHeader = document.querySelector("header");
+    var elBarraFija = document.querySelector(".barra-fija");
+    if(elHeader){
+      document.documentElement.style.setProperty("--alto-header", elHeader.offsetHeight + "px");
+    }
+    if(elBarraFija){
+      document.documentElement.style.setProperty("--alto-barra-fija", elBarraFija.offsetHeight + "px");
+    }
+  }
+  window.addEventListener("resize", actualizarAlturasFijas);
+  window.addEventListener("load", actualizarAlturasFijas);
+  actualizarAlturasFijas();
 
   function normalizar(texto){
     return (texto || "")
@@ -1263,6 +1324,7 @@
       // cuando se contrate a alguien, pero no aparecen en la búsqueda pública.
       estado.puestos = todos.filter(function(p){ return p.activos_total > 0; });
       construirOpcionesBusqueda();
+      poblarFiltroDepartamento();
       poblarDatalistDepartamentos();
       poblarDatalistPuestos();
       construirResumenEjecutivo(todos);
@@ -1300,6 +1362,18 @@
     listaDepto.sort(function(a, b){ return a.valor.localeCompare(b.valor, "es"); });
     estado.opcionesPuesto = listaPuesto;
     estado.opcionesDepartamento = listaDepto;
+  }
+
+  // Filtro "Departamento" como desplegable (igual que Dirección/País), con
+  // la lista de departamentos únicos ya ordenada que arma construirOpcionesBusqueda.
+  function poblarFiltroDepartamento(){
+    var elFiltro = document.getElementById("filtro-departamento");
+    var opciones = ['<option value="TODOS">Todos</option>'].concat(
+      estado.opcionesDepartamento.map(function(op){
+        return '<option value="' + escaparHtml(op.valor) + '">' + escaparHtml(op.valor) + '</option>';
+      })
+    );
+    elFiltro.innerHTML = opciones.join("");
   }
 
   function construirResumenEjecutivo(todos){
@@ -1367,13 +1441,6 @@
     });
   }
 
-  function mostrarSugerenciasDepartamento(texto){
-    mostrarSugerenciasGenerico(texto, estado.opcionesDepartamento, elInputBuscadorDepto, elCajaSugerenciasDepto, function(valor){
-      estado.departamentoBusqueda = valor;
-      aplicarFiltros();
-    });
-  }
-
   elInputBuscador.addEventListener("input", function(){
     estado.textoBusqueda = elInputBuscador.value;
     mostrarSugerencias(elInputBuscador.value);
@@ -1384,28 +1451,21 @@
     mostrarSugerencias(elInputBuscador.value);
   });
 
-  elInputBuscadorDepto.addEventListener("input", function(){
-    estado.departamentoBusqueda = elInputBuscadorDepto.value;
-    mostrarSugerenciasDepartamento(elInputBuscadorDepto.value);
-    aplicarFiltros();
-  });
-
-  elInputBuscadorDepto.addEventListener("focus", function(){
-    mostrarSugerenciasDepartamento(elInputBuscadorDepto.value);
-  });
-
   document.addEventListener("click", function(e){
     if(!elCajaSugerencias.contains(e.target) && e.target !== elInputBuscador){
       elCajaSugerencias.classList.remove("visible");
     }
-    if(!elCajaSugerenciasDepto.contains(e.target) && e.target !== elInputBuscadorDepto){
-      elCajaSugerenciasDepto.classList.remove("visible");
-    }
   });
 
-  /* ---------------- Filtros rápidos (Dirección y País como selects) ---------------- */
+  /* ---------------- Filtros rápidos (Departamento, Dirección y País como selects) ---------------- */
+  var elFiltroDepartamento = document.getElementById("filtro-departamento");
   var elFiltroDireccion = document.getElementById("filtro-direccion");
   var elFiltroPais = document.getElementById("filtro-pais");
+
+  elFiltroDepartamento.addEventListener("change", function(){
+    estado.departamento = elFiltroDepartamento.value;
+    aplicarFiltros();
+  });
 
   elFiltroDireccion.addEventListener("change", function(){
     estado.encargado = elFiltroDireccion.value;
@@ -1420,12 +1480,11 @@
   document.getElementById("btn-limpiar").addEventListener("click", function(){
     estado.encargado = "TODOS";
     estado.pais = "TODOS";
+    estado.departamento = "TODOS";
     estado.textoBusqueda = "";
-    estado.departamentoBusqueda = "";
     elInputBuscador.value = "";
-    elInputBuscadorDepto.value = "";
     elCajaSugerencias.classList.remove("visible");
-    elCajaSugerenciasDepto.classList.remove("visible");
+    elFiltroDepartamento.value = "TODOS";
     elFiltroDireccion.value = "TODOS";
     elFiltroPais.value = "TODOS";
 
@@ -1435,15 +1494,12 @@
   /* ---------------- Render ---------------- */
   function aplicarFiltros(){
     var consulta = normalizar(estado.textoBusqueda);
-    var consultaDepto = normalizar(estado.departamentoBusqueda);
 
     var resultado = estado.puestos.filter(function(p){
       if(estado.encargado !== "TODOS" && p.encargado !== estado.encargado){ return false; }
+      if(estado.departamento !== "TODOS" && p.departamento !== estado.departamento){ return false; }
       if(estado.pais !== "TODOS" && (p.paises_activos || []).indexOf(estado.pais) === -1){ return false; }
       if(consulta !== "" && normalizar(p.puesto_vigente).indexOf(consulta) === -1){
-        return false;
-      }
-      if(consultaDepto !== "" && normalizar(p.departamento).indexOf(consultaDepto) === -1){
         return false;
       }
       return true;
@@ -1653,21 +1709,12 @@
     document.body.style.overflow = "";
   }
 
+  // A propósito, el modal NO se cierra al hacer clic fuera de él ni con
+  // la tecla Escape: son formularios donde se puede perder información
+  // ya escrita por un clic accidental. La única forma de salir es el
+  // botón "✕" o "Cancelar" (ambos con data-cerrar-modal).
   Array.prototype.forEach.call(document.querySelectorAll("[data-cerrar-modal]"), function(btn){
     btn.addEventListener("click", function(){ cerrarModal(btn.getAttribute("data-cerrar-modal")); });
-  });
-
-  Array.prototype.forEach.call(document.querySelectorAll(".modal-overlay"), function(overlay){
-    overlay.addEventListener("click", function(e){
-      if(e.target === overlay){ cerrarModal(overlay.id); }
-    });
-  });
-
-  document.addEventListener("keydown", function(e){
-    if(e.key !== "Escape"){ return; }
-    Array.prototype.forEach.call(document.querySelectorAll(".modal-overlay"), function(overlay){
-      if(!overlay.hasAttribute("hidden")){ cerrarModal(overlay.id); }
-    });
   });
 
   /* ---------------- Validación del nombre del puesto propuesto ----------------
@@ -1725,6 +1772,9 @@
     document.getElementById("form-proponer").reset();
     elPpPuesto.classList.remove("campo-invalido");
     elPpPuestoError.classList.remove("visible");
+    elPpEmail.classList.remove("campo-invalido");
+    elPpTelefono.classList.remove("campo-invalido");
+    elPpContactoError.classList.remove("visible");
     document.getElementById("pp-error-envio").classList.remove("visible");
     // Si venía de una búsqueda sin resultados, se aprovecha el texto
     // buscado como punto de partida del nombre propuesto.
@@ -1736,12 +1786,27 @@
     abrirModal("modal-proponer");
   });
 
+  // Correo y teléfono ya no son cada uno "required" por separado: basta con
+  // que al menos uno de los dos esté lleno (política pedida por Compensaciones).
+  var elPpEmail = document.getElementById("pp-email");
+  var elPpTelefono = document.getElementById("pp-telefono");
+  var elPpContactoError = document.getElementById("pp-contacto-error");
+
+  function validarContactoProponer(){
+    var hayContacto = elPpEmail.value.trim() !== "" || elPpTelefono.value.trim() !== "";
+    elPpContactoError.classList.toggle("visible", !hayContacto);
+    elPpEmail.classList.toggle("campo-invalido", !hayContacto);
+    elPpTelefono.classList.toggle("campo-invalido", !hayContacto);
+    return hayContacto;
+  }
+
   document.getElementById("form-proponer").addEventListener("submit", function(e){
     e.preventDefault();
 
     var nombreValido = revisarNombrePuesto();
     var paisesValidos = validarPaisesSeleccionados("pp-paises", "pp-paises-error");
-    var formularioValido = e.target.reportValidity() && nombreValido && paisesValidos;
+    var contactoValido = validarContactoProponer();
+    var formularioValido = e.target.reportValidity() && nombreValido && paisesValidos && contactoValido;
     if(!formularioValido){ return; }
 
     var elBoton = document.getElementById("pp-btn-enviar");
@@ -1751,15 +1816,13 @@
     elBoton.textContent = "Enviando...";
 
     var prefijo = document.getElementById("pp-prefijo").value;
-    var numero = document.getElementById("pp-telefono").value.trim();
+    var numero = elPpTelefono.value.trim();
 
     enviarFormularioNetlify("propuesta-puesto", {
       puesto_propuesto: elPpPuesto.value.trim(),
       departamento: document.getElementById("pp-departamento").value.trim(),
-      funcion: document.getElementById("pp-funcion").value,
-      direccion: document.getElementById("pp-direccion").value,
       paises: obtenerPaisesSeleccionados("pp-paises").join(", "),
-      email: document.getElementById("pp-email").value.trim(),
+      email: elPpEmail.value.trim(),
       telefono: numero ? (prefijo + " " + numero) : "",
       comentario: document.getElementById("pp-comentario").value.trim(),
       origen: window.location.href
@@ -1902,9 +1965,9 @@
 
     var chips = [];
     if(estado.encargado !== "TODOS"){ chips.push(estado.encargado); }
+    if(estado.departamento !== "TODOS"){ chips.push(estado.departamento); }
     if(estado.pais !== "TODOS"){ chips.push(estado.pais); }
     if(estado.textoBusqueda){ chips.push('"' + estado.textoBusqueda + '"'); }
-    if(estado.departamentoBusqueda){ chips.push('"' + estado.departamentoBusqueda + '"'); }
 
     elChipsActivos.innerHTML = chips.map(function(c){
       return '<span class="chip-filtro-activo">' + escaparHtml(c) + '</span>';
