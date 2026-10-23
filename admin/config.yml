@@ -61,13 +61,13 @@ collections:
                   - { label: "Bolivia · PDM", name: "PDM", widget: "number", valueType: "int", default: 0 }
                   - { label: "Nicaragua · CDF", name: "CDF", widget: "number", valueType: "int", default: 0 }
                   - { label: "Guatemala · AFG", name: "AFG", widget: "number", valueType: "int", default: 0 }
-                  - { label: "Guatemala · MPG", name: "MPG", widget: "number", valueType: "int", default: 0 }
                   - { label: "Honduras · AFH", name: "AFH", widget: "number", valueType: "int", default: 0 }
                   - { label: "Honduras · MPH", name: "MPH", widget: "number", valueType: "int", default: 0 }
                   - { label: "Honduras · ECH", name: "ECH", widget: "number", valueType: "int", default: 0 }
                   - { label: "El Salvador · AFS", name: "AFS", widget: "number", valueType: "int", default: 0 }
                   - { label: "El Salvador · PST", name: "PST", widget: "number", valueType: "int", default: 0 }
                   - { label: "El Salvador · ECS", name: "ECS", widget: "number", valueType: "int", default: 0 }
+                  - { label: "El Salvador · CSC", name: "CSC", widget: "number", valueType: "int", default: 0 }
 
               - label: "Orden general"
                 name: "orden"

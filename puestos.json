@@ -13,13 +13,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -35,13 +35,13 @@
         "PDM": 2,
         "CDF": 1,
         "AFG": 1,
-        "MPG": 0,
         "AFH": 1,
         "MPH": 1,
         "ECH": 0,
         "AFS": 1,
         "PST": 1,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -52,18 +52,18 @@
       "funcion": "Back Office",
       "puesto_vigente": "Auditor Senior",
       "empresas": {
-        "EILC": 1,
+        "EILC": 0,
         "PCT": 0,
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -79,13 +79,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -101,13 +101,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -123,13 +123,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -145,171 +145,17 @@
         "PDM": 2,
         "CDF": 2,
         "AFG": 1,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 1,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
       "orden": 8,
-      "encargado": "CFO",
-      "departamento": "Contabilidad",
-      "departamento_orden": 3,
-      "funcion": "Back Office",
-      "puesto_vigente": "Analista De Impuestos",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 0,
-        "PDM": 1,
-        "CDF": 1,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 1,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 9,
-      "encargado": "CFO",
-      "departamento": "Contabilidad",
-      "departamento_orden": 3,
-      "funcion": "Back Office",
-      "puesto_vigente": "Gestor De Plataformas Erp Y Datos Maestros",
-      "empresas": {
-        "EILC": 1,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 10,
-      "encargado": "CFO",
-      "departamento": "Contabilidad",
-      "departamento_orden": 3,
-      "funcion": "Back Office",
-      "puesto_vigente": "Analista Contable Senior",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 11,
-      "encargado": "CFO",
-      "departamento": "Contabilidad",
-      "departamento_orden": 3,
-      "funcion": "Back Office",
-      "puesto_vigente": "Analista De Operaciones Contables",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 1,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 12,
-      "encargado": "CFO",
-      "departamento": "Contabilidad",
-      "departamento_orden": 3,
-      "funcion": "Back Office",
-      "puesto_vigente": "Especialista Tributario",
-      "empresas": {
-        "EILC": 1,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 13,
-      "encargado": "CFO",
-      "departamento": "Contabilidad",
-      "departamento_orden": 3,
-      "funcion": "Back Office",
-      "puesto_vigente": "Analista De Interfaz Contable",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 1,
-        "PST": 1,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 14,
-      "encargado": "CFO",
-      "departamento": "Contabilidad",
-      "departamento_orden": 3,
-      "funcion": "Back Office",
-      "puesto_vigente": "Financial Consolidation & Global Taxes",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 1,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 15,
       "encargado": "CFO",
       "departamento": "Contabilidad",
       "departamento_orden": 3,
@@ -321,17 +167,83 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 1,
         "MPH": 2,
         "ECH": 2,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 16,
+      "orden": 9,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "funcion": "Back Office",
+      "puesto_vigente": "Analista Contable Senior",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 10,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "funcion": "Back Office",
+      "puesto_vigente": "Analista De Interfaz Contable",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 1,
+        "PST": 1,
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 11,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "funcion": "Back Office",
+      "puesto_vigente": "Financial Consolidation & Global Taxes",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 1,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 12,
       "encargado": "CFO",
       "departamento": "Contabilidad",
       "departamento_orden": 3,
@@ -343,17 +255,83 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 17,
+      "orden": 13,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "funcion": "Back Office",
+      "puesto_vigente": "Especialista Tributario",
+      "empresas": {
+        "EILC": 1,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 14,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "funcion": "Back Office",
+      "puesto_vigente": "Analista De Impuestos",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 1,
+        "CDF": 1,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 1,
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 15,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "funcion": "Back Office",
+      "puesto_vigente": "Analista De Operaciones Contables",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 1,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 16,
       "encargado": "CFO",
       "departamento": "Contabilidad",
       "departamento_orden": 3,
@@ -365,13 +343,35 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 1,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 17,
+      "encargado": "CFO",
+      "departamento": "Contabilidad",
+      "departamento_orden": 3,
+      "funcion": "Back Office",
+      "puesto_vigente": "Gestor De Plataformas Erp Y Datos Maestros",
+      "empresas": {
+        "EILC": 1,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -387,13 +387,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -409,13 +409,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 1,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -431,13 +431,13 @@
         "PDM": 1,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -453,13 +453,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -475,13 +475,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 1,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -497,13 +497,13 @@
         "PDM": 1,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 1,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -519,13 +519,13 @@
         "PDM": 0,
         "CDF": 1,
         "AFG": 1,
-        "MPG": 0,
         "AFH": 1,
         "MPH": 0,
         "ECH": 1,
         "AFS": 0,
         "PST": 1,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -541,13 +541,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -563,13 +563,13 @@
         "PDM": 1,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -578,20 +578,20 @@
       "departamento": "Inteligencia Financiera",
       "departamento_orden": 4,
       "funcion": "Back Office",
-      "puesto_vigente": "Coordinador De Inteligencia Financiera",
+      "puesto_vigente": "Coordinador de Inteligencia Financiera",
       "empresas": {
         "EILC": 0,
         "PCT": 0,
         "PDM": 1,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -607,13 +607,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -629,39 +629,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
       "orden": 30,
-      "encargado": "CFO",
-      "departamento": "Legal",
-      "departamento_orden": 5,
-      "funcion": "Back Office",
-      "puesto_vigente": "Jefe de Asesoria Legal y Cumplimiento",
-      "empresas": {
-        "EILC": 1,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 31,
       "encargado": "CFO",
       "departamento": "Legal",
       "departamento_orden": 5,
@@ -673,13 +651,35 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 1
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 31,
+      "encargado": "CFO",
+      "departamento": "Legal",
+      "departamento_orden": 5,
+      "funcion": "Back Office",
+      "puesto_vigente": "Jefe de Asesoria Legal y Cumplimiento",
+      "empresas": {
+        "EILC": 1,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -695,13 +695,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 1,
         "PST": 1,
-        "ECS": 0
+        "ECS": 1,
+        "CSC": 0
       }
     },
     {
@@ -717,13 +717,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -739,13 +739,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 1,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -761,13 +761,13 @@
         "PDM": 1,
         "CDF": 1,
         "AFG": 1,
-        "MPG": 0,
         "AFH": 1,
         "MPH": 1,
         "ECH": 1,
         "AFS": 1,
-        "PST": 2,
-        "ECS": 0
+        "PST": 1,
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -783,13 +783,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 1,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 1,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -805,13 +805,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -827,13 +827,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -849,13 +849,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -871,13 +871,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -893,39 +893,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 1
+        "ECS": 1,
+        "CSC": 0
       }
     },
     {
       "orden": 42,
-      "encargado": "CIO",
-      "departamento": "Procesos",
-      "departamento_orden": 9,
-      "funcion": "Back Office",
-      "puesto_vigente": "Analista de Procesos Senior",
-      "empresas": {
-        "EILC": 1,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 43,
       "encargado": "CIO",
       "departamento": "Procesos",
       "departamento_orden": 9,
@@ -937,39 +915,39 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 1,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 44,
+      "orden": 43,
       "encargado": "CIO",
       "departamento": "Procesos",
       "departamento_orden": 9,
       "funcion": "Back Office",
-      "puesto_vigente": "Analista de Procesos",
+      "puesto_vigente": "Analista de Procesos Senior",
       "empresas": {
-        "EILC": 0,
+        "EILC": 1,
         "PCT": 0,
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 45,
+      "orden": 44,
       "encargado": "CIO",
       "departamento": "Procesos",
       "departamento_orden": 9,
@@ -981,13 +959,35 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 45,
+      "encargado": "CIO",
+      "departamento": "Procesos",
+      "departamento_orden": 9,
+      "funcion": "Back Office",
+      "puesto_vigente": "Analista de Procesos",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -1003,13 +1003,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -1025,39 +1025,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
       "orden": 48,
-      "encargado": "CFO",
-      "departamento": "Proyectos y Sostenibilidad",
-      "departamento_orden": 10,
-      "funcion": "Back Office",
-      "puesto_vigente": "Coordinador de Procesos",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 0,
-        "PDM": 1,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 49,
       "encargado": "CFO",
       "departamento": "Proyectos y Sostenibilidad",
       "departamento_orden": 10,
@@ -1069,13 +1047,35 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 49,
+      "encargado": "CFO",
+      "departamento": "Proyectos y Sostenibilidad",
+      "departamento_orden": 10,
+      "funcion": "Back Office",
+      "puesto_vigente": "Coordinador de Procesos",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 1,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -1091,86 +1091,20 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
       "orden": 51,
       "encargado": "CFO",
-      "departamento": "Tesoreria Central",
-      "departamento_orden": 11,
-      "funcion": "Back Office",
-      "puesto_vigente": "Gerente De Tesoreria",
-      "empresas": {
-        "EILC": 1,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 52,
-      "encargado": "CFO",
-      "departamento": "Tesoreria Central",
-      "departamento_orden": 11,
-      "funcion": "Back Office",
-      "puesto_vigente": "Asistente De Tesoreria",
-      "empresas": {
-        "EILC": 1,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 53,
-      "encargado": "CFO",
-      "departamento": "Tesoreria Central",
-      "departamento_orden": 11,
-      "funcion": "Back Office",
-      "puesto_vigente": "Analista De Contabilidad",
-      "empresas": {
-        "EILC": 1,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 2,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 54,
-      "encargado": "CFO",
       "departamento": "Tesoreria",
-      "departamento_orden": 12,
+      "departamento_orden": 11,
       "funcion": "Back Office",
       "puesto_vigente": "Analista de Tesoreria",
       "empresas": {
@@ -1179,42 +1113,20 @@
         "PDM": 1,
         "CDF": 0,
         "AFG": 2,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 55,
+      "orden": 52,
       "encargado": "CFO",
       "departamento": "Tesoreria",
-      "departamento_orden": 12,
-      "funcion": "Back Office",
-      "puesto_vigente": "Coordinadora De Tesoreria",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 1,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 56,
-      "encargado": "CFO",
-      "departamento": "Tesoreria",
-      "departamento_orden": 12,
+      "departamento_orden": 11,
       "funcion": "Back Office",
       "puesto_vigente": "Analista de Tesoreria Senior",
       "empresas": {
@@ -1223,20 +1135,42 @@
         "PDM": 0,
         "CDF": 1,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 1,
         "AFS": 0,
         "PST": 1,
-        "ECS": 1
+        "ECS": 1,
+        "CSC": 0
       }
     },
     {
-      "orden": 57,
+      "orden": 53,
       "encargado": "CFO",
       "departamento": "Tesoreria",
-      "departamento_orden": 12,
+      "departamento_orden": 11,
+      "funcion": "Back Office",
+      "puesto_vigente": "Coordinadora De Tesoreria",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 54,
+      "encargado": "CFO",
+      "departamento": "Tesoreria",
+      "departamento_orden": 11,
       "funcion": "Back Office",
       "puesto_vigente": "Jefe de Tesoreria",
       "empresas": {
@@ -1245,20 +1179,20 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 58,
+      "orden": 55,
       "encargado": "CFO",
       "departamento": "Tesoreria",
-      "departamento_orden": 12,
+      "departamento_orden": 11,
       "funcion": "Back Office",
       "puesto_vigente": "Jefe de Tesoreria Senior",
       "empresas": {
@@ -1267,20 +1201,20 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 59,
+      "orden": 56,
       "encargado": "CFO",
       "departamento": "Tesoreria",
-      "departamento_orden": 12,
+      "departamento_orden": 11,
       "funcion": "Back Office",
       "puesto_vigente": "Analista de Tesoreria Junior",
       "empresas": {
@@ -1289,20 +1223,20 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 1,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 60,
+      "orden": 57,
       "encargado": "CFO",
       "departamento": "Tesoreria",
-      "departamento_orden": 12,
+      "departamento_orden": 11,
       "funcion": "Back Office",
       "puesto_vigente": "Coordinador De Tesoreria",
       "empresas": {
@@ -1311,13 +1245,79 @@
         "PDM": 1,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
+        "AFH": 1,
         "MPH": 0,
         "ECH": 0,
         "AFS": 1,
         "PST": 1,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 58,
+      "encargado": "CFO",
+      "departamento": "Tesoreria Central",
+      "departamento_orden": 12,
+      "funcion": "Back Office",
+      "puesto_vigente": "Gerente De Tesoreria",
+      "empresas": {
+        "EILC": 1,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 59,
+      "encargado": "CFO",
+      "departamento": "Tesoreria Central",
+      "departamento_orden": 12,
+      "funcion": "Back Office",
+      "puesto_vigente": "Asistente De Tesoreria",
+      "empresas": {
+        "EILC": 1,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 60,
+      "encargado": "CFO",
+      "departamento": "Tesoreria Central",
+      "departamento_orden": 12,
+      "funcion": "Back Office",
+      "puesto_vigente": "Analista De Contabilidad",
+      "empresas": {
+        "EILC": 1,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 2,
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -1333,13 +1333,13 @@
         "PDM": 1,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -1355,13 +1355,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -1377,13 +1377,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 1,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -1392,20 +1392,20 @@
       "departamento": "Data Quality",
       "departamento_orden": 14,
       "funcion": "Middle Office",
-      "puesto_vigente": "Coordinador de Inteligencia De Negocios",
+      "puesto_vigente": "Coordinador de Inteligencia de Negocios",
       "empresas": {
         "EILC": 0,
         "PCT": 0,
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
-        "MPH": 1,
+        "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -1421,13 +1421,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -1443,13 +1443,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 1,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -1465,13 +1465,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -1487,13 +1487,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -1509,13 +1509,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -1531,13 +1531,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -1553,13 +1553,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -1575,39 +1575,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
       "orden": 73,
-      "encargado": "CIO",
-      "departamento": "Tecnologia de la Informacion",
-      "departamento_orden": 16,
-      "funcion": "Middle Office",
-      "puesto_vigente": "Contract Manager",
-      "empresas": {
-        "EILC": 1,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 74,
       "encargado": "CIO",
       "departamento": "Tecnologia de la Informacion",
       "departamento_orden": 16,
@@ -1619,17 +1597,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 75,
+      "orden": 74,
       "encargado": "CIO",
       "departamento": "Tecnologia de la Informacion",
       "departamento_orden": 16,
@@ -1641,17 +1619,17 @@
         "PDM": 1,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 76,
+      "orden": 75,
       "encargado": "CIO",
       "departamento": "Tecnologia de la Informacion",
       "departamento_orden": 16,
@@ -1663,39 +1641,39 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 77,
+      "orden": 76,
       "encargado": "CIO",
       "departamento": "Tecnologia de la Informacion",
       "departamento_orden": 16,
       "funcion": "Middle Office",
-      "puesto_vigente": "Coordinador de Servicios de Tecnología de la Información",
+      "puesto_vigente": "Contract Manager",
       "empresas": {
         "EILC": 1,
         "PCT": 0,
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 78,
+      "orden": 77,
       "encargado": "CIO",
       "departamento": "Tecnologia de la Informacion",
       "departamento_orden": 16,
@@ -1707,17 +1685,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 79,
+      "orden": 78,
       "encargado": "CIO",
       "departamento": "Tecnologia de la Informacion",
       "departamento_orden": 16,
@@ -1729,17 +1707,61 @@
         "PDM": 0,
         "CDF": 2,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 2,
         "PST": 1,
-        "ECS": 2
+        "ECS": 1,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 79,
+      "encargado": "CIO",
+      "departamento": "Tecnologia de la Informacion",
+      "departamento_orden": 16,
+      "funcion": "Middle Office",
+      "puesto_vigente": "Operador de Soporte Tecnico",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 1,
+        "CDF": 0,
+        "AFG": 1,
+        "AFH": 1,
+        "MPH": 1,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
       "orden": 80,
+      "encargado": "CIO",
+      "departamento": "Tecnologia de la Informacion",
+      "departamento_orden": 16,
+      "funcion": "Middle Office",
+      "puesto_vigente": "Coordinador de Servicios de Tecnología de la Información",
+      "empresas": {
+        "EILC": 1,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 81,
       "encargado": "CIO",
       "departamento": "Tecnologia de la Informacion",
       "departamento_orden": 16,
@@ -1751,17 +1773,17 @@
         "PDM": 1,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 81,
+      "orden": 82,
       "encargado": "CIO",
       "departamento": "Tecnologia de la Informacion",
       "departamento_orden": 16,
@@ -1773,17 +1795,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 1,
         "ECH": 0,
         "AFS": 0,
         "PST": 2,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 82,
+      "orden": 83,
       "encargado": "CIO",
       "departamento": "Tecnologia de la Informacion",
       "departamento_orden": 16,
@@ -1795,35 +1817,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 83,
-      "encargado": "CIO",
-      "departamento": "Tecnologia de la Informacion",
-      "departamento_orden": 16,
-      "funcion": "Middle Office",
-      "puesto_vigente": "Especialista De Calidad Y Servicios",
-      "empresas": {
-        "EILC": 1,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -1839,13 +1839,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -1861,13 +1861,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -1883,13 +1883,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 1,
         "MPH": 0,
         "ECH": 0,
         "AFS": 1,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -1905,13 +1905,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -1927,13 +1927,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -1949,13 +1949,13 @@
         "PDM": 0,
         "CDF": 1,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -1971,13 +1971,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -1993,13 +1993,13 @@
         "PDM": 1,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -2015,39 +2015,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
       "orden": 93,
-      "encargado": "CIO",
-      "departamento": "Tecnologia de la Informacion",
-      "departamento_orden": 16,
-      "funcion": "Middle Office",
-      "puesto_vigente": "Operador de Soporte Tecnico",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 0,
-        "PDM": 1,
-        "CDF": 0,
-        "AFG": 1,
-        "MPG": 0,
-        "AFH": 1,
-        "MPH": 1,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 94,
       "encargado": "COO",
       "departamento": "Agencias",
       "departamento_orden": 17,
@@ -2059,13 +2037,35 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 94,
+      "encargado": "COO",
+      "departamento": "Agencias",
+      "departamento_orden": 17,
+      "funcion": "Front Office",
+      "puesto_vigente": "Administrador de Agencia",
+      "empresas": {
+        "EILC": 75,
+        "PCT": 0,
+        "PDM": 34,
+        "CDF": 21,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 30,
+        "ECH": 4,
+        "AFS": 0,
+        "PST": 41,
+        "ECS": 3,
+        "CSC": 0
       }
     },
     {
@@ -2074,20 +2074,20 @@
       "departamento": "Agencias",
       "departamento_orden": 17,
       "funcion": "Front Office",
-      "puesto_vigente": "Administrador de Agencia",
+      "puesto_vigente": "Asesor Comercial",
       "empresas": {
-        "EILC": 76,
-        "PCT": 0,
-        "PDM": 34,
-        "CDF": 21,
+        "EILC": 0,
+        "PCT": 119,
+        "PDM": 0,
+        "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
-        "MPH": 28,
-        "ECH": 4,
+        "MPH": 0,
+        "ECH": 0,
         "AFS": 0,
-        "PST": 42,
-        "ECS": 3
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -2096,20 +2096,20 @@
       "departamento": "Agencias",
       "departamento_orden": 17,
       "funcion": "Front Office",
-      "puesto_vigente": "Asesor Comercial",
+      "puesto_vigente": "Verificador de Microcreditos",
       "empresas": {
         "EILC": 0,
-        "PCT": 126,
+        "PCT": 0,
         "PDM": 0,
         "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
+        "AFG": 22,
+        "AFH": 13,
         "MPH": 0,
         "ECH": 0,
-        "AFS": 0,
+        "AFS": 28,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -2124,14 +2124,14 @@
         "PCT": 0,
         "PDM": 0,
         "CDF": 0,
-        "AFG": 85,
-        "MPG": 0,
-        "AFH": 125,
+        "AFG": 75,
+        "AFH": 124,
         "MPH": 0,
         "ECH": 0,
-        "AFS": 141,
+        "AFS": 136,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -2147,13 +2147,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
-        "ECH": 6,
+        "ECH": 8,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -2168,14 +2168,14 @@
         "PCT": 0,
         "PDM": 0,
         "CDF": 0,
-        "AFG": 31,
-        "MPG": 0,
+        "AFG": 32,
         "AFH": 28,
         "MPH": 0,
         "ECH": 0,
         "AFS": 47,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -2191,13 +2191,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
-        "AFH": 40,
+        "AFH": 38,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -2206,20 +2206,20 @@
       "departamento": "Agencias",
       "departamento_orden": 17,
       "funcion": "Front Office",
-      "puesto_vigente": "Verificador de Microcreditos",
+      "puesto_vigente": "Ejecutivo de Ventas",
       "empresas": {
         "EILC": 0,
         "PCT": 0,
         "PDM": 0,
         "CDF": 0,
-        "AFG": 23,
-        "MPG": 0,
-        "AFH": 13,
+        "AFG": 0,
+        "AFH": 0,
         "MPH": 0,
-        "ECH": 0,
-        "AFS": 27,
+        "ECH": 1,
+        "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 10,
+        "CSC": 0
       }
     },
     {
@@ -2234,14 +2234,14 @@
         "PCT": 0,
         "PDM": 0,
         "CDF": 0,
-        "AFG": 26,
-        "MPG": 0,
-        "AFH": 32,
+        "AFG": 23,
+        "AFH": 33,
         "MPH": 0,
         "ECH": 0,
-        "AFS": 54,
+        "AFS": 50,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -2256,14 +2256,14 @@
         "PCT": 0,
         "PDM": 0,
         "CDF": 0,
-        "AFG": 2,
-        "MPG": 0,
+        "AFG": 1,
         "AFH": 3,
         "MPH": 0,
         "ECH": 0,
         "AFS": 26,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -2279,13 +2279,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 1,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -2301,13 +2301,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -2316,46 +2316,24 @@
       "departamento": "Agencias",
       "departamento_orden": 17,
       "funcion": "Front Office",
-      "puesto_vigente": "Ejecutivo de Ventas",
+      "puesto_vigente": "Ejecutivo de Agencia",
       "empresas": {
-        "EILC": 0,
+        "EILC": 58,
         "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
+        "PDM": 88,
+        "CDF": 22,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
-        "MPH": 0,
-        "ECH": 2,
+        "MPH": 45,
+        "ECH": 4,
         "AFS": 0,
-        "PST": 0,
-        "ECS": 9
+        "PST": 59,
+        "ECS": 2,
+        "CSC": 0
       }
     },
     {
       "orden": 107,
-      "encargado": "COO",
-      "departamento": "Agencias",
-      "departamento_orden": 17,
-      "funcion": "Front Office",
-      "puesto_vigente": "Ejecutivo de Agencia",
-      "empresas": {
-        "EILC": 59,
-        "PCT": 0,
-        "PDM": 91,
-        "CDF": 25,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 47,
-        "ECH": 5,
-        "AFS": 0,
-        "PST": 57,
-        "ECS": 2
-      }
-    },
-    {
-      "orden": 108,
       "encargado": "COO",
       "departamento": "Agencias",
       "departamento_orden": 17,
@@ -2366,18 +2344,18 @@
         "PCT": 0,
         "PDM": 0,
         "CDF": 0,
-        "AFG": 28,
-        "MPG": 0,
-        "AFH": 28,
+        "AFG": 27,
+        "AFH": 27,
         "MPH": 0,
         "ECH": 0,
-        "AFS": 30,
+        "AFS": 29,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 109,
+      "orden": 108,
       "encargado": "CFO",
       "departamento": "Control Interno",
       "departamento_orden": 18,
@@ -2385,21 +2363,21 @@
       "puesto_vigente": "Analista de Control Interno",
       "empresas": {
         "EILC": 0,
-        "PCT": 7,
+        "PCT": 6,
         "PDM": 7,
         "CDF": 2,
         "AFG": 2,
-        "MPG": 0,
         "AFH": 3,
         "MPH": 2,
-        "ECH": 1,
+        "ECH": 0,
         "AFS": 3,
         "PST": 3,
-        "ECS": 1
+        "ECS": 1,
+        "CSC": 0
       }
     },
     {
-      "orden": 110,
+      "orden": 109,
       "encargado": "CFO",
       "departamento": "Control Interno",
       "departamento_orden": 18,
@@ -2411,13 +2389,35 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 1,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 110,
+      "encargado": "CFO",
+      "departamento": "Control Interno",
+      "departamento_orden": 18,
+      "funcion": "Middle Office",
+      "puesto_vigente": "Analista de Monitoreo",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -2433,13 +2433,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -2455,13 +2455,13 @@
         "PDM": 0,
         "CDF": 1,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 1,
         "ECH": 0,
         "AFS": 0,
         "PST": 1,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -2477,13 +2477,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -2499,13 +2499,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 1,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -2521,13 +2521,13 @@
         "PDM": 1,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 1,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 1,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -2543,13 +2543,13 @@
         "PDM": 3,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -2565,13 +2565,13 @@
         "PDM": 0,
         "CDF": 2,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 1,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -2584,16 +2584,16 @@
       "empresas": {
         "EILC": 0,
         "PCT": 5,
-        "PDM": 6,
+        "PDM": 5,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 2,
         "ECH": 0,
         "AFS": 0,
         "PST": 2,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -2609,39 +2609,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
       "orden": 120,
-      "encargado": "COO",
-      "departamento": "Desarrollo Humano",
-      "departamento_orden": 19,
-      "funcion": "Back Office",
-      "puesto_vigente": "Especialista de Seleccion y Contratacion",
-      "empresas": {
-        "EILC": 1,
-        "PCT": 0,
-        "PDM": 1,
-        "CDF": 0,
-        "AFG": 1,
-        "MPG": 0,
-        "AFH": 1,
-        "MPH": 1,
-        "ECH": 0,
-        "AFS": 2,
-        "PST": 1,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 121,
       "encargado": "COO",
       "departamento": "Desarrollo Humano",
       "departamento_orden": 19,
@@ -2653,39 +2631,39 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 122,
+      "orden": 121,
       "encargado": "COO",
       "departamento": "Desarrollo Humano",
       "departamento_orden": 19,
       "funcion": "Back Office",
-      "puesto_vigente": "Practicante Pre Profesional De Desarrollo Humano",
+      "puesto_vigente": "Especialista de Capacitacion y Desarrollo Regional",
       "empresas": {
-        "EILC": 1,
+        "EILC": 0,
         "PCT": 0,
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 123,
+      "orden": 122,
       "encargado": "COO",
       "departamento": "Desarrollo Humano",
       "departamento_orden": 19,
@@ -2697,13 +2675,35 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 123,
+      "encargado": "COO",
+      "departamento": "Desarrollo Humano",
+      "departamento_orden": 19,
+      "funcion": "Back Office",
+      "puesto_vigente": "Practicante Pre Profesional De Desarrollo Humano",
+      "empresas": {
+        "EILC": 1,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -2719,13 +2719,13 @@
         "PDM": 0,
         "CDF": 1,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -2734,20 +2734,20 @@
       "departamento": "Desarrollo Humano",
       "departamento_orden": 19,
       "funcion": "Back Office",
-      "puesto_vigente": "Especialista de Capacitacion y Desarrollo Regional",
+      "puesto_vigente": "Especialista de Procesos Administrativos",
       "empresas": {
         "EILC": 0,
         "PCT": 0,
-        "PDM": 0,
+        "PDM": 1,
         "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
+        "AFG": 1,
+        "AFH": 1,
+        "MPH": 1,
+        "ECH": 1,
+        "AFS": 1,
+        "PST": 1,
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -2763,13 +2763,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -2778,20 +2778,20 @@
       "departamento": "Desarrollo Humano",
       "departamento_orden": 19,
       "funcion": "Back Office",
-      "puesto_vigente": "Coordinador de Desarrollo Humano",
+      "puesto_vigente": "Asistente de Procesos Administrativos",
       "empresas": {
-        "EILC": 0,
+        "EILC": 1,
         "PCT": 0,
         "PDM": 0,
         "CDF": 0,
-        "AFG": 1,
-        "MPG": 0,
+        "AFG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -2807,39 +2807,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
       "orden": 129,
-      "encargado": "COO",
-      "departamento": "Desarrollo Humano",
-      "departamento_orden": 19,
-      "funcion": "Back Office",
-      "puesto_vigente": "Especialista de Desarrollo Humano",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 130,
       "encargado": "COO",
       "departamento": "Desarrollo Humano",
       "departamento_orden": 19,
@@ -2851,13 +2829,35 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 130,
+      "encargado": "COO",
+      "departamento": "Desarrollo Humano",
+      "departamento_orden": 19,
+      "funcion": "Back Office",
+      "puesto_vigente": "Especialista De Seleccion y Contratacion",
+      "empresas": {
+        "EILC": 1,
+        "PCT": 0,
+        "PDM": 1,
+        "CDF": 0,
+        "AFG": 1,
+        "AFH": 1,
+        "MPH": 1,
+        "ECH": 0,
+        "AFS": 2,
+        "PST": 1,
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -2866,46 +2866,24 @@
       "departamento": "Desarrollo Humano",
       "departamento_orden": 19,
       "funcion": "Back Office",
-      "puesto_vigente": "Asistente de Procesos Administrativos",
+      "puesto_vigente": "Coordinador de Desarrollo Humano",
       "empresas": {
-        "EILC": 1,
+        "EILC": 0,
         "PCT": 0,
         "PDM": 0,
         "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
+        "AFG": 1,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 1,
+        "CSC": 0
       }
     },
     {
       "orden": 132,
-      "encargado": "COO",
-      "departamento": "Desarrollo Humano",
-      "departamento_orden": 19,
-      "funcion": "Back Office",
-      "puesto_vigente": "Especialista de Procesos Administrativos",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 0,
-        "PDM": 1,
-        "CDF": 0,
-        "AFG": 1,
-        "MPG": 0,
-        "AFH": 1,
-        "MPH": 1,
-        "ECH": 1,
-        "AFS": 1,
-        "PST": 2,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 133,
       "encargado": "COO",
       "departamento": "Desarrollo Humano",
       "departamento_orden": 19,
@@ -2917,13 +2895,35 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 133,
+      "encargado": "COO",
+      "departamento": "Desarrollo Humano",
+      "departamento_orden": 19,
+      "funcion": "Back Office",
+      "puesto_vigente": "Especialista de Desarrollo Humano",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -2939,13 +2939,13 @@
         "PDM": 1,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
-        "MPH": 0,
+        "MPH": 1,
         "ECH": 0,
         "AFS": 1,
         "PST": 1,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -2961,39 +2961,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 1,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
       "orden": 136,
-      "encargado": "COO",
-      "departamento": "Garantias y Valores",
-      "departamento_orden": 20,
-      "funcion": "Middle Office",
-      "puesto_vigente": "Asistente de Garantias y Valores",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 2,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 137,
       "encargado": "COO",
       "departamento": "Garantias y Valores",
       "departamento_orden": 20,
@@ -3005,13 +2983,35 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 1,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 137,
+      "encargado": "COO",
+      "departamento": "Garantias y Valores",
+      "departamento_orden": 20,
+      "funcion": "Middle Office",
+      "puesto_vigente": "Asistente de Garantias y Valores",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 2,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -3027,13 +3027,13 @@
         "PDM": 3,
         "CDF": 1,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 2,
         "ECH": 0,
         "AFS": 0,
         "PST": 1,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -3049,13 +3049,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -3071,13 +3071,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 1,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -3093,13 +3093,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -3115,13 +3115,13 @@
         "PDM": 1,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 1,
         "ECH": 0,
         "AFS": 0,
         "PST": 1,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -3137,13 +3137,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -3159,13 +3159,13 @@
         "PDM": 0,
         "CDF": 1,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 2,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -3181,13 +3181,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 1,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -3203,13 +3203,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -3225,13 +3225,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -3247,13 +3247,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -3269,13 +3269,13 @@
         "PDM": 1,
         "CDF": 1,
         "AFG": 1,
-        "MPG": 0,
         "AFH": 1,
         "MPH": 1,
         "ECH": 0,
         "AFS": 1,
         "PST": 1,
-        "ECS": 1
+        "ECS": 1,
+        "CSC": 0
       }
     },
     {
@@ -3291,13 +3291,13 @@
         "PDM": 1,
         "CDF": 1,
         "AFG": 1,
-        "MPG": 0,
         "AFH": 1,
         "MPH": 1,
         "ECH": 0,
         "AFS": 1,
         "PST": 0,
-        "ECS": 1
+        "ECS": 1,
+        "CSC": 0
       }
     },
     {
@@ -3313,13 +3313,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -3335,13 +3335,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -3357,13 +3357,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 1,
-        "AFS": 1,
+        "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -3379,13 +3379,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -3401,17 +3401,39 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
       "orden": 156,
+      "encargado": "CFO",
+      "departamento": "Logistica",
+      "departamento_orden": 22,
+      "funcion": "Back Office",
+      "puesto_vigente": "Coordinador de Logistica y Compras",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 157,
       "encargado": "CFO",
       "departamento": "Logistica",
       "departamento_orden": 22,
@@ -3423,35 +3445,13 @@
         "PDM": 0,
         "CDF": 1,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 157,
-      "encargado": "CFO",
-      "departamento": "Logistica",
-      "departamento_orden": 22,
-      "funcion": "Back Office",
-      "puesto_vigente": "Asistente de Logistica",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 1,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -3467,13 +3467,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 1,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -3489,13 +3489,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -3511,13 +3511,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -3533,13 +3533,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -3555,13 +3555,13 @@
         "PDM": 0,
         "CDF": 1,
         "AFG": 2,
-        "MPG": 0,
-        "AFH": 2,
+        "AFH": 1,
         "MPH": 0,
         "ECH": 0,
         "AFS": 1,
         "PST": 1,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -3577,13 +3577,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -3599,13 +3599,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -3621,39 +3621,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
       "orden": 166,
-      "encargado": "CFO",
-      "departamento": "Logistica",
-      "departamento_orden": 22,
-      "funcion": "Back Office",
-      "puesto_vigente": "Coordinador de Logistica y Compras",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 167,
       "encargado": "CFO",
       "departamento": "Logistica",
       "departamento_orden": 22,
@@ -3665,13 +3643,35 @@
         "PDM": 1,
         "CDF": 1,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 1,
         "ECH": 0,
         "AFS": 1,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 167,
+      "encargado": "CFO",
+      "departamento": "Logistica",
+      "departamento_orden": 22,
+      "funcion": "Back Office",
+      "puesto_vigente": "Asistente de Logistica",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 1,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -3687,13 +3687,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -3709,13 +3709,13 @@
         "PDM": 1,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 1,
         "ECH": 0,
         "AFS": 0,
-        "PST": 2,
-        "ECS": 0
+        "PST": 1,
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -3731,13 +3731,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 1,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -3753,13 +3753,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -3775,303 +3775,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
       "orden": 173,
-      "encargado": "COO",
-      "departamento": "Marketing",
-      "departamento_orden": 23,
-      "funcion": "Middle Office",
-      "puesto_vigente": "Analista De Mercadeo",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 174,
-      "encargado": "COO",
-      "departamento": "Marketing",
-      "departamento_orden": 23,
-      "funcion": "Middle Office",
-      "puesto_vigente": "Ejecutivo de Quejas y Reclamos",
-      "empresas": {
-        "EILC": 1,
-        "PCT": 0,
-        "PDM": 1,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 175,
-      "encargado": "COO",
-      "departamento": "Marketing",
-      "departamento_orden": 23,
-      "funcion": "Middle Office",
-      "puesto_vigente": "Coordinador de Marketing",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 1,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 176,
-      "encargado": "COO",
-      "departamento": "Marketing",
-      "departamento_orden": 23,
-      "funcion": "Middle Office",
-      "puesto_vigente": "Asistente de Marketing",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 177,
-      "encargado": "COO",
-      "departamento": "Marketing",
-      "departamento_orden": 23,
-      "funcion": "Middle Office",
-      "puesto_vigente": "Diseñador Audiovisual",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 0,
-        "PDM": 1,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 178,
-      "encargado": "COO",
-      "departamento": "Marketing",
-      "departamento_orden": 23,
-      "funcion": "Middle Office",
-      "puesto_vigente": "Ejecutivo De Nps y Canales Digitales",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 1,
-        "PST": 1,
-        "ECS": 1
-      }
-    },
-    {
-      "orden": 179,
-      "encargado": "COO",
-      "departamento": "Marketing",
-      "departamento_orden": 23,
-      "funcion": "Middle Office",
-      "puesto_vigente": "Coordinador De Paid Media Corporativo",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 1
-      }
-    },
-    {
-      "orden": 180,
-      "encargado": "COO",
-      "departamento": "Marketing",
-      "departamento_orden": 23,
-      "funcion": "Middle Office",
-      "puesto_vigente": "Coordinador De Marketing Pais",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 1,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 181,
-      "encargado": "COO",
-      "departamento": "Marketing",
-      "departamento_orden": 23,
-      "funcion": "Middle Office",
-      "puesto_vigente": "Trade Marketing Y Rse",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 1,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 182,
-      "encargado": "COO",
-      "departamento": "Marketing",
-      "departamento_orden": 23,
-      "funcion": "Middle Office",
-      "puesto_vigente": "Diseñador Grafico Audiovisual",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 183,
-      "encargado": "COO",
-      "departamento": "Marketing",
-      "departamento_orden": 23,
-      "funcion": "Middle Office",
-      "puesto_vigente": "Diseñador Publicitario Audiovisual",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 184,
-      "encargado": "COO",
-      "departamento": "Marketing",
-      "departamento_orden": 23,
-      "funcion": "Middle Office",
-      "puesto_vigente": "Community Manager",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 185,
-      "encargado": "COO",
-      "departamento": "Marketing",
-      "departamento_orden": 23,
-      "funcion": "Middle Office",
-      "puesto_vigente": "Content Creator Digital",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 186,
       "encargado": "COO",
       "departamento": "Marketing",
       "departamento_orden": 23,
@@ -4083,61 +3797,83 @@
         "PDM": 1,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 187,
+      "orden": 174,
       "encargado": "COO",
       "departamento": "Marketing",
       "departamento_orden": 23,
       "funcion": "Middle Office",
-      "puesto_vigente": "Coordinador Web & Ai",
+      "puesto_vigente": "Ejecutivo de NPS y Canales Digitales",
       "empresas": {
         "EILC": 0,
         "PCT": 0,
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
-        "PST": 0,
-        "ECS": 0
+        "PST": 1,
+        "ECS": 1,
+        "CSC": 0
       }
     },
     {
-      "orden": 188,
+      "orden": 175,
       "encargado": "COO",
       "departamento": "Marketing",
       "departamento_orden": 23,
       "funcion": "Middle Office",
-      "puesto_vigente": "Coordinador De Mercadeo",
+      "puesto_vigente": "Jefe de Marketing",
       "empresas": {
         "EILC": 0,
         "PCT": 0,
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
-        "MPH": 1,
+        "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 189,
+      "orden": 176,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 23,
+      "funcion": "Middle Office",
+      "puesto_vigente": "Analista De Mercadeo",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 177,
       "encargado": "COO",
       "departamento": "Marketing",
       "departamento_orden": 23,
@@ -4149,17 +3885,39 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 1,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 190,
+      "orden": 178,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 23,
+      "funcion": "Middle Office",
+      "puesto_vigente": "Trade Marketing y Rse",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 1,
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 179,
       "encargado": "COO",
       "departamento": "Marketing",
       "departamento_orden": 23,
@@ -4171,17 +3929,281 @@
         "PDM": 1,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 180,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 23,
+      "funcion": "Middle Office",
+      "puesto_vigente": "Coordinador De Paid Media Corporativo",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 1,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 181,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 23,
+      "funcion": "Middle Office",
+      "puesto_vigente": "Coordinador de Marketing",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 1,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 1,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 182,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 23,
+      "funcion": "Middle Office",
+      "puesto_vigente": "Coordinador de Marketing Pais",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 1,
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 183,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 23,
+      "funcion": "Middle Office",
+      "puesto_vigente": "Ejecutivo de Quejas y Reclamos",
+      "empresas": {
+        "EILC": 1,
+        "PCT": 0,
+        "PDM": 1,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 184,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 23,
+      "funcion": "Middle Office",
+      "puesto_vigente": "Diseñador Publicitario Audiovisual",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 185,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 23,
+      "funcion": "Middle Office",
+      "puesto_vigente": "Diseñador Grafico Audiovisual",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 186,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 23,
+      "funcion": "Middle Office",
+      "puesto_vigente": "Asistente de Marketing",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 187,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 23,
+      "funcion": "Middle Office",
+      "puesto_vigente": "Diseñador Audiovisual",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 1,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 188,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 23,
+      "funcion": "Middle Office",
+      "puesto_vigente": "Coordinador Web & Ai",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 189,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 23,
+      "funcion": "Middle Office",
+      "puesto_vigente": "Community Manager",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 190,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 23,
+      "funcion": "Middle Office",
+      "puesto_vigente": "Content Creator Digital",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
       "orden": 191,
+      "encargado": "COO",
+      "departamento": "Marketing",
+      "departamento_orden": 23,
+      "funcion": "Middle Office",
+      "puesto_vigente": "Coordinador De Mercadeo",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 192,
       "encargado": "COO",
       "departamento": "Marketing",
       "departamento_orden": 23,
@@ -4193,17 +4215,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 192,
+      "orden": 193,
       "encargado": "COO",
       "departamento": "Marketing",
       "departamento_orden": 23,
@@ -4215,17 +4237,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 193,
+      "orden": 194,
       "encargado": "COO",
       "departamento": "Marketing",
       "departamento_orden": 23,
@@ -4237,17 +4259,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
-        "MPH": 0,
+        "MPH": 1,
         "ECH": 0,
         "AFS": 0,
-        "PST": 0,
-        "ECS": 0
+        "PST": 1,
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 194,
+      "orden": 195,
       "encargado": "COO",
       "departamento": "Marketing",
       "departamento_orden": 23,
@@ -4259,17 +4281,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 195,
+      "orden": 196,
       "encargado": "COO",
       "departamento": "Marketing",
       "departamento_orden": 23,
@@ -4281,17 +4303,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 196,
+      "orden": 197,
       "encargado": "COO",
       "departamento": "Marketing",
       "departamento_orden": 23,
@@ -4303,17 +4325,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 197,
+      "orden": 198,
       "encargado": "COO",
       "departamento": "Marketing",
       "departamento_orden": 23,
@@ -4325,17 +4347,17 @@
         "PDM": 0,
         "CDF": 1,
         "AFG": 1,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 198,
+      "orden": 199,
       "encargado": "COO",
       "departamento": "Marketing",
       "departamento_orden": 23,
@@ -4347,17 +4369,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 1,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 199,
+      "orden": 200,
       "encargado": "COO",
       "departamento": "Marketing",
       "departamento_orden": 23,
@@ -4369,17 +4391,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 200,
+      "orden": 201,
       "encargado": "COO",
       "departamento": "Marketing",
       "departamento_orden": 23,
@@ -4391,17 +4413,17 @@
         "PDM": 1,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 201,
+      "orden": 202,
       "encargado": "COO",
       "departamento": "Marketing",
       "departamento_orden": 23,
@@ -4413,17 +4435,17 @@
         "PDM": 0,
         "CDF": 2,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 1,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 202,
+      "orden": 203,
       "encargado": "COO",
       "departamento": "Marketing",
       "departamento_orden": 23,
@@ -4435,17 +4457,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 203,
+      "orden": 204,
       "encargado": "COO",
       "departamento": "Negocios",
       "departamento_orden": 24,
@@ -4457,17 +4479,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 1,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 204,
+      "orden": 205,
       "encargado": "COO",
       "departamento": "Negocios",
       "departamento_orden": 24,
@@ -4479,17 +4501,17 @@
         "PDM": 1,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 205,
+      "orden": 206,
       "encargado": "COO",
       "departamento": "Negocios",
       "departamento_orden": 24,
@@ -4501,39 +4523,39 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 206,
+      "orden": 207,
       "encargado": "COO",
       "departamento": "Negocios",
       "departamento_orden": 24,
       "funcion": "Middle Office",
-      "puesto_vigente": "Modulador De Garantias Y Gps",
+      "puesto_vigente": "Coordinador De Ventas De Joyeria",
       "empresas": {
         "EILC": 0,
         "PCT": 0,
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
-        "ECH": 1,
+        "ECH": 0,
         "AFS": 0,
-        "PST": 0,
-        "ECS": 0
+        "PST": 1,
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 207,
+      "orden": 208,
       "encargado": "COO",
       "departamento": "Negocios",
       "departamento_orden": 24,
@@ -4545,35 +4567,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 1,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 208,
-      "encargado": "COO",
-      "departamento": "Negocios",
-      "departamento_orden": 24,
-      "funcion": "Middle Office",
-      "puesto_vigente": "Auxiliar de Tramites y Archivo",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 1,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
+        "ECS": 1,
+        "CSC": 0
       }
     },
     {
@@ -4582,68 +4582,24 @@
       "departamento": "Negocios",
       "departamento_orden": 24,
       "funcion": "Middle Office",
-      "puesto_vigente": "Auxiliar Operativo",
+      "puesto_vigente": "Modulador De Garantias Y Gps",
       "empresas": {
         "EILC": 0,
         "PCT": 0,
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 1
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
       "orden": 210,
-      "encargado": "COO",
-      "departamento": "Negocios",
-      "departamento_orden": 24,
-      "funcion": "Middle Office",
-      "puesto_vigente": "Coordinador Legal",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 211,
-      "encargado": "COO",
-      "departamento": "Negocios",
-      "departamento_orden": 24,
-      "funcion": "Middle Office",
-      "puesto_vigente": "Especialista En Capacitación De Servicio Al Cliente",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 212,
       "encargado": "COO",
       "departamento": "Negocios",
       "departamento_orden": 24,
@@ -4655,13 +4611,57 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 211,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 24,
+      "funcion": "Middle Office",
+      "puesto_vigente": "Auxiliar de Tramites y Archivo",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 1,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 212,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 24,
+      "funcion": "Middle Office",
+      "puesto_vigente": "Coordinador Legal",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -4677,13 +4677,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 1
+        "ECS": 1,
+        "CSC": 0
       }
     },
     {
@@ -4699,17 +4699,39 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 1,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
       "orden": 215,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 24,
+      "funcion": "Middle Office",
+      "puesto_vigente": "Auxiliar Operativo",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 1,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 216,
       "encargado": "COO",
       "departamento": "Negocios",
       "departamento_orden": 24,
@@ -4721,17 +4743,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 216,
+      "orden": 217,
       "encargado": "COO",
       "departamento": "Negocios",
       "departamento_orden": 24,
@@ -4743,17 +4765,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 1,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 1,
         "AFS": 0,
         "PST": 0,
-        "ECS": 1
+        "ECS": 1,
+        "CSC": 0
       }
     },
     {
-      "orden": 217,
+      "orden": 218,
       "encargado": "COO",
       "departamento": "Negocios",
       "departamento_orden": 24,
@@ -4765,17 +4787,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 1,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 218,
+      "orden": 219,
       "encargado": "COO",
       "departamento": "Negocios",
       "departamento_orden": 24,
@@ -4787,61 +4809,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 1,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 219,
-      "encargado": "COO",
-      "departamento": "Negocios",
-      "departamento_orden": 24,
-      "funcion": "Middle Office",
-      "puesto_vigente": "Gestor (A) De Cobro",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
       "orden": 220,
-      "encargado": "COO",
-      "departamento": "Negocios",
-      "departamento_orden": 24,
-      "funcion": "Middle Office",
-      "puesto_vigente": "Gestor De Cobros",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 221,
       "encargado": "COO",
       "departamento": "Negocios",
       "departamento_orden": 24,
@@ -4853,13 +4831,35 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 1
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 221,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 24,
+      "funcion": "Middle Office",
+      "puesto_vigente": "Gestor (A) De Cobro",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -4868,68 +4868,24 @@
       "departamento": "Negocios",
       "departamento_orden": 24,
       "funcion": "Middle Office",
-      "puesto_vigente": "Gestor de Cobranzas",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 12,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 3,
-        "ECH": 6,
-        "AFS": 0,
-        "PST": 1,
-        "ECS": 3
-      }
-    },
-    {
-      "orden": 223,
-      "encargado": "COO",
-      "departamento": "Negocios",
-      "departamento_orden": 24,
-      "funcion": "Middle Office",
-      "puesto_vigente": "Gestor de Cobranzas Senior",
+      "puesto_vigente": "Gestor De Cobros",
       "empresas": {
         "EILC": 0,
         "PCT": 0,
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 1,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 224,
-      "encargado": "COO",
-      "departamento": "Negocios",
-      "departamento_orden": 24,
-      "funcion": "Middle Office",
-      "puesto_vigente": "Asistente Legal",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 2
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 225,
+      "orden": 223,
       "encargado": "COO",
       "departamento": "Negocios",
       "departamento_orden": 24,
@@ -4941,17 +4897,83 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 224,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 24,
+      "funcion": "Middle Office",
+      "puesto_vigente": "Gestor de Cobranzas",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 12,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 2,
+        "ECH": 6,
+        "AFS": 0,
+        "PST": 1,
+        "ECS": 3,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 225,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 24,
+      "funcion": "Middle Office",
+      "puesto_vigente": "Gestor de Cobranzas Senior",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 1,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
       "orden": 226,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 24,
+      "funcion": "Middle Office",
+      "puesto_vigente": "Especialista De Calidad Y Servicios",
+      "empresas": {
+        "EILC": 1,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 227,
       "encargado": "COO",
       "departamento": "Negocios",
       "departamento_orden": 24,
@@ -4963,17 +4985,39 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 3,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 1,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 227,
+      "orden": 228,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 24,
+      "funcion": "Middle Office",
+      "puesto_vigente": "Ejecutivo de Desembolso",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 229,
       "encargado": "COO",
       "departamento": "Negocios",
       "departamento_orden": 24,
@@ -4985,17 +5029,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 1,
-        "MPG": 0,
         "AFH": 1,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 228,
+      "orden": 230,
       "encargado": "COO",
       "departamento": "Negocios",
       "departamento_orden": 24,
@@ -5007,17 +5051,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 229,
+      "orden": 231,
       "encargado": "COO",
       "departamento": "Negocios",
       "departamento_orden": 24,
@@ -5029,17 +5073,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 1,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 230,
+      "orden": 232,
       "encargado": "COO",
       "departamento": "Negocios",
       "departamento_orden": 24,
@@ -5051,17 +5095,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 4,
-        "MPG": 0,
         "AFH": 4,
         "MPH": 0,
         "ECH": 0,
         "AFS": 4,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 231,
+      "orden": 233,
       "encargado": "COO",
       "departamento": "Negocios",
       "departamento_orden": 24,
@@ -5073,17 +5117,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 1
+        "ECS": 1,
+        "CSC": 0
       }
     },
     {
-      "orden": 232,
+      "orden": 234,
       "encargado": "COO",
       "departamento": "Negocios",
       "departamento_orden": 24,
@@ -5095,17 +5139,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 4,
         "AFS": 0,
         "PST": 0,
-        "ECS": 4
+        "ECS": 3,
+        "CSC": 0
       }
     },
     {
-      "orden": 233,
+      "orden": 235,
       "encargado": "COO",
       "departamento": "Negocios",
       "departamento_orden": 24,
@@ -5117,17 +5161,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 1,
         "AFS": 0,
         "PST": 0,
-        "ECS": 1
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 234,
+      "orden": 236,
       "encargado": "COO",
       "departamento": "Negocios",
       "departamento_orden": 24,
@@ -5139,17 +5183,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 235,
+      "orden": 237,
       "encargado": "COO",
       "departamento": "Negocios",
       "departamento_orden": 24,
@@ -5161,17 +5205,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 236,
+      "orden": 238,
       "encargado": "COO",
       "departamento": "Negocios",
       "departamento_orden": 24,
@@ -5183,17 +5227,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 1,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 237,
+      "orden": 239,
       "encargado": "COO",
       "departamento": "Negocios",
       "departamento_orden": 24,
@@ -5205,17 +5249,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 238,
+      "orden": 240,
       "encargado": "COO",
       "departamento": "Negocios",
       "departamento_orden": 24,
@@ -5224,20 +5268,20 @@
       "empresas": {
         "EILC": 3,
         "PCT": 2,
-        "PDM": 6,
+        "PDM": 5,
         "CDF": 3,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 4,
         "ECH": 1,
         "AFS": 0,
         "PST": 5,
-        "ECS": 0
+        "ECS": 1,
+        "CSC": 0
       }
     },
     {
-      "orden": 239,
+      "orden": 241,
       "encargado": "COO",
       "departamento": "Negocios",
       "departamento_orden": 24,
@@ -5249,39 +5293,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 1,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 240,
-      "encargado": "COO",
-      "departamento": "Negocios",
-      "departamento_orden": 24,
-      "funcion": "Middle Office",
-      "puesto_vigente": "Ejecutivo de Caja",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 1
-      }
-    },
-    {
-      "orden": 241,
+      "orden": 242,
       "encargado": "COO",
       "departamento": "Negocios",
       "departamento_orden": 24,
@@ -5293,17 +5315,83 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 1,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 243,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 24,
+      "funcion": "Middle Office",
+      "puesto_vigente": "Especialista En Capacitación De Servicio Al Cliente",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 242,
+      "orden": 244,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 24,
+      "funcion": "Middle Office",
+      "puesto_vigente": "Ejecutivo de Caja",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 245,
+      "encargado": "COO",
+      "departamento": "Negocios",
+      "departamento_orden": 24,
+      "funcion": "Middle Office",
+      "puesto_vigente": "Asistente Legal",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 2,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 246,
       "encargado": "COO",
       "departamento": "Negocios",
       "departamento_orden": 24,
@@ -5315,17 +5403,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 243,
+      "orden": 247,
       "encargado": "COO",
       "departamento": "Negocios",
       "departamento_orden": 24,
@@ -5337,17 +5425,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 2,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 244,
+      "orden": 248,
       "encargado": "CIO",
       "departamento": "Gestión de Incidencias y Requerimientos",
       "departamento_orden": 25,
@@ -5359,17 +5447,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 245,
+      "orden": 249,
       "encargado": "CIO",
       "departamento": "Gestión de Incidencias y Requerimientos",
       "departamento_orden": 25,
@@ -5381,17 +5469,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 1,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 246,
+      "orden": 250,
       "encargado": "CIO",
       "departamento": "Gestión de Incidencias y Requerimientos",
       "departamento_orden": 25,
@@ -5403,17 +5491,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 1,
         "PST": 2,
-        "ECS": 1
+        "ECS": 1,
+        "CSC": 0
       }
     },
     {
-      "orden": 247,
+      "orden": 251,
       "encargado": "CIO",
       "departamento": "Gestión de Incidencias y Requerimientos",
       "departamento_orden": 25,
@@ -5425,17 +5513,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 248,
+      "orden": 252,
       "encargado": "CIO",
       "departamento": "Gestión de Incidencias y Requerimientos",
       "departamento_orden": 25,
@@ -5447,17 +5535,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 2,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 249,
+      "orden": 253,
       "encargado": "COO",
       "departamento": "Creditos",
       "departamento_orden": 26,
@@ -5469,17 +5557,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 250,
+      "orden": 254,
       "encargado": "COO",
       "departamento": "Creditos",
       "departamento_orden": 26,
@@ -5491,39 +5579,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 4,
-        "MPG": 0,
         "AFH": 4,
         "MPH": 1,
         "ECH": 1,
         "AFS": 6,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 251,
-      "encargado": "COO",
-      "departamento": "Creditos",
-      "departamento_orden": 26,
-      "funcion": "Middle Office",
-      "puesto_vigente": "Jefe De Metodologias Crediticias Y Cpc",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 252,
+      "orden": 255,
       "encargado": "COO",
       "departamento": "Creditos",
       "departamento_orden": 26,
@@ -5535,105 +5601,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 1,
-        "MPG": 0,
         "AFH": 1,
         "MPH": 0,
         "ECH": 0,
         "AFS": 1,
         "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 253,
-      "encargado": "COO",
-      "departamento": "Creditos",
-      "departamento_orden": 26,
-      "funcion": "Middle Office",
-      "puesto_vigente": "Jefe De La Unidad De Inteligencia De Portafolio",
-      "empresas": {
-        "EILC": 1,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 254,
-      "encargado": "COO",
-      "departamento": "Creditos",
-      "departamento_orden": 26,
-      "funcion": "Middle Office",
-      "puesto_vigente": "Especialista De Unidad De Inteligencia De Portafolio",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 255,
-      "encargado": "COO",
-      "departamento": "Creditos",
-      "departamento_orden": 26,
-      "funcion": "Middle Office",
-      "puesto_vigente": "Especialista Senior De Unidad De Inteligencia De Portafolio",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
       "orden": 256,
-      "encargado": "COO",
-      "departamento": "Creditos",
-      "departamento_orden": 26,
-      "funcion": "Middle Office",
-      "puesto_vigente": "Especialista Senior Unidad De Inteligencia De Portafolio",
-      "empresas": {
-        "EILC": 3,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 257,
       "encargado": "COO",
       "departamento": "Creditos",
       "departamento_orden": 26,
@@ -5645,13 +5623,35 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 257,
+      "encargado": "COO",
+      "departamento": "Creditos",
+      "departamento_orden": 26,
+      "funcion": "Middle Office",
+      "puesto_vigente": "Especialista Senior De Forecast",
+      "empresas": {
+        "EILC": 2,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -5660,28 +5660,50 @@
       "departamento": "Creditos",
       "departamento_orden": 26,
       "funcion": "Middle Office",
-      "puesto_vigente": "Especialista Senior De Forecast",
+      "puesto_vigente": "Especialista Senior De Unidad De Inteligencia De Portafolio",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 259,
+      "encargado": "COO",
+      "departamento": "Creditos",
+      "departamento_orden": 26,
+      "funcion": "Middle Office",
+      "puesto_vigente": "Especialista Senior Unidad De Inteligencia De Portafolio",
       "empresas": {
         "EILC": 3,
         "PCT": 0,
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 259,
+      "orden": 260,
       "encargado": "CIO",
       "departamento": "Pricing",
       "departamento_orden": 27,
-      "funcion": "Middle Office",
+      "funcion": "Back Office",
       "puesto_vigente": "Especialista Senior De Pricing",
       "empresas": {
         "EILC": 2,
@@ -5689,35 +5711,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 260,
-      "encargado": "CIO",
-      "departamento": "Riesgos",
-      "departamento_orden": 15,
-      "funcion": "Middle Office",
-      "puesto_vigente": "Especialista Senior De Modelos Y Forecast",
-      "empresas": {
-        "EILC": 2,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 0,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
@@ -5725,7 +5725,29 @@
       "encargado": "CIO",
       "departamento": "Riesgos",
       "departamento_orden": 15,
-      "funcion": "Middle Office",
+      "funcion": "Back Office",
+      "puesto_vigente": "Especialista Senior De Modelos Y Forecast",
+      "empresas": {
+        "EILC": 2,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 262,
+      "encargado": "CIO",
+      "departamento": "Riesgos",
+      "departamento_orden": 15,
+      "funcion": "Back Office",
       "puesto_vigente": "Senior Analyst De Modelos Y Forecast",
       "empresas": {
         "EILC": 1,
@@ -5733,17 +5755,39 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 262,
+      "orden": 263,
+      "encargado": "COO",
+      "departamento": "Creditos",
+      "departamento_orden": 26,
+      "funcion": "Middle Office",
+      "puesto_vigente": "Jefe De La Unidad De Inteligencia De Portafolio",
+      "empresas": {
+        "EILC": 1,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 264,
       "encargado": "COO",
       "departamento": "Creditos",
       "departamento_orden": 26,
@@ -5755,17 +5799,39 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 263,
+      "orden": 265,
+      "encargado": "COO",
+      "departamento": "Creditos",
+      "departamento_orden": 26,
+      "funcion": "Middle Office",
+      "puesto_vigente": "Jefe De Metodologias Crediticias Y Cpc",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 266,
       "encargado": "COO",
       "departamento": "Creditos",
       "departamento_orden": 26,
@@ -5777,61 +5843,39 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 264,
+      "orden": 267,
       "encargado": "COO",
       "departamento": "Creditos",
       "departamento_orden": 26,
       "funcion": "Middle Office",
-      "puesto_vigente": "Jefe De Calidad De Procesos Crediticios",
+      "puesto_vigente": "Especialista De Unidad De Inteligencia De Portafolio",
       "empresas": {
         "EILC": 0,
         "PCT": 0,
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 265,
-      "encargado": "COO",
-      "departamento": "Creditos",
-      "departamento_orden": 26,
-      "funcion": "Middle Office",
-      "puesto_vigente": "Coordinador de Creditos",
-      "empresas": {
-        "EILC": 0,
-        "PCT": 0,
-        "PDM": 0,
-        "CDF": 0,
-        "AFG": 0,
-        "MPG": 0,
-        "AFH": 0,
-        "MPH": 0,
-        "ECH": 1,
-        "AFS": 0,
-        "PST": 0,
-        "ECS": 0
-      }
-    },
-    {
-      "orden": 266,
+      "orden": 268,
       "encargado": "COO",
       "departamento": "Creditos",
       "departamento_orden": 26,
@@ -5843,17 +5887,17 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 267,
+      "orden": 269,
       "encargado": "COO",
       "departamento": "Creditos",
       "departamento_orden": 26,
@@ -5865,20 +5909,86 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 268,
+      "orden": 270,
+      "encargado": "COO",
+      "departamento": "Creditos",
+      "departamento_orden": 26,
+      "funcion": "Middle Office",
+      "puesto_vigente": "Jefe De Calidad De Procesos Crediticios",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 271,
+      "encargado": "COO",
+      "departamento": "Creditos",
+      "departamento_orden": 26,
+      "funcion": "Middle Office",
+      "puesto_vigente": "Coordinador de Creditos",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 1,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 272,
+      "encargado": "COO",
+      "departamento": "Innovacion y Transformacion",
+      "departamento_orden": 28,
+      "funcion": "Back Office",
+      "puesto_vigente": "Gerente De Innovacion y Transformacion",
+      "empresas": {
+        "EILC": 0,
+        "PCT": 0,
+        "PDM": 0,
+        "CDF": 0,
+        "AFG": 0,
+        "AFH": 0,
+        "MPH": 0,
+        "ECH": 0,
+        "AFS": 0,
+        "PST": 0,
+        "ECS": 0,
+        "CSC": 0
+      }
+    },
+    {
+      "orden": 273,
       "encargado": "COO",
       "departamento": "Servicio y Atencion al Cliente",
-      "departamento_orden": 28,
+      "departamento_orden": 29,
       "funcion": "Middle Office",
       "puesto_vigente": "Gestor De Atención Al Cliente",
       "empresas": {
@@ -5887,20 +5997,20 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 269,
+      "orden": 274,
       "encargado": "COO",
       "departamento": "Servicio y Atencion al Cliente",
-      "departamento_orden": 28,
+      "departamento_orden": 29,
       "funcion": "Middle Office",
       "puesto_vigente": "Gestor de Clientes",
       "empresas": {
@@ -5909,20 +6019,20 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 270,
+      "orden": 275,
       "encargado": "COO",
       "departamento": "Servicio y Atencion al Cliente",
-      "departamento_orden": 28,
+      "departamento_orden": 29,
       "funcion": "Middle Office",
       "puesto_vigente": "Ejecutivo De Atencion Al Cliente",
       "empresas": {
@@ -5931,20 +6041,20 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 1,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 271,
+      "orden": 276,
       "encargado": "COO",
       "departamento": "Servicio y Atencion al Cliente",
-      "departamento_orden": 28,
+      "departamento_orden": 29,
       "funcion": "Middle Office",
       "puesto_vigente": "Oficial De Atencion Al Usuario",
       "empresas": {
@@ -5953,20 +6063,20 @@
         "PDM": 0,
         "CDF": 1,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     },
     {
-      "orden": 272,
+      "orden": 277,
       "encargado": "COO",
       "departamento": "Servicio y Atencion al Cliente",
-      "departamento_orden": 28,
+      "departamento_orden": 29,
       "funcion": "Middle Office",
       "puesto_vigente": "Recuperador De Clientes Inactivos",
       "empresas": {
@@ -5975,13 +6085,13 @@
         "PDM": 0,
         "CDF": 0,
         "AFG": 0,
-        "MPG": 0,
         "AFH": 0,
         "MPH": 0,
         "ECH": 0,
         "AFS": 0,
         "PST": 0,
-        "ECS": 0
+        "ECS": 0,
+        "CSC": 0
       }
     }
   ]
