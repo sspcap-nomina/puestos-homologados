@@ -232,10 +232,17 @@
   }
 
   /* ---------- Buscador predictivo ---------- */
+  /* position:relative ancla la caja de sugerencias; el tamaño del
+     buscador ya lo controla .grupo-filtro--buscador (su contenedor
+     padre), así que aquí solo ocupa el 100% del ancho disponible.
+     (Antes tenía flex:1 1 320px, pensado para cuando .buscador era
+     hijo directo de una fila horizontal; al quedar dentro de
+     .grupo-filtro--buscador, que es flex-direction:column, ese
+     mismo flex-basis de 320px pasaba a controlar la ALTURA en vez
+     del ancho, dejando una caja de ~320px de alto vacía.) */
   .buscador{
     position: relative;
-    flex: 1 1 320px;
-    min-width: 240px;
+    width: 100%;
   }
 
   .buscador input[type="text"]{
