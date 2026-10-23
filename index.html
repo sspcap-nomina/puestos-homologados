@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Puestos Homologados · SSP Capital</title>
+<title>Catálogo de Puestos · SSP Capital</title>
 <link rel="icon" href="assets/logo-sspcap.png" />
 <style>
   :root{
@@ -255,6 +255,16 @@
 
   .grupo-filtro--direccion{
     flex: 0 0 140px;
+  }
+
+  .grupo-filtro--segmento{
+    flex: 0 0 140px;
+  }
+
+  /* Empresa lleva "País · CÓDIGO" (ej. "Honduras · MPH"), más largo
+     que un código de dirección o segmento suelto. */
+  .grupo-filtro--empresa{
+    flex: 0 0 190px;
   }
 
   label.etiqueta-filtro{
@@ -629,25 +639,6 @@
 
   .sin-datos-mensaje{ margin: 0; }
 
-  /* Botón pequeño para reportar un puesto de la tabla como "a eliminar" */
-  .btn-reportar-baja{
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 13px;
-    line-height: 1;
-    padding: 2px 4px;
-    border-radius: 6px;
-    opacity: 0.45;
-    transition: opacity .15s ease, background-color .15s ease;
-    vertical-align: middle;
-  }
-
-  .btn-reportar-baja:hover{
-    opacity: 1;
-    background: #FCEAEA;
-  }
-
   /* ---------- Modales (proponer puesto / reportar eliminación) ---------- */
   .modal-overlay{
     position: fixed;
@@ -944,12 +935,11 @@
       </span>
     </div>
     <p class="titulo-app">
-      <strong>Puestos Homologados</strong>
-      Nómina LATAM
+      <strong>Catálogo de Puestos</strong>
     </p>
     <a class="enlace-politica" href="assets/politica-creacion-de-puestos.pdf" target="_blank" rel="noopener"
        download="Politica_Creacion_de_Puestos_SSP_Capital.pdf">
-      ⬇ Política de puestos
+      ⬇ Política de creación de puesto
     </a>
   </div>
 </header>
@@ -997,13 +987,6 @@
           </div>
         </div>
 
-        <div class="grupo-filtro grupo-filtro--departamento">
-          <label class="etiqueta-filtro" for="filtro-departamento">Departamento</label>
-          <select id="filtro-departamento">
-            <option value="TODOS">Todos</option>
-          </select>
-        </div>
-
         <div class="grupo-filtro grupo-filtro--direccion">
           <label class="etiqueta-filtro" for="filtro-direccion">Dirección</label>
           <select id="filtro-direccion">
@@ -1011,6 +994,16 @@
             <option value="CIO">CIO</option>
             <option value="COO">COO</option>
             <option value="CFO">CFO</option>
+          </select>
+        </div>
+
+        <div class="grupo-filtro grupo-filtro--segmento">
+          <label class="etiqueta-filtro" for="filtro-segmento">Segmento</label>
+          <select id="filtro-segmento">
+            <option value="TODOS">Todos</option>
+            <option value="ABL">ABL</option>
+            <option value="MICRO">MICRO</option>
+            <option value="AUTO">AUTO</option>
           </select>
         </div>
 
@@ -1026,6 +1019,31 @@
             <option value="El Salvador">El Salvador</option>
           </select>
         </div>
+
+        <div class="grupo-filtro grupo-filtro--empresa">
+          <label class="etiqueta-filtro" for="filtro-empresa">Empresa</label>
+          <select id="filtro-empresa">
+            <option value="TODOS">Todas</option>
+            <option value="EILC">Perú · EILC</option>
+            <option value="PCT">Perú · PCT</option>
+            <option value="PDM">Bolivia · PDM</option>
+            <option value="CDF">Nicaragua · CDF</option>
+            <option value="AFG">Guatemala · AFG</option>
+            <option value="AFH">Honduras · AFH</option>
+            <option value="MPH">Honduras · MPH</option>
+            <option value="ECH">Honduras · ECH</option>
+            <option value="AFS">El Salvador · AFS</option>
+            <option value="PST">El Salvador · PST</option>
+            <option value="ECS">El Salvador · ECS</option>
+          </select>
+        </div>
+
+        <div class="grupo-filtro grupo-filtro--departamento">
+          <label class="etiqueta-filtro" for="filtro-departamento">Departamento</label>
+          <select id="filtro-departamento">
+            <option value="TODOS">Todos</option>
+          </select>
+        </div>
       </div>
 
     </section>
@@ -1038,7 +1056,7 @@
       <span id="chips-activos"></span>
     </div>
     <div class="acciones-resultados">
-      <button class="boton-accion-secundaria" id="btn-abrir-proponer" type="button">+ Proponer puesto</button>
+      <button class="boton-accion-secundaria" id="btn-abrir-proponer" type="button">+ Incluir puesto</button>
       <button class="boton-accion-secundaria" id="btn-abrir-eliminar" type="button">🗑 Eliminar puesto</button>
       <button class="boton-exportar" id="btn-exportar" title="Descarga los puestos que ves en pantalla (según tu búsqueda y filtros actuales), con presencia por país — sin cantidades de personal">
         ⬇ Exportar resultados
@@ -1077,12 +1095,12 @@
     <button type="button" class="modal-cerrar" data-cerrar-modal="modal-proponer" aria-label="Cerrar">✕</button>
 
     <div id="modal-proponer-cuerpo">
-      <h2 id="titulo-modal-proponer">Proponer un puesto nuevo</h2>
-      <p class="modal-subtitulo">¿No encontraste el puesto que buscabas? Complétalo y lo enviamos al área encargada para su evaluación.</p>
+      <h2 id="titulo-modal-proponer">Inclusión de puesto</h2>
+      <p class="modal-subtitulo">Para puestos ya aprobados por la Gerencia General. Complétalo y lo enviamos al área encargada para incluirlo en el catálogo.</p>
 
       <form id="form-proponer" novalidate>
         <div class="campo">
-          <label for="pp-puesto">Nombre del puesto propuesto *</label>
+          <label for="pp-puesto">Nombre del puesto *</label>
           <input type="text" id="pp-puesto" name="puesto_propuesto" required maxlength="80" placeholder="Ej. Analista de Nóminas" />
           <p class="ayuda-campo">No uses símbolos ni números de más; evita las palabras "Corporativo" o "Regional"; no diferencies el género con "(a)" (ej. "Encargado(a)"); y evita describir la actividad puntual del puesto (ej. "Ingeniero de reparación de motores Diesel") — usa un nombre genérico y homologable.</p>
           <p class="error-campo" id="pp-puesto-error"></p>
@@ -1122,19 +1140,19 @@
 
         <p class="campo-oculto"><label>No llenar este campo: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
 
-        <p class="error-envio" id="pp-error-envio">No se pudo enviar la propuesta. Verifica tu conexión e inténtalo de nuevo.</p>
+        <p class="error-envio" id="pp-error-envio">No se pudo enviar la inclusión. Verifica tu conexión e inténtalo de nuevo.</p>
 
         <div class="acciones-modal">
           <button type="button" class="boton-secundario" data-cerrar-modal="modal-proponer">Cancelar</button>
-          <button type="submit" class="boton-primario" id="pp-btn-enviar">Enviar para evaluación</button>
+          <button type="submit" class="boton-primario" id="pp-btn-enviar">Enviar inclusión</button>
         </div>
       </form>
     </div>
 
     <div class="modal-exito" id="modal-proponer-exito" hidden>
       <div class="icono-exito">✓</div>
-      <h2>¡Listo! Tu propuesta fue enviada</h2>
-      <p>El equipo de Compensaciones la evaluará y te contactará con la respuesta (aprobada, rechazada o con una recomendación).</p>
+      <h2>¡Listo! La inclusión fue enviada</h2>
+      <p>El área encargada registrará el puesto en el catálogo de puestos homologados.</p>
       <button type="button" class="boton-primario" data-cerrar-modal="modal-proponer">Cerrar</button>
     </div>
   </div>
@@ -1215,6 +1233,8 @@
     encargado: "TODOS",
     pais: "TODOS",
     departamento: "TODOS",
+    segmento: "TODOS",
+    empresa: "TODOS",
     textoBusqueda: ""
   };
 
@@ -1293,10 +1313,24 @@
   };
   var ORDEN_PAISES = ["Perú", "Bolivia", "Nicaragua", "Guatemala", "Honduras", "El Salvador"];
 
+  // Mapa empresa -> segmento de negocio (ABL / MICRO / AUTO), para el filtro
+  // "Segmento". MPG y CSC quedan fuera a propósito: son empresas cerradas y
+  // no deben ofrecerse como opción de filtro ni de segmento.
+  var EMPRESA_SEGMENTO = {
+    EILC: "ABL", PCT: "ABL",
+    PDM: "ABL",
+    CDF: "ABL",
+    AFG: "MICRO",
+    AFH: "MICRO", MPH: "ABL", ECH: "AUTO",
+    AFS: "MICRO", PST: "ABL", ECS: "AUTO"
+  };
+  var ORDEN_SEGMENTOS = ["ABL", "MICRO", "AUTO"];
+
   function derivarPresencia(p){
     var empresas = p.empresas || {};
     var activosTotal = 0;
     var paisesSet = {};
+    var segmentosSet = {};
 
     Object.keys(empresas).forEach(function(codigo){
       var cantidad = Number(empresas[codigo]) || 0;
@@ -1304,10 +1338,14 @@
       if(cantidad > 0 && EMPRESA_PAIS[codigo]){
         paisesSet[EMPRESA_PAIS[codigo]] = true;
       }
+      if(cantidad > 0 && EMPRESA_SEGMENTO[codigo]){
+        segmentosSet[EMPRESA_SEGMENTO[codigo]] = true;
+      }
     });
 
     p.activos_total = activosTotal;
     p.paises_activos = ORDEN_PAISES.filter(function(pais){ return paisesSet[pais]; });
+    p.segmentos_activos = ORDEN_SEGMENTOS.filter(function(seg){ return segmentosSet[seg]; });
     return p;
   }
 
@@ -1457,10 +1495,12 @@
     }
   });
 
-  /* ---------------- Filtros rápidos (Departamento, Dirección y País como selects) ---------------- */
+  /* ---------------- Filtros rápidos (Dirección, Segmento, País, Empresa y Departamento como selects) ---------------- */
   var elFiltroDepartamento = document.getElementById("filtro-departamento");
   var elFiltroDireccion = document.getElementById("filtro-direccion");
+  var elFiltroSegmento = document.getElementById("filtro-segmento");
   var elFiltroPais = document.getElementById("filtro-pais");
+  var elFiltroEmpresa = document.getElementById("filtro-empresa");
 
   elFiltroDepartamento.addEventListener("change", function(){
     estado.departamento = elFiltroDepartamento.value;
@@ -1472,8 +1512,18 @@
     aplicarFiltros();
   });
 
+  elFiltroSegmento.addEventListener("change", function(){
+    estado.segmento = elFiltroSegmento.value;
+    aplicarFiltros();
+  });
+
   elFiltroPais.addEventListener("change", function(){
     estado.pais = elFiltroPais.value;
+    aplicarFiltros();
+  });
+
+  elFiltroEmpresa.addEventListener("change", function(){
+    estado.empresa = elFiltroEmpresa.value;
     aplicarFiltros();
   });
 
@@ -1481,12 +1531,16 @@
     estado.encargado = "TODOS";
     estado.pais = "TODOS";
     estado.departamento = "TODOS";
+    estado.segmento = "TODOS";
+    estado.empresa = "TODOS";
     estado.textoBusqueda = "";
     elInputBuscador.value = "";
     elCajaSugerencias.classList.remove("visible");
     elFiltroDepartamento.value = "TODOS";
     elFiltroDireccion.value = "TODOS";
+    elFiltroSegmento.value = "TODOS";
     elFiltroPais.value = "TODOS";
+    elFiltroEmpresa.value = "TODOS";
 
     aplicarFiltros();
   });
@@ -1498,7 +1552,11 @@
     var resultado = estado.puestos.filter(function(p){
       if(estado.encargado !== "TODOS" && p.encargado !== estado.encargado){ return false; }
       if(estado.departamento !== "TODOS" && p.departamento !== estado.departamento){ return false; }
+      if(estado.segmento !== "TODOS" && (p.segmentos_activos || []).indexOf(estado.segmento) === -1){ return false; }
       if(estado.pais !== "TODOS" && (p.paises_activos || []).indexOf(estado.pais) === -1){ return false; }
+      // Empresa filtra por la cifra cruda de esa empresa puntual (no por el
+      // país derivado), así solo aparecen los puestos activos en ESA empresa.
+      if(estado.empresa !== "TODOS" && !(Number((p.empresas || {})[estado.empresa]) > 0)){ return false; }
       if(consulta !== "" && normalizar(p.puesto_vigente).indexOf(consulta) === -1){
         return false;
       }
@@ -1532,13 +1590,7 @@
     }
     elSinDatos.style.display = "none";
 
-    // Se guarda la lista tal cual se dibujó para poder ubicar el puesto
-    // exacto cuando se hace clic en "reportar para eliminar" de una fila
-    // (el botón solo lleva el índice, no todo el texto, para no pelear
-    // con comillas/caracteres especiales en el nombre del puesto).
-    estado.ultimaListaRenderizada = lista;
-
-    elCuerpoTabla.innerHTML = lista.map(function(p, indice){
+    elCuerpoTabla.innerHTML = lista.map(function(p){
       var paises = p.paises_activos || [];
       var presenciaHtml = paises.length
         ? '<div class="lista-paises">' + paises.map(function(pais){
@@ -1551,9 +1603,7 @@
           '<td class="col-direccion">' + escaparHtml(p.encargado) + '</td>' +
           '<td class="col-departamento">' + escaparHtml(p.departamento) + '</td>' +
           '<td class="col-funcion">' + escaparHtml(p.funcion || "—") + '</td>' +
-          '<td class="col-vigente">' + escaparHtml(p.puesto_vigente || "—") +
-            ' <button type="button" class="btn-reportar-baja" data-idx="' + indice + '" title="Reportar este puesto para eliminación">🗑</button>' +
-          '</td>' +
+          '<td class="col-vigente">' + escaparHtml(p.puesto_vigente || "—") + '</td>' +
           '<td class="col-presencia">' + presenciaHtml + '</td>' +
         '</tr>'
       );
@@ -1882,36 +1932,6 @@
     abrirModal("modal-eliminar");
   });
 
-  /* ---------------- "Eliminar puesto": abrir desde el ícono de una fila de la tabla ---------------- */
-  elCuerpoTabla.addEventListener("click", function(e){
-    var boton = e.target.closest(".btn-reportar-baja");
-    if(!boton){ return; }
-
-    var indice = Number(boton.getAttribute("data-idx"));
-    var puesto = (estado.ultimaListaRenderizada || [])[indice];
-    if(!puesto){ return; }
-
-    document.getElementById("form-eliminar").reset();
-    document.getElementById("pe-motivo-error").classList.remove("visible");
-    document.getElementById("pe-paises-error").classList.remove("visible");
-    document.getElementById("pe-error-envio").classList.remove("visible");
-
-    document.getElementById("pe-puesto").value = puesto.puesto_vigente || "";
-    var form = document.getElementById("form-eliminar");
-    form.setAttribute("data-departamento", puesto.departamento || "");
-    form.setAttribute("data-direccion", puesto.encargado || "");
-
-    var elAuto = document.getElementById("pe-puesto-auto");
-    elAuto.textContent = "Detectado en el catálogo: " + (puesto.departamento || "—") + " · " + (puesto.encargado || "—");
-    elAuto.classList.add("visible");
-
-    crearPillsPaises("pe-paises", puesto.paises_activos || []);
-
-    document.getElementById("modal-eliminar-cuerpo").hidden = false;
-    document.getElementById("modal-eliminar-exito").hidden = true;
-    abrirModal("modal-eliminar");
-  });
-
   document.getElementById("form-eliminar").addEventListener("submit", function(e){
     e.preventDefault();
 
@@ -1965,8 +1985,10 @@
 
     var chips = [];
     if(estado.encargado !== "TODOS"){ chips.push(estado.encargado); }
-    if(estado.departamento !== "TODOS"){ chips.push(estado.departamento); }
+    if(estado.segmento !== "TODOS"){ chips.push(estado.segmento); }
     if(estado.pais !== "TODOS"){ chips.push(estado.pais); }
+    if(estado.empresa !== "TODOS"){ chips.push(estado.empresa); }
+    if(estado.departamento !== "TODOS"){ chips.push(estado.departamento); }
     if(estado.textoBusqueda){ chips.push('"' + estado.textoBusqueda + '"'); }
 
     elChipsActivos.innerHTML = chips.map(function(c){
