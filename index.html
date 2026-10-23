@@ -770,18 +770,100 @@
   .selector-prefijo{ flex: 0 0 120px; }
   .campo-telefono input[type="tel"]{ flex: 1 1 auto; }
 
-  /* Selector de país(es) dentro de los modales: reutiliza el estilo de
-     .pill (mismo lenguaje visual que el resto del sitio) pero un poco
-     más compacto para que quepan los 6 países sin ocupar tanto alto. */
-  .grupo-paises{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7px;
+  /* Selector de empresa(s) dentro de los modales: un combobox que se ve y
+     se comporta como los <select> de "FILTROS DE BÚSQUEDA" (mismo borde,
+     radio, tipografía), pero permite marcar varias empresas a la vez con
+     checkboxes en un panel desplegable -en vez de una fila de botones
+     sueltos, que con 11 empresas se veía desordenada-. */
+  .multiselect{
+    position: relative;
   }
 
-  .grupo-paises .pill{
-    padding: 6px 13px;
-    font-size: 12.5px;
+  .multiselect-disparador{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 11px 14px;
+    border: 1.5px solid var(--borde);
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--texto-principal);
+    background: var(--fondo-platino);
+    cursor: pointer;
+    text-align: left;
+    transition: border-color .15s, box-shadow .15s;
+  }
+
+  .multiselect-disparador:hover{
+    border-color: var(--verde-sspcap);
+  }
+
+  .multiselect-disparador[aria-expanded="true"]{
+    border-color: var(--verde-sspcap);
+    box-shadow: 0 0 0 3px rgba(17,107,50,0.14);
+    background-color: var(--blanco);
+  }
+
+  .multiselect-texto{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .multiselect-texto.vacio{
+    color: var(--texto-terciario);
+  }
+
+  .multiselect-flecha{
+    flex-shrink: 0;
+    color: var(--texto-secundario);
+    font-size: 11px;
+    transition: transform .15s ease;
+  }
+
+  .multiselect-disparador[aria-expanded="true"] .multiselect-flecha{
+    transform: rotate(180deg);
+  }
+
+  .multiselect-panel{
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    box-shadow: 0 10px 24px rgba(15,35,55,0.12);
+    max-height: 260px;
+    overflow-y: auto;
+    z-index: 60;
+    padding: 6px;
+  }
+
+  .multiselect-opcion{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--texto-principal);
+  }
+
+  .multiselect-opcion:hover{
+    background: var(--verde-tint);
+  }
+
+  .multiselect-opcion input[type="checkbox"]{
+    width: 16px;
+    height: 16px;
+    accent-color: var(--verde-sspcap);
+    cursor: pointer;
+    flex-shrink: 0;
   }
 
   #pe-puesto-auto{ display: none; }
@@ -1118,8 +1200,14 @@
         </div>
 
         <div class="campo">
-          <label>Empresa(s) donde aplicaría *</label>
-          <div class="grupo-paises" id="pp-paises"></div>
+          <label id="pp-paises-label">Empresa(s) donde aplicaría *</label>
+          <div class="multiselect" id="pp-paises">
+            <button type="button" class="multiselect-disparador" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="pp-paises-label">
+              <span class="multiselect-texto vacio">Selecciona una o más empresas</span>
+              <span class="multiselect-flecha">▾</span>
+            </button>
+            <div class="multiselect-panel" hidden></div>
+          </div>
           <p class="error-campo" id="pp-paises-error">Selecciona al menos una empresa.</p>
         </div>
 
@@ -1181,8 +1269,14 @@
         </div>
 
         <div class="campo">
-          <label>Empresa(s) donde se debe eliminar *</label>
-          <div class="grupo-paises" id="pe-paises"></div>
+          <label id="pe-paises-label">Empresa(s) donde se debe eliminar *</label>
+          <div class="multiselect" id="pe-paises">
+            <button type="button" class="multiselect-disparador" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="pe-paises-label">
+              <span class="multiselect-texto vacio">Selecciona una o más empresas</span>
+              <span class="multiselect-flecha">▾</span>
+            </button>
+            <div class="multiselect-panel" hidden></div>
+          </div>
           <p class="error-campo" id="pe-paises-error">Selecciona al menos una empresa.</p>
         </div>
 
@@ -1714,25 +1808,45 @@
     return coincidencias[0] || null;
   }
 
-  /* ---------------- Selector de empresa(s): pills multi-selección reutilizables ----------------
+  /* ---------------- Selector de empresa(s): combobox desplegable ----------------
      Antes elegían país; ahora eligen empresa (son varias por país), porque
      el equipo necesita saber en qué empresa exacta se incluye/elimina el
-     puesto, no solo el país. El valor que viaja por pill es el CÓDIGO
-     (data-empresa, ej. "EILC") y lo que se ve y se envía es la etiqueta
-     "País · CÓDIGO", igual que en el filtro "Empresa" de la tabla. */
-  function crearPillsEmpresas(contenedorId, preseleccion){
-    var contenedor = document.getElementById(contenedorId);
-    contenedor.innerHTML = ORDEN_EMPRESAS.map(function(codigo){
-      var activa = (preseleccion || []).indexOf(codigo) !== -1;
+     puesto, no solo el país. Se ve y se comporta como los <select> de
+     "FILTROS DE BÚSQUEDA" (mismo estilo de borde/foco), pero permite marcar
+     varias casillas dentro de un panel desplegable -no pills sueltos-, y el
+     botón disparador resume la selección ("Perú · EILC +2 más"). */
+  function crearMultiselectEmpresas(contenedorId, preseleccion){
+    var raiz = document.getElementById(contenedorId);
+    var panel = raiz.querySelector(".multiselect-panel");
+    panel.innerHTML = ORDEN_EMPRESAS.map(function(codigo){
+      var marcado = (preseleccion || []).indexOf(codigo) !== -1;
       var etiqueta = (EMPRESA_PAIS[codigo] || "—") + " · " + codigo;
-      return '<button type="button" class="pill' + (activa ? ' activa' : '') + '" data-empresa="' + escaparHtml(codigo) + '">' + escaparHtml(etiqueta) + '</button>';
+      return '<label class="multiselect-opcion"><input type="checkbox" value="' + escaparHtml(codigo) + '"' + (marcado ? " checked" : "") + ' /><span>' + escaparHtml(etiqueta) + '</span></label>';
     }).join("");
+    actualizarTextoMultiselect(raiz);
+  }
+
+  // Refresca el texto del botón disparador según las casillas marcadas:
+  // vacío → placeholder gris; 1-2 → etiquetas separadas por coma; 3+ → la
+  // primera + "+N más", para que el botón nunca crezca de tamaño.
+  function actualizarTextoMultiselect(raiz){
+    var texto = raiz.querySelector(".multiselect-texto");
+    var marcados = Array.prototype.slice.call(raiz.querySelectorAll('input[type="checkbox"]:checked'));
+    if(marcados.length === 0){
+      texto.textContent = "Selecciona una o más empresas";
+      texto.classList.add("vacio");
+      return;
+    }
+    var etiquetas = marcados.map(function(cb){ return cb.nextElementSibling.textContent; });
+    texto.classList.remove("vacio");
+    texto.textContent = etiquetas.length <= 2 ? etiquetas.join(", ") : (etiquetas[0] + " +" + (etiquetas.length - 1) + " más");
   }
 
   function obtenerEmpresasSeleccionadas(contenedorId){
+    var raiz = document.getElementById(contenedorId);
     return Array.prototype.map.call(
-      document.querySelectorAll("#" + contenedorId + " .pill.activa"),
-      function(btn){ return btn.textContent; }
+      raiz.querySelectorAll('input[type="checkbox"]:checked'),
+      function(cb){ return cb.nextElementSibling.textContent; }
     );
   }
 
@@ -1742,22 +1856,58 @@
     return hayAlMenosUna;
   }
 
-  // Para preseleccionar los pills de "pe-paises" al auto-detectar un puesto
-  // existente: empresas donde ese puesto tiene headcount > 0 hoy.
+  // Para preseleccionar las casillas de "pe-paises" al auto-detectar un
+  // puesto existente: empresas donde ese puesto tiene headcount > 0 hoy.
   function empresasActivasDe(puesto){
     var empresas = (puesto && puesto.empresas) || {};
     return Object.keys(empresas).filter(function(codigo){ return Number(empresas[codigo]) > 0; });
   }
 
-  // Delegación de clics: los pills de cada grupo se regeneran por completo
-  // cada vez que se abre un modal (crearPillsEmpresas), así que el listener
-  // va en el contenedor fijo, no en cada botón.
+  // Abrir/cerrar cada combobox (un solo panel abierto a la vez) y refrescar
+  // el texto del disparador cuando cambia una casilla. Este listener es
+  // propio de cada .multiselect: NO toca el cierre por click-fuera/Escape de
+  // los modales, que sigue deshabilitado a propósito (solo X o Cancelar).
   ["pp-paises", "pe-paises"].forEach(function(id){
-    document.getElementById(id).addEventListener("click", function(e){
-      var boton = e.target.closest(".pill");
-      if(!boton){ return; }
-      boton.classList.toggle("activa");
+    var raiz = document.getElementById(id);
+    var disparador = raiz.querySelector(".multiselect-disparador");
+    var panel = raiz.querySelector(".multiselect-panel");
+    disparador.addEventListener("click", function(e){
+      e.stopPropagation();
+      var yaAbierto = !panel.hidden;
+      document.querySelectorAll(".multiselect-panel").forEach(function(p){ p.hidden = true; });
+      document.querySelectorAll(".multiselect-disparador").forEach(function(d){ d.setAttribute("aria-expanded", "false"); });
+      if(!yaAbierto){
+        panel.hidden = false;
+        disparador.setAttribute("aria-expanded", "true");
+      }
     });
+    panel.addEventListener("click", function(e){
+      e.stopPropagation();
+      if(e.target.matches('input[type="checkbox"]')){
+        actualizarTextoMultiselect(raiz);
+      }
+    });
+  });
+
+  // Cerrar cualquier panel abierto al hacer click fuera de su combobox, o al
+  // presionar Escape -alcance limitado al combobox, nunca al modal-.
+  document.addEventListener("click", function(e){
+    document.querySelectorAll(".multiselect").forEach(function(ms){
+      if(!ms.contains(e.target)){
+        ms.querySelector(".multiselect-panel").hidden = true;
+        ms.querySelector(".multiselect-disparador").setAttribute("aria-expanded", "false");
+      }
+    });
+  });
+  document.addEventListener("keydown", function(e){
+    if(e.key !== "Escape"){ return; }
+    var habiaAlgunoAbierto = false;
+    document.querySelectorAll(".multiselect-panel").forEach(function(p){
+      if(!p.hidden){ habiaAlgunoAbierto = true; }
+      p.hidden = true;
+    });
+    document.querySelectorAll(".multiselect-disparador").forEach(function(d){ d.setAttribute("aria-expanded", "false"); });
+    if(habiaAlgunoAbierto){ e.stopPropagation(); }
   });
 
   function enviarFormularioNetlify(nombreFormulario, datos){
@@ -1853,7 +2003,7 @@
     // Si venía de una búsqueda sin resultados, se aprovecha el texto
     // buscado como punto de partida del nombre propuesto.
     document.getElementById("pp-puesto").value = estado.textoBusqueda || "";
-    crearPillsEmpresas("pp-paises", []);
+    crearMultiselectEmpresas("pp-paises", []);
     document.getElementById("pp-paises-error").classList.remove("visible");
     document.getElementById("modal-proponer-cuerpo").hidden = false;
     document.getElementById("modal-proponer-exito").hidden = true;
@@ -1931,7 +2081,7 @@
       form.setAttribute("data-direccion", encontrado.encargado || "");
       elAuto.textContent = "Detectado en el catálogo: " + (encontrado.departamento || "—") + " · " + (encontrado.encargado || "—");
       elAuto.classList.add("visible");
-      crearPillsEmpresas("pe-paises", empresasActivasDe(encontrado));
+      crearMultiselectEmpresas("pe-paises", empresasActivasDe(encontrado));
     } else {
       form.removeAttribute("data-departamento");
       form.removeAttribute("data-direccion");
@@ -1950,7 +2100,7 @@
     document.getElementById("pe-paises-error").classList.remove("visible");
     document.getElementById("pe-error-envio").classList.remove("visible");
     document.getElementById("pe-puesto-auto").classList.remove("visible");
-    crearPillsEmpresas("pe-paises", []);
+    crearMultiselectEmpresas("pe-paises", []);
     document.getElementById("modal-eliminar-cuerpo").hidden = false;
     document.getElementById("modal-eliminar-exito").hidden = true;
     abrirModal("modal-eliminar");
