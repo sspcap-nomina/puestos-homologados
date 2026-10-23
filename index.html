@@ -893,9 +893,14 @@
     .stat-valor{ font-size: 19px; }
     .stat-detalle{ display: none; }
 
-    /* En mobile cada filtro ocupa su propia línea en vez de compartir
-       una sola fila -ahí sí hay espacio de sobra para apretarlos-. */
-    .grupo-filtro{ flex-basis: 100%; }
+    /* En mobile, Puesto (el buscador principal) ocupa su propia línea;
+       el resto de filtros (Dirección, Segmento, País, Empresa,
+       Departamento) se acomodan de a 2 por fila. Con 6 filtros en
+       total, apilarlos todos a 1 por línea (como antes, cuando solo
+       había 4) hace que la barra fija sticky mida ~680px y tape toda
+       la tabla en pantallas de celular -por eso el 2 columnas-. */
+    .grupo-filtro{ flex-basis: calc(50% - 6px); }
+    .grupo-filtro--buscador{ flex-basis: 100%; }
     .panel-filtros-encabezado{ align-items: flex-start; }
 
     .acciones-resultados{ width: 100%; }
