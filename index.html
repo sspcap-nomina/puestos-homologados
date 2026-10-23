@@ -1118,9 +1118,9 @@
         </div>
 
         <div class="campo">
-          <label>País(es) donde aplicaría *</label>
+          <label>Empresa(s) donde aplicaría *</label>
           <div class="grupo-paises" id="pp-paises"></div>
-          <p class="error-campo" id="pp-paises-error">Selecciona al menos un país.</p>
+          <p class="error-campo" id="pp-paises-error">Selecciona al menos una empresa.</p>
         </div>
 
         <div class="campo">
@@ -1170,7 +1170,7 @@
 
     <div id="modal-eliminar-cuerpo">
       <h2 id="titulo-modal-eliminar">Reportar puesto para eliminación</h2>
-      <p class="modal-subtitulo">Indícanos qué puesto y en qué país(es) ya no debería estar vigente. El equipo de Compensaciones lo evaluará.</p>
+      <p class="modal-subtitulo">Indícanos qué puesto y en qué empresa(s) ya no debería estar vigente. El equipo de Compensaciones lo evaluará.</p>
 
       <form id="form-eliminar" novalidate>
         <div class="campo">
@@ -1181,9 +1181,9 @@
         </div>
 
         <div class="campo">
-          <label>País(es) donde se debe eliminar *</label>
+          <label>Empresa(s) donde se debe eliminar *</label>
           <div class="grupo-paises" id="pe-paises"></div>
-          <p class="error-campo" id="pe-paises-error">Selecciona al menos un país.</p>
+          <p class="error-campo" id="pe-paises-error">Selecciona al menos una empresa.</p>
         </div>
 
         <div class="campo">
@@ -1330,6 +1330,12 @@
     AFS: "MICRO", PST: "ABL", ECS: "AUTO"
   };
   var ORDEN_SEGMENTOS = ["ABL", "MICRO", "AUTO"];
+
+  // Mismas 11 empresas (y mismo orden) que el <select> del filtro "Empresa"
+  // más arriba -CSC y MPG quedan fuera a propósito: están cerradas-. Se
+  // reutiliza aquí para los pills de "Empresa(s) donde aplicaría" de los
+  // formularios de Inclusión/Eliminar puesto.
+  var ORDEN_EMPRESAS = ["EILC", "PCT", "PDM", "CDF", "AFG", "AFH", "MPH", "ECH", "AFS", "PST", "ECS"];
 
   function derivarPresencia(p){
     var empresas = p.empresas || {};
@@ -1708,30 +1714,43 @@
     return coincidencias[0] || null;
   }
 
-  /* ---------------- Selector de país(es): pills multi-selección reutilizables ---------------- */
-  function crearPillsPaises(contenedorId, preseleccion){
+  /* ---------------- Selector de empresa(s): pills multi-selección reutilizables ----------------
+     Antes elegían país; ahora eligen empresa (son varias por país), porque
+     el equipo necesita saber en qué empresa exacta se incluye/elimina el
+     puesto, no solo el país. El valor que viaja por pill es el CÓDIGO
+     (data-empresa, ej. "EILC") y lo que se ve y se envía es la etiqueta
+     "País · CÓDIGO", igual que en el filtro "Empresa" de la tabla. */
+  function crearPillsEmpresas(contenedorId, preseleccion){
     var contenedor = document.getElementById(contenedorId);
-    contenedor.innerHTML = ORDEN_PAISES.map(function(pais){
-      var activa = (preseleccion || []).indexOf(pais) !== -1;
-      return '<button type="button" class="pill' + (activa ? ' activa' : '') + '" data-pais="' + escaparHtml(pais) + '">' + escaparHtml(pais) + '</button>';
+    contenedor.innerHTML = ORDEN_EMPRESAS.map(function(codigo){
+      var activa = (preseleccion || []).indexOf(codigo) !== -1;
+      var etiqueta = (EMPRESA_PAIS[codigo] || "—") + " · " + codigo;
+      return '<button type="button" class="pill' + (activa ? ' activa' : '') + '" data-empresa="' + escaparHtml(codigo) + '">' + escaparHtml(etiqueta) + '</button>';
     }).join("");
   }
 
-  function obtenerPaisesSeleccionados(contenedorId){
+  function obtenerEmpresasSeleccionadas(contenedorId){
     return Array.prototype.map.call(
       document.querySelectorAll("#" + contenedorId + " .pill.activa"),
-      function(btn){ return btn.getAttribute("data-pais"); }
+      function(btn){ return btn.textContent; }
     );
   }
 
-  function validarPaisesSeleccionados(contenedorId, errorId){
-    var hayAlMenosUno = obtenerPaisesSeleccionados(contenedorId).length > 0;
-    document.getElementById(errorId).classList.toggle("visible", !hayAlMenosUno);
-    return hayAlMenosUno;
+  function validarEmpresasSeleccionadas(contenedorId, errorId){
+    var hayAlMenosUna = obtenerEmpresasSeleccionadas(contenedorId).length > 0;
+    document.getElementById(errorId).classList.toggle("visible", !hayAlMenosUna);
+    return hayAlMenosUna;
+  }
+
+  // Para preseleccionar los pills de "pe-paises" al auto-detectar un puesto
+  // existente: empresas donde ese puesto tiene headcount > 0 hoy.
+  function empresasActivasDe(puesto){
+    var empresas = (puesto && puesto.empresas) || {};
+    return Object.keys(empresas).filter(function(codigo){ return Number(empresas[codigo]) > 0; });
   }
 
   // Delegación de clics: los pills de cada grupo se regeneran por completo
-  // cada vez que se abre un modal (crearPillsPaises), así que el listener
+  // cada vez que se abre un modal (crearPillsEmpresas), así que el listener
   // va en el contenedor fijo, no en cada botón.
   ["pp-paises", "pe-paises"].forEach(function(id){
     document.getElementById(id).addEventListener("click", function(e){
@@ -1834,7 +1853,7 @@
     // Si venía de una búsqueda sin resultados, se aprovecha el texto
     // buscado como punto de partida del nombre propuesto.
     document.getElementById("pp-puesto").value = estado.textoBusqueda || "";
-    crearPillsPaises("pp-paises", []);
+    crearPillsEmpresas("pp-paises", []);
     document.getElementById("pp-paises-error").classList.remove("visible");
     document.getElementById("modal-proponer-cuerpo").hidden = false;
     document.getElementById("modal-proponer-exito").hidden = true;
@@ -1859,7 +1878,7 @@
     e.preventDefault();
 
     var nombreValido = revisarNombrePuesto();
-    var paisesValidos = validarPaisesSeleccionados("pp-paises", "pp-paises-error");
+    var paisesValidos = validarEmpresasSeleccionadas("pp-paises", "pp-paises-error");
     var contactoValido = validarContactoProponer();
     var formularioValido = e.target.reportValidity() && nombreValido && paisesValidos && contactoValido;
     if(!formularioValido){ return; }
@@ -1876,7 +1895,7 @@
     enviarFormularioNetlify("propuesta-puesto", {
       puesto_propuesto: elPpPuesto.value.trim(),
       departamento: document.getElementById("pp-departamento").value.trim(),
-      paises: obtenerPaisesSeleccionados("pp-paises").join(", "),
+      paises: obtenerEmpresasSeleccionadas("pp-paises").join(", "),
       email: elPpEmail.value.trim(),
       telefono: numero ? (prefijo + " " + numero) : "",
       comentario: document.getElementById("pp-comentario").value.trim(),
@@ -1899,7 +1918,7 @@
   /* ---------------- "Reportar para eliminar": auto-detección al escribir el puesto ----------------
      Si lo que se escribe/elige coincide exactamente con un puesto del
      catálogo, se auto-completan departamento/dirección (ocultos, van en
-     el envío) y se preseleccionan los países donde hoy tiene presencia
+     el envío) y se preseleccionan las empresas donde hoy tiene headcount
      -editable igual-. Si no hay coincidencia (puesto nuevo o mal
      escrito) simplemente no se auto-completa nada y el equipo lo revisa
      con lo que la persona haya escrito. */
@@ -1912,7 +1931,7 @@
       form.setAttribute("data-direccion", encontrado.encargado || "");
       elAuto.textContent = "Detectado en el catálogo: " + (encontrado.departamento || "—") + " · " + (encontrado.encargado || "—");
       elAuto.classList.add("visible");
-      crearPillsPaises("pe-paises", encontrado.paises_activos || []);
+      crearPillsEmpresas("pe-paises", empresasActivasDe(encontrado));
     } else {
       form.removeAttribute("data-departamento");
       form.removeAttribute("data-direccion");
@@ -1931,7 +1950,7 @@
     document.getElementById("pe-paises-error").classList.remove("visible");
     document.getElementById("pe-error-envio").classList.remove("visible");
     document.getElementById("pe-puesto-auto").classList.remove("visible");
-    crearPillsPaises("pe-paises", []);
+    crearPillsEmpresas("pe-paises", []);
     document.getElementById("modal-eliminar-cuerpo").hidden = false;
     document.getElementById("modal-eliminar-exito").hidden = true;
     abrirModal("modal-eliminar");
@@ -1947,7 +1966,7 @@
     elMotivoError.classList.toggle("visible", !motivoValido);
     elMotivoError.textContent = "Cuéntanos brevemente el motivo.";
 
-    var paisesValidos = validarPaisesSeleccionados("pe-paises", "pe-paises-error");
+    var paisesValidos = validarEmpresasSeleccionadas("pe-paises", "pe-paises-error");
     var formularioValido = e.target.reportValidity() && motivoValido && paisesValidos;
     if(!formularioValido){ return; }
 
@@ -1965,7 +1984,7 @@
       puesto: document.getElementById("pe-puesto").value.trim(),
       departamento: form.getAttribute("data-departamento") || "",
       direccion: form.getAttribute("data-direccion") || "",
-      paises: obtenerPaisesSeleccionados("pe-paises").join(", "),
+      paises: obtenerEmpresasSeleccionadas("pe-paises").join(", "),
       motivo: elMotivo.value.trim(),
       email: document.getElementById("pe-email").value.trim(),
       telefono: numero ? (prefijo + " " + numero) : "",
